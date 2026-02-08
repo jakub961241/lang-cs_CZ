@@ -95,16 +95,16 @@ ZFS Volume=ZFS svazek
 
 
 :ud_edit_script_buttons_plug:
-Klikněte na **Výchozí**, chcete-li inicializovat editační pole s výchozím skriptem zařízení. Pro uložení změny je stále nutné kliknout na Uložit.
-
-Klikněte na **Uložit**, chcete-li uložit soubor se skriptem zařízení.
-
-Klikněte na **Smazat**, chcete-li smazat soubor se skriptem zařízení.
-
-Klikněte na **Obnovit**, chcete-li vrátit provedené změny (před uložením).
-
-Klikněte na **Použít**, chcete-li potvrdit aktuální úpravy.
-
-Klikněte na **Hotovo**, chcete-li opustit tuto stránku.
+> Klikněte na **Výchozí**, chcete-li inicializovat editační pole s výchozím skriptem zařízení. Pro uložení změny je stále nutné kliknout na **Uložit**.
+>
+> Klikněte na **Uložit**, chcete-li uložit soubor se skriptem zařízení.
+>
+> Klikněte na **Smazat**, chcete-li smazat soubor se skriptem zařízení.
+>
+> Klikněte na **Obnovit**, chcete-li vrátit provedené změny (před uložením).
+>
+> Klikněte na **Použít**, chcete-li potvrdit aktuální úpravy.
+>
+> Klikněte na **Hotovo**, chcete-li opustit tuto stránku.
 :end
 
