@@ -48,11 +48,14 @@ Use increments for Parity-SyncData Rebuild operations=Použít inkrementy pro sy
 You require a parity disk present for this option to be relevant=Tato možnost je relevantní pouze pokud je přítomen paritní disk
 
 ; Parity Problems Assistant page
+
 Parity Problems Assistant=Asistent pro problémy s paritou
+
 ; page intro text
+
 :parityProblems_intro_plug:
-Asistent **problémů s paritou** je součástí pluginu **Parita Kontrola Ladění**.<p/>
-Aktuální stav je **EXPERIMENTÁLNÍ** a je vždy možné, že tento asistent může být v budoucnu odstraněn).
+Asistent **problémů s paritou** je součástí pluginu **Parity Check Tuning**.<p/>
+Aktuální stav je **EXPERIMENTÁLNÍ** a je vždy možné, že tento asistent může být v budoucnu odstraněn.
 **(zpětná vazba k základnímu konceptu a nápadům na zlepšení je vítána)**.<p/>
 Myšlenka je taková, že tento asistent může být použit po dokončení kontroly parity nebo kontroly čtení, která nahlásila problémy a zaznamenala podrobnosti o problematických sektorech do systémového logu.
 V mnoha případech mohou být tyto chyby způsobeny vnějšími faktory, jako jsou kabeláž nebo napájení, nikoliv samotnými disky.<p/>
@@ -62,7 +65,10 @@ Pokud si myslíte, že jste odstranili příčinu problémů, můžete použít 
 To může být mnohem rychlejší než kompletní kontrola parity nebo kontrola čtení, případně rozšířený SMART test disku.<p/>
 **DŮLEŽITÉ**: Tento asistent nikdy nesmí být použit jako náhrada za kompletní kontrolu parity, pokud si myslíte, že problém byl vyřešen.
 :end
+
+
 ; fields
+
 Click to show Error Sectors from syslog=Kliknutím zobrazíte chybné sektory ze systémového protokolu
 End point for check=Koncový bod kontroly
 Method used to specify start and stop points=Způsob určení počátečního a koncového bodu
@@ -111,7 +117,9 @@ where action is one of=kde akce je jedna z následujících
 
 aborted due to Unclean shutdown=Zrušeno kvůli nečistému vypnutí
 array stopping so progress will be lost=Pole se zastavuje, průběh bude ztracen
+
 ; The type of array operation (parity check, clear, rebuild) will be appended to the following text
+
 Automatic unRaid=Automatické unRaid
 Average Speed=Průměrná rychlost
 completed=Dokončeno
@@ -165,7 +173,7 @@ Unusually large value=Neobvykle vysoká hodnota
 ; Syslog messages (with debug logging disabled)
 
 %s Cancelled=%s zrušeno
-Array not started so no action taken=Pole nebylo spuštěno, proto nebyla provedena žádná akce
+Array not started so no action taken=Pole nebylo spuštěno, žádná akce neprovedena
 as drives now cooled down=protože disky se nyní ochladily
 Following drives overheated=Následující disky se přehřály
 Only able to start a Read-Check due to number of disabled drives=Lze spustit pouze čtecí kontrolu kvůli počtu deaktivovaných disků
@@ -249,6 +257,7 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 > **UPOZORNĚNÍ:** Pokud je pole zastaveno během nedokončené operace pole, dosavadní průběh se ztratí a operaci lze restartovat pouze od začátku.
 :end
 
+
 :parity_tune_increments_plug:
 > Nastavení této volby na **Ano** určuje, že kontroly parity by měly být spuštěny po částečných blocích rozložených do několika dní.
 >
@@ -257,9 +266,11 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 > **UPOZORNĚNÍ:** Výchozí chování unRaid je takové, že pokud je pole zastaveno během nedokončené operace pole, dosavadní průběh se ztratí a operaci lze restartovat pouze od začátku.
 :end
 
+
 :parity_tune_frequency_plug:
 > Frekvence, jak často by měly být spouštěny inkrementy kontroly parity.<br><br>V běžném provozu se očekává, že většina uživatelů bude chtít použít volbu <strong>Denně</strong>, proto je to výchozí nastavení.  Pro uživatele, kteří chtějí jiné frekvence, je zde možnost nastavit <strong>Vlastní</strong> rozvrhy, které umožní složitější plánování časů pozastavení a obnovení. Při použití této volby máte možnost zadat čas v podobě, jakou používá linuxový nástroj <a href="https://en.wikipedia.org/wiki/Cron#Overview" target="_blank">crontab</a>.
 :end
+
 
 :parity_tune_manual_plug:
 > Měly by být kontroly parity spuštěné ručně také prováděny po inkrementálních blocích?
@@ -268,11 +279,13 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 > Pokud ji nastavíte na **Ano**, pak pokud ručně spustíte kontrolu parity z hlavní stránky a pak ji manuálně pozastavíte, bude kontrola následně pokračovat po inkrementálních blocích během naplánovaných časů, dokud nebude dokončena.
 :end
 
+
 :parity_tune_automatic_plug:
 > Pokud systém unRaid nebyl korektně vypnut, při dalším spuštění pole unRaid automaticky spustí nekorigující kontrolu parity (nebo kontrolu čtení, pokud nemáte disk parity). To může nastat z různých důvodů, jako je výpadek napájení, hardwarové problémy nebo softwarové chyby. Automatická kontrola se spouští, protože pokud jsou nějaké chyby parity, může to ohrozit schopnost obnovy při selhání disku, a proto chcete co nejdříve získat platnou paritu.
 >
 > Pokud je tato volba povolena, kontrola poběží pár minut (chyby po nekorektním vypnutí jsou nejčastěji na začátku disků, protože nebyly správně odpojeny), poté se automaticky pozastaví (pokud je mimo čas pro inkrementy) a zbytek kontroly poběží inkrementálně podle nastavených časových úseků.
 :end
+
 
 :parity_tune_resume_plug:
 > Čas, kdy by měla být pozastavená kontrola parity obnovena.<br>Pokud v daný čas není žádná kontrola parity pozastavena, nebude provedena žádná akce.
@@ -281,6 +294,7 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 >
 >Pokud je nastaven inkrementální režim na **Vlastní**, pak jsou pole pro hodiny/minuty skryta a místo nich je možné zadat čas ve formátu <a href="https://en.wikipedia.org/wiki/Cron#Overview" target="_blank">crontab</a>.
 :end
+
 
 :parity_tune_pause_plug:
 > Čas, kdy by měla být běžící kontrola parity pozastavena. Obvykle by měl být nastaven na dobu, kdy chcete, aby jiné aktivity nebyly ovlivněny probíhající kontrolou parity.
@@ -293,11 +307,13 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 > Také chcete zajistit, aby čas vyhrazený pro inkrementy byl dostatečný k tomu, aby kontrola parity mohla být dokončena před dalším plánovaným spuštěním. Vzhledem k tomu, že většina lidí plánuje kontroly parity jen zřídka (např. měsíčně nebo čtvrtletně), pravděpodobně to nebude problém, ale je to něco, co byste měli zvážit.
 :end
 
+
 :parity_tune_notify_plug:
 > Nastavení této volby na <strong>Ano</strong> znamená, že budete dostávat oznámení pokaždé, když plugin pozastaví nebo obnoví operaci na poli.
 > Pokud taková oznámení nechcete dostávat, nechte volbu nastavenou na **Ne**.
 > Oznámení je odesíláno jako zpráva kategorie **Upozornění (Notice)** na cíle nastavené v *<a href="Settings/Notifications">Nastavení->Nastavení oznámení</a>*.
 :end
+
 
 :parity_tune_allops_plug:
 > Měly by být operace, které zahrnují vytváření nové parity nebo přestavbu selhaného disku, prováděny inkrementálně?
@@ -315,6 +331,7 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 > Vzhledem k tomu, že disk není dostupný k použití, dokud není operace vymazání dokončena, většina uživatelů pravděpodobně nechá tuto volbu nastavenou na **Ne**. Navíc, operace vymazání obvykle nezatěžuje systém příliš, takže nemá velký dopad na výkon během běžného denního provozu.
 :end
 
+
 :parity_tune_restart_plug:
 > Unraid běžně zruší kontrolu parity, pokud dojde k vypnutí, restartu systému nebo zastavení arraye (a jedinou možností je znovu spustit kontrolu parity od začátku).
 > Nastavení této volby umožňuje tomuto pluginu znovu spustit kontrolu parity od bodu, kde byla přerušena, pokud jsou splněna následující kritéria:
@@ -329,6 +346,7 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 >* Pokud chcete tuto funkci využívat tak, že pole pouze zastavíte (bez okamžitého kliknutí na **Reboot** nebo **Shutdown**), musíte nejprve ručně **Pozastavit** operaci pole a teprve pak použít tlačítko **Stop**. Pokud pole úspěšně zastavíte tímto způsobem, pak se operace automaticky obnoví buď při opětovném spuštění pole, nebo i po restartu či vypnutí.
 :end
 
+
 :parity_tune_hot_plug:
 > Pozastaví operaci pole (Kontrola parity, Parity-Sync / Obnova disku, Vymazání disku), pokud teplota některého z disků překročí vámi nastavené limity.
 >
@@ -338,6 +356,7 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 >
 > Pokud byla operace součástí naplánovaného inkrementu, nebude obnovena mimo čas vyhrazený pro tento inkrement. Pokud byla operace spuštěna jiným způsobem, pak je chování Pozastavit/Obnovit na základě teploty vždy aktivní.
 :end
+
 
 :parity_tune_warn_plug:
 > Tato hodnota určuje, jak blízko k hodnotě nastavené jako Výstražná Teplota disku může teplota disku dosáhnout, než dojde k **pozastavení** běžící operace pole. Pokud je nastavena konkrétní mezní hodnota pro daný disk, použije se tato hodnota. Jinak se použije globální nastavení.
@@ -351,19 +370,22 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 > Pokud žádná operace pole neběží, nebude provedena žádná akce.
 :end
 
+
 :parity_tune_low_plug:
-> This value indicates how much below the Warning temperature threshold of a drive must reach before a **resume** of an array operation is issued.
+> Tato hodnota určuje, o kolik musí teplota disku klesnout pod výstražný práh, než dojde k **obnovení** operace pole.
 >
->You need to get a good balance between array operations being resumed too soon (and thus quickly reaching the level to initiate another pause) and wasting a lot of time.
+> Je třeba najít rovnováhu mezi příliš brzkým obnovením operace (kdy teplota rychle opět stoupne a vyvolá další pozastavení) a zbytečnou ztrátou času.
 >
->If a disk ever gets spun down the temperature is not readily available so it will be assumed that this criteria has been met
+> Pokud je disk v režimu spánku, teplota není snadno dostupná – v takovém případě se předpokládá, že toto kritérium bylo splněno.
 >
->If there is no paused array operation then no action will be taken.
+> Pokud neprobíhá žádná pozastavená operace pole, nebude provedena žádná akce.
 :end
+
 
 :parity_tune_temp_notify_plug:
 > Pokud je tato volba nastavena na **Ano**, obdržíte oznámení pokaždé, když plugin Pozastaví nebo Obnoví operaci pole kvůli teplotě vašich disků.<br>Pokud si nepřejete taková oznámení dostávat, ponechte tuto volbu nastavenou na **Ne**. Oznámení je odesláno jako zpráva kategorie **Upozornění** na cíle definované v *<a href="Settings/Notifications">Nastavení->Nastavení upozornění</a>*.
 :end
+
 
 :parity_tune_shutdown_plug:
 > Pokud je nastaveno na **Ano**, automaticky se spustí korektní vypnutí serveru, pokud některý z disků v poli nebo cache pool dosáhne definovaného teplotního limitu.
@@ -376,12 +398,14 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 > **POZOR:** Pokud je pole zastaveno během probíhající operace, bude její dosavadní průběh ztracen a operaci bude možné spustit pouze znovu od začátku.
 :end
 
+
 :parity_tune_critical_plug:
 > Tato hodnota určuje, jak blízko k nastavené Kritické Teplotě disku může teplota disku dosáhnout, než se spustí vypnutí serveru.
 > Můžete nastavit malé kladné číslo, aby se vypnutí provedlo ještě před tím, než Unraid odešle upozornění o dosažení kritické teploty.
 >
 > Pokud je pro jednotlivý disk nastavena konkrétní hodnota, použije se ona. Jinak se použije globální nastavení.
 :end
+
 
 :parity_tune_logging_plug:
 > Určuje úroveň detailu zaznamenaných zpráv. Úroveň detailu lze zvýšit pro účely ladění problémů, na které by tento plugin mohl narazit.
@@ -403,6 +427,7 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 > Pro potřeby ladění můžete v testovacím režimu zapisovat zprávy i na flash disk – místo syslogu nebo společně s ním. Vznikne soubor `parityTuning.log` v adresáři pluginu na flash disku. Pokud tento soubor poskytnete vývojáři, pomůže to při diagnostice nečekaného chování pluginu.
 :end
 
+
 :parityProblems_type_plug:
 > Zvolte způsob, jakým chcete zadat počáteční a koncové body kontroly.
 >
@@ -412,6 +437,7 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 > Alternativou je použití procent. Při použití procent jsou odpovídající sektory vypočítány jako procento z velikosti největšího parity disku.
 :end
 
+
 :parityProblems_start_plug:
 > Zvolte, odkud má být kontrola spuštěna. Počáteční bod můžete zadat jako číslo sektoru nebo jako procento z velikosti největšího parity disku.
 >
@@ -420,16 +446,19 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 > Z technických důvodů může kontrola ve skutečnosti začít o něco dříve, než určíte, ale rozdíl bude jen nepatrný.
 :end
 
+
 :parityProblems_end_plug:
 > Zvolte, kde má být kontrola ukončena. Konec lze stejně jako začátek zadat buď číslem sektoru, nebo procentem velikosti největšího parity disku.
 >
 > Z technických důvodů může kontrola skončit o něco později, než určíte, protože se konečný bod vyhodnocuje jen jednou za minutu.
 :end
 
+
 :parityProblems_correct_plug:
 > Určete, zda si přejete pokusit se opravit paritu při nalezení chyby,
 > nebo zda má být provedena pouze čtecí kontrola pro zjištění, zda existují chyby parity.
 :end
+
 
 :parityProblems_check_plug:
 > Po kliknutí na možnost **Spustit kontrolu** bude zahájena částečná kontrola,
@@ -437,8 +466,10 @@ Method used to specify start and stop points=Způsob určení počátečního a 
 > pokud je možnost **Zapsat opravy** nastavena na **Ano**, jinak půjde pouze o čtecí kontrolu.
 :end
 
+
 :parityProblems_sectors_plug:
 > Po kliknutí na možnost **Zobrazit čísla sektorů** se zobrazí dialogové okno,
 > které extrahuje položky ze *syslogu*, v nichž jsou uvedeny sektory s chybami parity
 > a informace, zda šlo o opravu nebo pouze zjištění chyby.
 :end
+

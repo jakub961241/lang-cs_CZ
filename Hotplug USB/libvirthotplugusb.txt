@@ -20,3 +20,4 @@ No USB devices=Není vybrané USB zařízení
 :libvirt_hot_plug:
 > Vyberte virtuální stroj (VM), ke kterému má být USB zařízení připojeno/odpojeno, a poté vyberte USB zařízení pro zvolený VM.
 :end
+

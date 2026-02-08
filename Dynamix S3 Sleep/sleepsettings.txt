@@ -42,13 +42,16 @@ Yes, exclude Cache=Ano, vyloučit mezipaměť
 > Následující nastavení určují podmínky, za kterých má být systém uspán nebo vypnut.
 :end
 
+
 :s3sleep_excluded_days_plug:
 > Ve výchozím stavu jsou zahrnuty všechny dny. Zde můžete vybrat dny, kdy se spánek nebo vypnutí nebude provádět. Toto nastavení funguje v kombinaci s vyloučenými hodinami.
 :end
 
+
 :s3sleep_excluded_hours_plug:
 > Ve výchozím stavu jsou zahrnuty všechny hodiny. Zde můžete vybrat hodiny, kdy se spánek nebo vypnutí nebude provádět. Toto nastavení funguje v kombinaci s vyloučenými dny.
 :end
+
 
 :s3sleep_inactivity_plug:
 > Zvolte, zda musí být pole zcela neaktivní (všechny disky zastaveny), než dojde ke spánku nebo vypnutí.
@@ -56,31 +59,38 @@ Yes, exclude Cache=Ano, vyloučit mezipaměť
 > Cache disk může být zahrnut nebo vyloučen z tohoto nastavení, např. pokud je neustále používán a nikdy se nezastavuje.
 :end
 
+
 :s3sleep_activity_plug:
 > *Stav* sleduje hardwarový stav zařízení
 >
 > *Počítadla* sledují počty čtení/zápisů na zařízení
 :end
 
+
 :s3sleep_outside_plug:
 > Pokud jsou přítomny jiné disky mimo pole, mohou být monitorovány samostatně.
 :end
+
 
 :s3sleep_extra_delay_plug:
 > Zadejte dodatečné zpoždění po té, co se pole stane neaktivním. Hodnota může být 0 pro žádné zpoždění.
 :end
 
+
 :s3sleep_network_plug:
 > Zvolte, zda má být síťová aktivita brána v úvahu před uspáním nebo vypnutím.
 :end
+
 
 :s3sleep_ethernet_plug:
 > Pokud je přítomno více síťových rozhraní, zvolte zde to, které se má použít pro kontrolu síťové aktivity.
 :end
 
+
 :s3sleep_idle_plug:
 > Síťová aktivita je měřena podle různých prahových hodnot, od úplného ticha až po megabitový provoz. Experimentujte s tímto nastavením, abyste našli správnou rovnováhu pro vaši situaci.
 :end
+
 
 :s3sleep_host_plug:
 > Vyberte, zda je potřeba monitorovat externí hosty jako podmínku pro spánek nebo vypnutí, pokud neodpovídají.
@@ -88,30 +98,38 @@ Yes, exclude Cache=Ano, vyloučit mezipaměť
 > Externí hosty určujete jejich IP adresami, více adres oddělujte čárkou. Dokud alespoň jeden externí host odpovídá na ping, spánek/vypnutí se neprovede.
 :end
 
+
 :s3sleep_login_plug:
 > Vyberte, zda musí být místní (konzolový) nebo vzdáleně (telnet/ssh) přihlášení uživatelé nejdříve odhlášeni, než může dojít ke spánku nebo vypnutí.
 :end
+
 
 :s3sleep_wol_plug:
 > Nastavte další možnosti WOL (Wake On LAN) pro správnou podporu S3 spánku. Viz dokumentace vašeho systému pro dostupné možnosti.
 :end
 
+
 :s3sleep_before_plug:
 > Sem můžete vložit libovolné příkazy, které se provedou před spuštěním spánku nebo vypnutí. Může to být úklid nebo jiné žádoucí akce.
 :end
+
 
 :s3sleep_after_plug:
 > Sem můžete vložit libovolné příkazy, které se provedou po probuzení ze spánku. Může to pomoci obnovit předchozí stav.
 :end
 
+
 :s3sleep_gigabit_plug:
 > Nechte toto nastavení ve výchozím stavu VYPNUTO. Pokud po probuzení síťové rozhraní nenaskočí správně, zkuste toto nastavení zapnout.
 :end
+
 
 :s3sleep_dhcp_plug:
 > Nechte toto nastavení ve výchozím stavu VYPNUTO. Pokud po probuzení systém nenaskočí správně, zkuste toto nastavení zapnout.
 :end
 
+
 :s3sleep_debug_plug:
 > Výchozí stav je VYPNUTO. Používejte toto nastavení pouze při řešení problémů, vygeneruje další zprávy o průběhu skriptu s3_sleep.
 :end
+

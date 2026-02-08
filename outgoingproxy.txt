@@ -18,9 +18,11 @@ User=Uživatel
 > Pro komplexnější řešení zvaž nastavení <u><a href='https://docs.unraid.net/unraid-os/manual/security/vpn/#configuring-vpn-tunneled-access-for-system/' target='_blank'>VPN tunelovaného přístupu pro systém</a></u>.
 :end
 
+
 :outgoing_proxy_name_plug:
 > Název odchozí proxy serveru.
 :end
+
 
 :outgoing_proxy_url_plug:
 > URL adresa odchozí proxy. Může být zadána s přihlašovacími údaji nebo bez nich. Přihlašovací údaje se načítají z URL.
@@ -28,6 +30,8 @@ User=Uživatel
 > Pokud zadáš uživatele a heslo zvlášť, budou použity jako nové přihlašovací údaje.
 :end
 
+
 :outgoing_proxy_user_plug:
 > Uživatelské jméno pro odchozí proxy.
 :end
+

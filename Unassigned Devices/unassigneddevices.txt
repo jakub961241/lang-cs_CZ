@@ -70,7 +70,6 @@ is offline=je offline
 ISO File is=ISO soubor je
 ISO File Shares=ISO sdílení souborů
 If using a disk password be sure to enter the password for this disk in UD Settings so it can be mounted=Pokud používáš heslo disku, zadej ho v nastavení UD, aby bylo možné disk připojit
-Device=Zařízení
 Leave blank to use the array passwordpassphrase=Nech prázdné pro použití hesla pole
 Load Shares=Načíst sdílení
 Loading=Načítání
@@ -93,8 +92,8 @@ Note=Poznámka
 offline=offline
 User Shares=Uživatelská sdílení
 User Shares without Pools=Uživatelská sdílení bez poolů
-You must enable NFS in Settings->NFS to mount NFS shares=Musíš povolit NFS v Nastavení->NFS, abys mohl připojit NFS sdílení
-You must enable SMB in Settings->SMB to mount SMB shares=Musíš povolit SMB v Nastavení->SMB, abys mohl připojit SMB sdílení
+You must enable NFS in Settings->NFS to mount NFS shares=Musíš povolit NFS v Nastavení->NFS pro připojení NFS sdílení
+You must enable SMB in Settings->SMB to mount SMB shares=Musíš povolit SMB v Nastavení->SMB pro připojení SMB sdílení
 Open=Otevřít
 Partition=Oddíl
 Partition and Format Disk=Rozdělit a formátovat disk
@@ -113,7 +112,7 @@ Remote Shares online status will be reset=Stav online vzdálených sdílení bud
 Remote share mounts are dependent on a solid and reliable network connection and that can be difficult to achieve=Připojení vzdálených sdílení závisí na stabilním a spolehlivém připojení k síti, což může být obtížné zajistit
 Remove Device configuration=Odstranit konfiguraci zařízení
 Remove ISO File Share=Odstranit ISO sdílení
-Remove Partition=Odstranit oddíl
+Remove partition=Odstranit oddíl
 Remove Remote SMB=Odstranit vzdálené SMB
 Remove partition=Odstranit oddíl
 Running=Spuštěno
@@ -131,7 +130,7 @@ Share Type=Typ sdílení
 share for=sdílení pro
 Show/Hide Historical Unassigned Devices=Zobrazit/Skrýt historická nepřiřazená zařízení
 Show/Hide SMB/NFS/ISO Shares=Zobrazit/Skrýt SMB/NFS/ISO sdílení
-Show/Hide Unassiged Disk Devices=Zobrazit/Skrýt nepřiřazené disky
+Show/Hide Unassigned Disk Devices=Zobrazit/Skrýt nepřiřazená disková zařízení
 Simple=Jednoduché
 SMB Shares=SMB sdílení
 Source=Zdroj
@@ -151,11 +150,9 @@ Unassigned Devices Settings=Nastavení nepřiřazených zařízení
 Unassigned Disk Devices=Nepřiřazená zařízení disku
 Unassigned Disks=Nepřiřazené disky
 Unmount=Odpojit
-Unmounting=Odpájím
+Unmounting=Odpojuji
 Use caution when gathering shares into one Root Share=Buď opatrný při slučování sdílení do jednoho Root sdílení
 Used=Využito
-User Shares=Uživatelská sdílení
-User Shares without Pools=Uživatelská sdílení bez poolů
 User Shares - allow access to User Shares, including Cache and Pool files=Uživatelská sdílení – povolit přístup včetně cache a pool souborů
 User Shares without Pools - allow access to User Shares, but the Root Share will not include Cache and Pool files=Uživatelská sdílení bez poolů – přístup povolen, ale Root nebude zahrnovat cache a pool soubory
 Username=Uživatelské jméno
@@ -168,14 +165,12 @@ When you copy files between shares in the Root Share, the files may not end up o
 Working=Funguje
 You can also subject yourself to security issues like ransomware by exposing all your shares in one Root Share=Můžeš se vystavit bezpečnostním rizikům, např. ransomware, pokud zveřejníš všechna sdílení v jednom Root sdílení
 You may need to enter credentials to list the shares=Možná budeš muset zadat přihlašovací údaje pro zobrazení sdílení
-You must enable NFS in Settings->NFS to mount NFS shares=Musíš povolit NFS v Nastavení->NFS pro připojení NFS sdílení
-You must enable SMB in Settings->SMB to mount SMB shares=Musíš povolit SMB v Nastavení->SMB pro připojení SMB sdílení
 You must enable the Destructive Mode in UD Settings before you can Format this disk=Musíš povolit destruktivní režim v UD nastavení před formátováním tohoto disku
 You WILL have problems if you do=Budeš mít problémy, pokud to uděláš
 ZFS Pool Name=ZFS název poolu
 ZFS Volume=ZFS svazek
 
-:unassgned_devices_switches_plug=
+:unassgned_devices_switches_plug:
 > Přepni přepínač **Disky**, aby se na webu zobrazovaly disky. Vypni jej, pokud je chceš skrýt.
 >
 > Přepni přepínač **Sdílení**, aby se zobrazovala sdílení. Vypni jej, pokud je chceš skrýt.
@@ -189,7 +184,7 @@ ZFS Volume=ZFS svazek
 > Disk můžeš spustit nebo uspávat kliknutím na symbol <i class='fa fa-circle orb green-orb'></i> nebo <i class='fa fa-circle orb grey-orb'></i>. Funguje od verze 6.9 RC2 a vyšší.
 >
 > Klikněte na ikonu <i class="fa fa-gears"></i> pro přechod do konfigurace nastavení zařízení. Zde nastavíte skript zařízení a určité vlastnosti zařízení.
-> 
+>
 > Klikněte na ikonu <i class="icon-nvme"></i> nebo <i class="fa fa-hdd-o"></i> pro zobrazení syslog záznamů vztahujících se k tomuto diskovému zařízení.
 >
 > **Ikony přípojných bodů:**
@@ -200,11 +195,11 @@ ZFS Volume=ZFS svazek
 >
 > Klikněte na ikonu <i class="fa fa-align-left"></i> pro zobrazení logu skriptu zařízení. Tento log je specifický pro daný skript.
 >
-> Klikněte na ikonu <i class="fa fa-check"></i> pro kontrolu souborového systému. BTRFS a ZFS musí být připojeny, aby kontrola proběhla – jedná se o tzv. „scrub“.
+> Klikněte na ikonu <i class="fa fa-check"></i> pro kontrolu souborového systému. BTRFS a ZFS musí být připojeny, aby kontrola proběhla – jedná se o tzv. „scrub".
 >
 > Klikněte na ikonu <i class="fa fa-flash"></i> pro spuštění skriptu zařízení, jako by bylo zařízení připojeno za chodu (hot plug). Platí pouze pro disková zařízení.
-
 :end
+
 
 :unassigned_devices_general_help_plug:
 > **Unassigned Devices se zkráceně označuje jako UD.**
@@ -234,30 +229,29 @@ ZFS Volume=ZFS svazek
 >
 > **Šifrované disky:**
 >
-> + Každý disk, který je v UD naformátován jako šifrovaný, bude používat heslo/frázi pole (array) a může být začleněn do pole. Případně můžete při formátování zadat vlastní heslo. Pokud zadáte heslo při formátování disku, bude třeba zadat heslo k disku v Unassigned Devices -> Nastavení pro daný disk.
-> + Každý disk, který nebyl šifrován pomocí hesla/fráze pole, lze připojit zadáním hesla k disku v Unassigned Devices -> Nastavení.
+> + Ve výchozím nastavení šifrované disky naformátované v UD používají heslo/frázi pole (array) a mohou být přidány do pole. Případně můžete při formátování nastavit vlastní heslo pro konkrétní disk; k připojení takového disku zadejte heslo v 'Unassigned Devices → Nastavení'.
 >
 > **Skript Unassigned Devices:**
 >
 > UD obsahuje skript, který se používá k připojení a odpojení zařízení a SMB/NFS připojení. Tyto skripty lze použít z příkazové řádky nebo ve vlastních skriptech dle potřeby.
 >
-> + `/usr/local/sbin/rc.unassigned mount autodevices` — připojí vše s Auto-Einhängen.
-> + `/usr/local/sbin/rc.unassigned mount autoshares` — připojí všechny SMB/NFS s Auto-Einhängen.
-> + `/usr/local/sbin/rc.unassigned umount auto` — odpojí vše s Auto-Einhängen.
+> + `/usr/local/sbin/rc.unassigned mount autodevices` — připojí vše s automatickým připojením.
+> + `/usr/local/sbin/rc.unassigned mount autoshares` — připojí všechny SMB/NFS s automatickým připojením.
+> + `/usr/local/sbin/rc.unassigned umount auto` — odpojí vše s automatickým připojením.
 > + `/usr/local/sbin/rc.unassigned umount all` — odpojí vše (před vypnutím).
 > + `/usr/local/sbin/rc.unassigned mount /dev/sdX` nebo `devX` — připojí konkrétní disk.
 > + `/usr/local/sbin/rc.unassigned mount name=diskname` — připojí dle jména.
-> + `/usr/local/sbin/rc.unassigned umount /dev/sdX` nebo `devX` — odpojí disk.
+> + `/usr/local/sbin/rc.unassigned umount /dev/sdX` nebo `devX` — odpojí disk. Tento příkaz můžete použít ve skriptu UD k odpojení zařízení po dokončení skriptu.
 > + `/usr/local/sbin/rc.unassigned umount name=diskname` — odpojí dle jména.
 > + `/usr/local/sbin/rc.unassigned spindown /dev/sdX` — uspí disk.
 > + `/usr/local/sbin/rc.unassigned spindown name=diskname` — uspí podle jména.
-> + `/usr/local/sbin/rc.unassigned detach /dev/sdX` — odpojí USB disk.
-> + `/usr/local/sbin/rc.unassigned attach serial` — připojí USB disk.
+> + `/usr/local/sbin/rc.unassigned detach /dev/sdX` nebo `devX` — odpojí USB disk. Tento příkaz můžete použít ve skriptu UD k odpojení zařízení po dokončení skriptu.
+> + `/usr/local/sbin/rc.unassigned detach name=diskname` — odpojí USB disk podle jména. Tento příkaz můžete použít v uživatelském skriptu k odpojení zařízení po dokončení skriptu.
+> + `/usr/local/sbin/rc.unassigned attach serial` — připojí diskové zařízení. Tento příkaz můžete použít ve skriptu k připojení zařízení. Název disku (diskname) není k dispozici, když je disk odpojen.
 > + `/usr/local/sbin/rc.unassigned mount source` — připojí vzdálený zdroj.
 > + `/usr/local/sbin/rc.unassigned umount source` — odpojí vzdálený zdroj.
 >
-> **Poznámka:** `/dev/sdX` nebo `devX` — 'X' je označení disku. Použití `name=diskname` je ideální pro uživatelské skripty.
+> **Poznámka:** `/dev/sdX`, kde 'X' je označení zařízení. `devX` je název zařízení na stránce UD. Pokud je název zařízení 'Dev 1', použijte 'dev1' pro uspání. Použití `name=diskname` je ideální, pokud potřebujete ve skriptu provádět operace UD na konkrétním disku.
 >
 > Dávej pozor — označení `/dev/sdX` nebo `devX` se může po restartu změnit. Nejlepší je používat proměnné `DEVICE` a `UD_DEVICE`, které UD skript předává.
 :end
-

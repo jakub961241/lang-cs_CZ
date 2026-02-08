@@ -42,10 +42,12 @@ Každý disk má vlastní souborový systém a může být exportován jako samo
 Kliknutím na název disku otevřeš jeho nastavení a nástroje.
 :end
 
+
 :main_slots_help:
 **Sloty** Zvol počet diskových slotů ve svém serveru, které mají být použity pro disky pole (Array).
 Minimální počet slotů pole je 2 a musíš přiřadit alespoň jeden disk do pole.
 :end
+
 
 :cache_devices_help:
 **Barevné označení stavu** Význam barevných ikon na začátku každého řádku u *pool disků* je následující:
@@ -72,9 +74,11 @@ Při konfiguraci jako pool s více disky Unraid OS automaticky použije formát 
 Pokud jsou aktivní [uživatelské sdílené složky](/Settings/ShareSettings), lze je nakonfigurovat tak, aby automaticky používaly pool disky pro zvýšení rychlosti zápisu. Speciální proces na pozadí s názvem *Mover* může být nastaven tak, aby pravidelně přesouval soubory z cache na pole.
 :end
 
+
 :cache_slots_help:
 **Sloty** Zvol počet diskových slotů ve svém serveru, které mají být použity pro pool disky (Cache/Pool).
 :end
+
 
 :boot_device_help:
 Nejdůležitější konfigurace se ukládají na USB flash disk. Z tohoto důvodu musí zůstat připojený k serveru.
@@ -168,12 +172,14 @@ Vyber lokální soubor s uloženým šifrovacím klíčem nebo binární soubor.
 **Zálohuj** svůj soubor s klíčem. **POKUD HO ZTRATÍŠ, ŠIFROVANÝ OBSAH NELZE OBNOVIT!**
 :end
 
+
 :info_warning_temp_help:
 *Vysoká teplota disku* určuje práh pro varování při vysoké teplotě tohoto disku.  
 Překročení této hodnoty spustí varovné oznámení.
 
 Hodnota 0 deaktivuje kontrolu vysoké teploty disku (včetně oznámení).
 :end
+
 
 :info_critical_temp_help:
 *Kritická teplota disku* určuje práh pro kriticky vysokou teplotu tohoto disku.  
@@ -182,15 +188,18 @@ Překročení této hodnoty spustí výstražné (alarmové) oznámení.
 Hodnota 0 deaktivuje kontrolu kritické teploty disku (včetně oznámení).
 :end
 
+
 :info_file_system_help:
 Zvol požadovaný souborový systém. Změna souborového systému ti umožní tento disk naformátovat novým vybraným systémem.  
 Upozorňujeme, že **všechna stávající data na disku budou smazána**.
 :end
 
+
 :info_comments_help:
 Tento text se zobrazí v poli *Komentář* ve Windows Průzkumníku.  
 Zadej libovolný text až do délky 256 znaků.
 :end
+
 
 :info_warning_utilization_help:
 *Vysoké využití disku* určuje práh pro varování při vysokém využití tohoto disku.  
@@ -201,6 +210,7 @@ bude se zobrazovat pouze kritické oznámení (žádné varování pro vysoké v
 
 Hodnota 0 deaktivuje práh pro kritické využití disku (včetně oznámení).
 :end
+
 
 :info_critical_utilization_help:
 *Kritické využití disku* určuje práh pro kriticky vysoké využití tohoto disku.  
@@ -244,9 +254,17 @@ pokud je k dispozici bezchybná kopie.
 :end
 
 
+:info_zfs_scrub_help:
+**Scrub** spustí program *zfs scrub*, který přečte všechna data a metadata ze všech zařízení a ověří kontrolní součty.
+
+Kliknutím na **Aktualizovat pool** provedete upgrade ZFS poolu, čímž se aktivují nejnovější funkce ZFS.
+:end
+
+
 :info_scrub_cancel_help:
 **Zrušit** přeruší právě probíhající proces kontroly (scrub).
 :end
+
 
 :info_btrfs_check_help:
 **Kontrola** spustí nástroj *btrfs check* pro ověření integrity souborového systému na disku.
@@ -301,6 +319,7 @@ Výstup je minimální, ale průběh můžeš sledovat podle čítačů čtení/
 **Zrušit** přeruší právě probíhající kontrolu (xfs_repair).
 :end
 
+
 :info_smart_notifications_help:
 SMART oznámení jsou generována buď při zvyšující se RAW hodnotě atributu, nebo při snižující se NORMALIZOVANÉ prahové hodnotě,  
 která je definována výrobcem.
@@ -343,6 +362,7 @@ Každý disk může mít svou vlastní hodnotu, která přepíše "výchozí" na
 Klikni na **Zobrazit**, abys zobrazil(a) historii SMART samodiagnostiky uloženou přímo na disku.  
 Tato funkce je dostupná pouze tehdy, pokud je disk aktivní.
 :end
+
 
 :selftest_error_log_help:
 Klikni na **Zobrazit**, abys zobrazil(a) chybový záznam uložený přímo na disku.  
@@ -397,6 +417,7 @@ Zde je uvedena také odhadovaná délka krátké a rozšířené SMART samodiagn
 Tento seznam zobrazuje identifikační SMART informace o tomto disku.
 :end
 
+
 :open_devices_help:
 Jedná se o disky, které jsou nainstalovány ve tvém serveru, ale nejsou přiřazeny ani do paritně chráněného pole,  
 ani do cache poolu.
@@ -426,7 +447,7 @@ Klikni na **Hotovo**, pro opuštění této stránky.
 
 
 :info_share_assignment_help:
-Vybraný pool je dostupný pro uživatelské sdílené složky.
+Vybraný pool je dostupný pro uživatelské sdílení.
 :end
 
 
@@ -613,6 +634,7 @@ To znamená, že pokud chceš přesunout soubory systémových služeb jako Dock
 musíš tyto služby během běhu Moveru zastavit.
 :end
 
+
 :share_edit_copy_on_write_help:
 Nastav na **Ne**, pokud chceš, aby *btrfs* nastavil atribut NOCOW (No Copy-on-Write) pro tuto sdílenou složku,  
 pokud je vytvořena na souborovém systému formátovaném jako *btrfs*.  
@@ -624,13 +646,44 @@ Toto nastavení nemá žádný vliv na souborové systémy jiné než btrfs.
 Nastav na **Auto** pro standardní chování – COW bude **aktivní** pro všechny disky formátované jako *btrfs*.
 :end
 
+
 :share_edit_status_help:
 Sdílení neobsahuje *žádná* data a může být odstraněno, pokud již není potřeba.
 :end
 
+
 :share_edit_delete_help:
 Sdílení *nelze* odstranit, dokud na něm zůstávají data.  
 Pozor – počítají se i skryté soubory, viz [SMB nastavení](/Settings/SMB) → Skrýt „dot“ soubory.
+:end
+
+
+:share_edit_exclusive_access_help:
+Pokud je nastaveno na "ano", znamená to, že je sdílení namapováno přímo na pool ve stromu /mnt/user, za předpokladu že jsou splněny následující podmínky:
+
+- Primární úložiště je pool.
+- Sekundární úložiště je nastaveno na **žádné**.
+- Sdílení neexistuje na žádném jiném svazku.
+:end
+
+
+:share_edit_primary_storage_help:
+**Primární úložiště** je místo, kam se ukládají *nové soubory a složky*.  
+Pokud má primární úložiště méně než minimální volné místo, nové soubory
+a složky se uloží do **sekundárního úložiště**, pokud je nastaveno.
+
+**Důležité:** U sdílení s *exkluzivním přístupem* se nastavení minimálního volného místa ignoruje.
+:end
+
+
+:share_edit_secondary_storage_help:
+**Sekundární úložiště** slouží pro uložení nových souborů a složek, pokud není místo na primárním úložišti.
+Pokud jsou nastavena obě úložiště, soubory se přesouvají mezi nimi pomocí funkce 'mover'.
+:end
+
+
+:share_edit_mover_action_help:
+Definuje směr přesunu souborů mezi primárním a sekundárním úložištěm, pokud jsou obě nastavena.
 :end
 
 
@@ -724,6 +777,16 @@ Vyber cílová sdílení a klikni na **Zapsat**, čímž aplikuješ nastavení N
 :end
 
 
+:nfs_security_rules_help:
+Zadejte pravidlo pro každou IP adresu na samostatný řádek a ukončete jej novým řádkem.
+Nelze zadávat pravidla ve formátu IP1,IP2(...). Unraid tento formát v souboru exports nepodporuje.
+
+Výchozí pravidla pro každé NFS pravidlo jsou: async a no_subtree_check.
+
+**Poznámka:** Veřejně přístupné pravidlo je: '*(rw,sec=sys,insecure,anongid=100,anonuid=99,no_root_squash)'.
+:end
+
+
 :user_add_username_help:
 Uživatelské jméno může mít maximálně 40 znaků a musí začínat **malým písmenem** nebo podtržítkem,  
 následovat mohou **malá písmena**, číslice, podtržítka nebo pomlčky.  
@@ -734,6 +797,7 @@ Uživatelské jméno může končit znakem dolaru ($).
 :user_add_description_help:
 Maximálně 64 znaků. Znaky ampersand (&amp;), uvozovky (&quot;) a dvojtečka (:) nejsou povoleny.
 :end
+
 
 :user_add_custom_image_help:
 Obrázek bude přizpůsoben na velikost 48×48 pixelů. Maximální velikost nahrávaného obrázku je 95 kB (97 280 bajtů).
@@ -821,18 +885,22 @@ Primární NTP server. Zadej plně kvalifikovaný název domény (FQDN) nebo IP 
 Alternativní NTP server, který se použije v případě výpadku NTP serveru 1.
 :end
 
+
 :ntp_server3_help:
 Alternativní NTP server, který se použije, pokud selžou NTP servery 1 a 2.
 :end
+
 
 :ntp_server4_help:
 Alternativní NTP server, který se použije, pokud selžou NTP servery 1, 2 a 3.
 :end
 
+
 :current_time_help:
 Zadej aktuální čas. Použij formát RRRR-MM-DD HH:MM:SS.  
 Pokud je aktivní NTP, pole bude nedostupné.
 :end
+
 
 :disk_enable_autostart_help:
 Pokud zvolíš **Ano**, pole se automaticky spustí a sdílení se exportují,  
@@ -840,14 +908,17 @@ pokud je konfigurace zařízení při startu serveru správná.<br>
 Pokud zvolíš **Ne**, je nutné pole spustit ručně.
 :end
 
+
 :disk_spindown_delay_help:
 Určuje výchozí časový limit pro uspání disku po období bez aktivity (žádné I/O operace).  
 Tento výchozí čas lze přepsat pro každý jednotlivý disk v jeho vlastním nastavení.
 :end
 
+
 :disk_spinup_groups_help:
 Pokud zvolíš **Ano**, bude aktivní funkce [Spinup Groups](/Help).
 :end
+
 
 :disk_default_partition_format_help:
 Určuje typ rozvržení oddílů, které bude použito při formátování disků s kapacitou **do 2 TB včetně**.  
@@ -863,22 +934,35 @@ Toto je požadováno pro správnou podporu tzv. *Advanced Format* disků.
 Neměň toto nastavení, pokud nemáš specifické důvody mimo běžný standard **MBR: zarovnané na 4K**.
 :end
 
+
 :disk_default_file_system_help:
 Určuje výchozí formát souborového systému, který bude použit při formátování *nepřipojitelného* disku v poli.
 
 Výchozí souborový systém pro jednozařízeníový nebo víczařízeníový cache je vždy Btrfs.
 :end
 
+
 :disk_shutdown_timeout_help:
 Určuje, jak dlouho se čeká na *čisté* vypnutí systému před tím, než se vynutí vypnutí,  
 pokud bylo spuštěno ruční vypnutí serveru.
 :end
+
 
 :disk_tunable_poll_attributes_help:
 Určuje interval dotazování na SMART atributy disku (v sekundách).  
 Hodnota 0 dotazování SMART deaktivuje (nedoporučuje se).
 :end
 
+
+:disk_tunable_enable_ncq_help:
+Pokud je nastaveno na **Ne**, bude *Native Command Queuing* (NCQ) deaktivováno pro všechna zařízení pole, která NCQ podporují.
+
+**Auto** ponechá aktuální nastavení každého zařízení.
+
+Poznámka: Po výběru Auto je nutné provést restart, aby se nastavení projevilo.
+:end
+
+
 :disk_tunable_nr_requests_help:
 Určuje hodnotu `nr_requests` ovladače zařízení pro všechny disky v poli.
 
@@ -888,14 +972,6 @@ Poznámka: Pokud toto pole zůstane prázdné a klikneš na **Použít**, nastav
 Po výběru Auto je nutné provést restart, aby se nastavení projevilo.
 :end
 
-:disk_tunable_nr_requests_help:
-Určuje hodnotu `nr_requests` ovladače zařízení pro všechny disky v poli.
-
-**Auto** ponechá aktuální nastavení každého disku tak, jak je.
-
-Poznámka: Pokud toto pole zůstane prázdné a klikneš na **Použít**, nastaví se výchozí hodnota.  
-Po výběru Auto je nutné provést restart, aby se nastavení projevilo.
-:end
 
 :disk_tunable_scheduler_help:
 Určuje, jaký plánovač I/O operací jádra se použije pro všechny disky v poli.
@@ -905,6 +981,7 @@ Určuje, jaký plánovač I/O operací jádra se použije pro všechny disky v p
 Poznámka: Po výběru Auto je nutné provést restart, aby se nastavení projevilo.
 :end
 
+
 :disk_tunable_md_num_stripes_help:
 Určuje velikost *stripe poolu* v počtu *stripe* bloků. Stripe je datová struktura,  
 která umožňuje paralelní 4K čtení/zápis a je nezbytná pro pole chráněné paritou.
@@ -913,12 +990,14 @@ Poznámka: Pokud toto pole zůstane prázdné a klikneš na **Použít**, nastav
 Změna se projeví po restartu.
 :end
 
+
 :disk_tunable_md_queue_limit_help:
 Číslo v rozsahu [1–100], které určuje maximální procentuální zatížení stripe poolu.
 
 Poznámka: Pokud toto pole zůstane prázdné a klikneš na **Použít**, nastaví se výchozí hodnota.  
 Změna se projeví po restartu.
 :end
+
 
 :disk_tunable_md_sync_limit_help:
 Číslo v rozsahu [0–100], které určuje maximální procentuální zatížení stripe poolu  
@@ -928,11 +1007,13 @@ Poznámka: Pokud toto pole zůstane prázdné a klikneš na **Použít**, nastav
 Změna se projeví po restartu.
 :end
 
+
 :disk_tunable_md_write_method_help:
 Určuje metodu zápisu používanou při psaní na aktivní disk v poli chráněném paritou.
 
 *Auto* automaticky zvolí metodu `read/modify/write`.
 :end
+
 
 :disk_default_warning_utilization_help:
 *Upozornění na vytížení disku* nastavuje výchozí varovný práh pro zaplnění všech disků.  
@@ -943,12 +1024,14 @@ Pokud je varovný práh roven nebo vyšší než kritický, budou zobrazována p
 Hodnota 0 varovný práh (a tedy i upozornění) deaktivuje.
 :end
 
+
 :disk_default_critical_utilization_help:
 *Kritické vytížení disku* nastavuje kritický výchozí práh zaplnění pro všechny disky.  
 Je-li překročen, zobrazí se kritické varování.
 
 Hodnota 0 tento kritický práh (a oznámení) deaktivuje.
 :end
+
 
 :disk_default_warning_temperature_help:
 *Varování na teplotu disku* nastavuje výchozí varovný práh pro teplotu všech disků.  
@@ -957,12 +1040,28 @@ Je-li překročen, zobrazí se varovná zpráva.
 Hodnota 0 varovný práh (včetně upozornění) deaktivuje.
 :end
 
+
 :disk_default_critical_temperature_help:
 *Kritická teplota disku* nastavuje výchozí kritický práh pro teplotu všech disků.  
 Překročení této hodnoty spustí kritické varování.
 
 Hodnota 0 tento kritický práh (a oznámení) deaktivuje.
 :end
+
+
+:ssd_default_warning_temperature_help:
+*Nastavení varovné teploty SSD* určuje výchozí hranici pro varování ohledně teploty všech SSD zařízení. Překročení této hodnoty způsobí zobrazení varování.
+
+Hodnota nula tuto funkci (včetně upozornění) vypne.
+:end
+
+
+:ssd_default_critical_temperature_help:
+*Kritická teplota disku* určuje výchozí kritickou hodnotu teploty všech SSD zařízení. Překročení této hodnoty způsobí zobrazení výstrahy.
+
+Hodnota nula tuto funkci (včetně upozornění) vypne.
+:end
+
 
 :disk_default_smart_notification_help:
 SMART oznámení jsou generována buď při zvyšující se hodnotě RAW atributu,  
@@ -972,6 +1071,7 @@ Tato sekce určuje globální nastavení pro všechny disky.
 Je možné nastavit hodnoty i individuálně pro jednotlivé disky.
 :end
 
+
 :disk_default_smart_tolerance_help:
 Lze nastavit úroveň tolerance, která zabrání tomu, aby malé změny vyvolávaly oznámení.  
 Příliš vysoká tolerance ale může způsobit, že kritické změny zůstanou bez upozornění.
@@ -979,6 +1079,7 @@ Příliš vysoká tolerance ale může způsobit, že kritické změny zůstanou
 Tato sekce určuje globální nastavení pro všechny disky.  
 Je možné nastavit hodnoty i individuálně pro jednotlivé disky.
 :end
+
 
 :disk_default_smart_controller_help:
 Ve výchozím nastavení smartctl automaticky vybírá řadič pro čtení SMART informací.  
@@ -989,6 +1090,7 @@ Potřebné údaje nalezneš v dokumentaci výrobce.
 Tato sekce určuje globální nastavení pro všechny disky.  
 Je možné nastavit hodnoty i individuálně pro jednotlivé disky.
 :end
+
 
 :disk_default_smart_attribute_help:
 Uživatel může povolit nebo zakázat oznámení pro vybrané SMART atributy.  
@@ -1001,6 +1103,7 @@ Buď ale opatrný – nesprávný výběr může způsobit zahlcení oznámením
 Tato sekce určuje globální nastavení pro všechny disky.  
 Je možné nastavit hodnoty i individuálně pro jednotlivé disky.
 :end
+
 
 :docker_repositories_help:
 Použij toto pole pro přidání vlastních repozitářů šablon.  
@@ -1018,12 +1121,39 @@ do kterého bude Docker nainstalován.
 Po prvním spuštění se Docker při každém zapnutí pole automaticky spustí.
 :end
 
+
+:docker_readmore_help:
+Některé systémy s velkým počtem Docker kontejnerů mohou zaznamenat zpomalení při použití hlavní Docker stránky.
+
+Nastavením na "Ne" může dojít ke zrychlení celkové odezvy stránek tím, že se vypne použití knihovny readmore-js.
+Místo šipek indikujících další data (např. mapování portů a svazků) se zobrazí veškerá data najednou.
+:end
+
+
+:docker_timeout_help:
+Čas v sekundách, po který má kontejner prostor pro korektní ukončení, než bude vynuceně zastaven.
+:end
+
+
+:docker_pid_limit_help:
+Nastavte limit PID pro Docker kontejner. Výchozí hodnota je 2048. Hodnota nula znamená neomezeně (nedoporučeno).
+:end
+
+
+:docker_vdisk_type_help:
+Zvolte, kde má být uchováván trvalý stav Dockera.
+
+Může to být obrazový soubor s určenou velikostí nebo vyhrazená složka.
+:end
+
+
 :docker_vdisk_size_help:
 Pokud systém musí vytvořit nový image soubor Dockeru, použije se tato výchozí velikost (v GB).
 
 Chceš-li změnit velikost již existujícího image, zadej zde novou velikost.  
 Při příštím spuštění Dockeru se image rozšíří (zmenšení není možné).
 :end
+
 
 :docker_vdisk_location_help:
 Musíš zadat cestu k image souboru Dockeru.  
@@ -1034,6 +1164,24 @@ Název image souboru musí končit příponou `.img`. Jinak nebude vstup akcepto
 Doporučujeme uložit image mimo pole – například do cache poolu.  
 Pro nejlepší výkon se doporučuje použití SSD.
 :end
+
+
+:docker_vdisk_directory_help:
+Musíte zadat složku pro Docker. Systém ji automaticky vytvoří při prvním spuštění Docker služby.
+
+Doporučuje se vytvořit složku ve sdílení, které je umístěné na Cache poolu (nastavení: cache=Only). Pro nejlepší výkon jsou vhodná SSD zařízení.
+:end
+
+
+:docker_storage_driver_help:
+overlay2 (výchozí): Použije jako úložiště Dockeru ovladač overlay2 bez ohledu na použitý souborový systém.
+
+native: Použije nativní úložný ovladač podle vašeho systému (XFS: overlay2 | ZFS: zfs | BTRFS: btrfs).
+
+POZOR: Změna úložného ovladače u existující instalace Dockeru není možná – je nutné smazat složku Dockeru, změnit typ úložiště a znovu nainstalovat kontejnery.
+Před změnou doporučujeme pořídit snímek obrazovky s nastaveními kontejnerů. Po změně přidávejte kontejnery pomocí tlačítka Přidat kontejner a vyberte je ze seznamu.
+:end
+
 
 :docker_appdata_location_help:
 Můžeš zadat složku, do které budou automaticky ukládány konfigurační podsložky pro jednotlivé Docker aplikace (odpovídající připojenému svazku `/config`).
@@ -1047,29 +1195,47 @@ Toto nastavení se použije pouze při přidávání nových Docker aplikací.
 Změna nemá vliv na již existující aplikace.
 :end
 
+
 :docker_log_rotation_help:
 Ve výchozím nastavení je rotace logu vypnutá a generuje se jediný log soubor s neomezenou velikostí.
 
 Aktivací rotace logu můžeš omezit velikost jednotlivých souborů a určit, kolik starších verzí se má uchovávat.
 :end
 
+
 :docker_log_file_size_help:
 Určuje maximální velikost jednoho log souboru.  
 Po jejím překročení se spustí rotace logu.
 :end
 
+
 :docker_log_file_number_help:
 Určuje, kolik log souborů se uchová během rotace logů.
 :end
+
 
 :docker_authoring_mode_help:
 Pokud nastavíš **Ano**, při vytváření/upravování kontejnerů se v rozhraní zobrazí další pole pro tvorbu šablon.
 :end
 
+
+:docker_custom_network_type_help:
+Typ **ipvlan** je nejlepší, pokud není nutné připojení k fyzické síti.
+Přečtěte si prosím <u><a style="color:blue" href='https://docs.docker.com/network/ipvlan/' target='_blank'>tento článek</a></u> o implementaci ipvlan sítě.<br>
+
+Typ **macvlan** umožňuje přímé připojení do fyzické sítě.
+Přečtěte si prosím <u><a style="color:blue" href='https://docs.docker.com/network/macvlan/' target='_blank'>tento článek</a></u> o implementaci macvlan sítě.<br>
+
+**Poznámka:** Docker používá vlastní DHCP službu, což odpovídá nastavení **DHCP Pool**.
+Pokud používáte více serverů s Unraid, musí mít každý server jiný rozsah **DHCP Pool** pro Docker.
+:end
+
+
 :docker_custom_network_access_help:
 Povolí přímou komunikaci mezi hostem a kontejnery přes vlastní (macvlan) síť.<br>  
 Tato možnost je ve výchozím nastavení vypnutá.
 :end
+
 
 :docker_user_defined_network_help:
 Uživatelem vytvořené sítě jsou ty, které byly vytvořeny mimo webové rozhraní.<br>  
@@ -1079,11 +1245,13 @@ Změnou tohoto nastavení je možné vlastní sítě povolit.
 Je však na odpovědnosti uživatele zajistit, že budou fungovat správně a bez konfliktů.
 :end
 
+
 :docker_include_interface_vlan_ipv4_help:
 Zahrne (výchozí) nebo vyloučí výše uvedená rozhraní nebo VLAN jako vlastní síť pro Docker.
 
 Zadej rozsah adres (pool) v rámci každé přiřazené podsítě, který bude použit pro DHCPv4 přidělování adres Dockerem. Např. 192.168.1.128/25
 :end
+
 
 :docker_exclude_interface_vlan_ipv4_help:
 Zahrne nebo vyloučí vlastní sítě Dockeru (výchozí).
@@ -1091,11 +1259,13 @@ Zahrne nebo vyloučí vlastní sítě Dockeru (výchozí).
 Zadej rozsah adres (pool) v rámci každé přiřazené podsítě, který bude použit pro DHCPv4 přidělování adres Dockerem. Např. 192.168.1.128/25
 :end
 
+
 :docker_include_interface_vlan_ipv6_help:
 Zahrne nebo vyloučí vlastní rozhraní a VLAN pro Docker (výchozí je zahrnout).
 
 Zadej rozsah adres (pool) v rámci každé přiřazené podsítě, který bude použit pro DHCPv6 přidělování adres Dockerem. Např. 2a02:abcd:9ef5:100:1::/72
 :end
+
 
 :docker_exclude_interface_vlan_ipv6_help:
 Zahrne nebo vyloučí vlastní rozhraní a VLAN pro Docker (výchozí je zahrnout).
@@ -1103,32 +1273,44 @@ Zahrne nebo vyloučí vlastní rozhraní a VLAN pro Docker (výchozí je zahrnou
 Zadej rozsah adres (pool) v rámci každé přiřazené podsítě, který bude použit pro DHCPv6 přidělování adres Dockerem. Např. 2a02:abcd:9ef5:100:1::/72
 :end
 
+
 :docker_version_help:
 Toto je aktuálně používaná verze Dockeru.
 :end
+
 
 :docker_vdisk_location_active_help:
 Toto je umístění image souboru Dockeru.
 :end
 
+
+:docker_storage_driver_active_help:
+Zobrazí aktivní úložný ovladač používaný Dockerem.
+:end
+
+
 :docker_appdata_location_active_help:
 Toto je umístění uživatelských souborů pro Docker.
 :end
+
 
 :docker_log_rotation_active_help:
 Ve výchozím nastavení je generován log soubor bez omezení velikosti.  
 Pokud je aktivní rotace logu, je omezena velikost a počet uchovaných log souborů.
 :end
 
+
 :docker_custom_network_active_help:
 Umožňuje přímou komunikaci mezi hostem a kontejnery přes vlastní (Macvlan) síť.<br>  
 Ve výchozím nastavení je tato možnost zakázána.
 :end
 
+
 :docker_user_defined_network_active_help:
 Zobrazuje, zda se používají sítě vytvořené mimo webové rozhraní Dockeru.  
 Pokud ano, budou tyto *vlastní sítě* dostupné v rozbalovací nabídce *Typ sítě*.
 :end
+
 
 :docker_scrub_help:
 **Scrub** spustí příkaz *btrfs scrub*, který prověří souborový systém.
@@ -1137,9 +1319,11 @@ Pokud je nutná oprava, zaškrtni možnost *Opravit chyby systému souborů* a s
 Tím umožníš nástroji *btrfs scrub* opravit nalezené chyby.
 :end
 
+
 :docker_cancel_help:
 **Zrušit** přeruší probíhající operaci scrub.
 :end
+
 
 :id_server_name_help:
 Síťová identita tvého serveru – také známá jako *hostname* nebo *krátké jméno hostitele*.  
@@ -1149,41 +1333,50 @@ Používej pouze alfanumerické znaky („A–Z“, „a–z“, „0–9“), p
 První a poslední znak musí být alfanumerický.
 :end
 
+
 :id_description_help:
 Zobrazuje se jako textové pole vedle serveru v Průzkumníku Windows nebo ve Finderu (macOS).
 :end
 
+
 :id_model_help:
 Zobrazí modelové číslo serveru.
 :end
+
 
 :mgmt_start_page_help:
 Určuje stránku, která se otevře při spuštění webového rozhraní.  
 Výchozí stránka je *Main*.
 :end
 
+
 :mgmt_use_telnet_help:
 Ve výchozím nastavení je přístup přes TELNET povolen.  
 TELNET je však nezabezpečený způsob přístupu přes příkazovou řádku – doporučujeme místo něj používat SSH a TELNET vypnout.
 :end
 
+
 :mgmt_telnet_port_help:
 Zadej port pro TELNET připojení. Výchozí hodnota je 23.
 :end
+
 
 :mgmt_use_ssh_help:
 SSH je ve výchozím nastavení povoleno a poskytuje bezpečný způsob přístupu přes příkazovou řádku.  
 Pokud systém nemá vygenerované SSH klíče, vytvoří je při spuštění serveru a uloží do */config/ssh*.
 :end
 
+
 :mgmt_ssh_port_help:
 Zadej port pro SSH připojení. Výchozí hodnota je 22.
 :end
+
 
 :mgmt_use_upnp_help:
 Povolí (výchozí) nebo zakáže funkci UPnP na serveru.  
 Tato funkce umožňuje automatické přesměrování portů na routeru – musí být povolena i přímo v nastavení routeru.
 :end
+
 
 :mgmt_use_ssl_tls_help:
 Určuje, jak bude webové rozhraní reagovat na HTTP a/nebo HTTPS požadavky.
@@ -1226,17 +1419,37 @@ Podle použitého certifikátu:
 `config/ssl/certs/<server-name>_unraid_bundle.pem` => Ne
 :end
 
+
 :mgmt_http_port_help:
 Zadej port pro HTTP připojení. Výchozí hodnota je 80.
 :end
+
 
 :mgmt_https_port_help:
 Zadej port pro HTTPS připojení. Výchozí hodnota je 443.
 :end
 
+
 :mgmt_local_tld_help:
 Zadej svou vlastní top-level doménu (TLD). Může zůstat prázdné.
 :end
+
+
+:mgmt_local_access_urls_help:
+Lokální přístupové URL adresy uvedené výše vycházejí z aktuálního nastavení.
+Pro úpravu URL nebo přesměrování viz nápověda k položce "Použít SSL/TLS".
+:end
+
+
+:mgmt_wg_access_urls_help:
+Tyto adresy URL budou fungovat pouze při připojení přes příslušný WireGuard tunel, jak je nastaveno v ***Nastavení > VPN Manager***.
+:end
+
+
+:mgmt_tailscale_access_urls_help:
+Tyto adresy URL budou fungovat pouze při připojení přes odpovídající Tailscale Tailnet.
+:end
+
 
 :mgmt_certificate_expiration_help:
 **Vystavit** – použije se pro získání *bezplatného* SSL certifikátu od [Let's Encrypt](https://letsencrypt.org/) a jeho nahrání.  
@@ -1275,10 +1488,12 @@ Většina běžných domácích routerů tuto ochranu nemá. Pokud tvůj router 
 Pokud nic z toho nefunguje, můžeš upravit soubor *hosts* na svém počítači a přesměrovat dotazy na FQDN unraid.net přímo na lokální IP adresu serveru.
 :end
 
+
 :ftp_server_help:
 Povol nebo zakaž FTP službu na pozadí. FTP server je ve výchozím nastavení povolen.  
 Toto nastavení není trvalé – po restartu serveru se vrátí na výchozí hodnotu.
 :end
+
 
 :ftp_users_help:
 Zadej uživatelská jména, která mají mít přístup k FTP serveru (oddělená mezerami).  
@@ -1286,6 +1501,7 @@ Chceš-li zakázat přístup všem uživatelům, nech pole prázdné.
 
 **Poznámka:** Pro předejití problémům **nepřidávej** uživatele `root`.
 :end
+
 
 :ftp_overview_help:
 ### Přehled
@@ -1295,6 +1511,7 @@ Unraid obsahuje oblíbený FTP server `vsftpd`. Konfigurace je aktuálně velmi 
 *plná práva pro čtení/zápis/smazání* na celém serveru – používej s opatrností.
 :end
 
+
 :smb_enable_help:
 Pokud nastavíš **Ano (Pracovní skupina)**, aktivuje se SMB protokol (Windows Networking),  
 včetně detekce počítačů ve Windows síti.
@@ -1302,12 +1519,21 @@ včetně detekce počítačů ve Windows síti.
 Pokud nastavíš **Ano (Active Directory)**, aktivuje se integrace s Active Directory.
 :end
 
+
 :smb_hide_files_help:
 Pokud nastavíš **Ano**, budou všechny soubory začínající tečkou (např. `.file`) označeny jako *skryté*  
 a ve Windows se nezobrazí – pokud není zapnuto zobrazení skrytých souborů.
 
 Pokud nastavíš **Ne**, budou tyto soubory zobrazovány běžně jako ostatní.
 :end
+
+
+:smb_multi_channel_help:
+Pokud je nastaveno na *Ano*, aktivuje se podpora *SMB Multi Channel* na serveru. Podle
+[microsoft](https://docs.microsoft.com/en-us/azure-stack/hci/manage/manage-smb-multichannel):
+„SMB Multichannel umožňuje souborovým serverům používat více síťových spojení současně.“
+:end
+
 
 :smb_enhanced_macos_help:
 Pokud nastavíš **Ano**, zlepší se kompatibilita SMB pro macOS.  
@@ -1317,25 +1543,30 @@ Může ale způsobit problémy ve Windows.
 Více informací najdeš na [VFS_FRUIT MAN PAGE](https://www.mankier.com/8/vfs_fruit).
 :end
 
+
 :smb_enable_netbios_help:
 Pokud nastavíš **Ano**, povolí se NetBIOS. To zároveň aktivuje podporu SMBv1.  
 Pokud zakážeš, musí klienti podporovat SMBv2 nebo vyšší.
 :end
+
 
 :smb_enable_wsd_help:
 Pokud nastavíš **Ano**, povolí se WSD (WS-Discovery).  
 Vypínej pouze pokud používáš síť založenou na SMBv1.
 :end
 
+
 :smb_wsd_options_help:
 Toto pole bude přidáno ke spouštěcím možnostem WSD služby.  
 Ponech prázdné, pokud ti support nedoporučil jinak.
 :end
 
+
 :smb_extra_conf_help:
 Na této stránce můžeš upravit obsah souboru `smb-extra.conf`.  
 Změny se projeví až po restartu Samba služby.
 :end
+
 
 :smb_extra_button_help:
 Klikni na **Použít**, pro uložení provedených změn.  
@@ -1343,18 +1574,22 @@ Klikni na **Reset**, pro zrušení změn (před uložením).
 Klikni na **Hotovo**, pro návrat zpět.
 :end
 
+
 :smb_workgroup_help:
 Nastaví název pracovní skupiny. Obvykle „WORKGROUP“.
 :end
+
 
 :smb_local_master_help:
 Pokud nastavíš **Ano**, bude se server účastnit volby lokálního správce (Local Master Browser).  
 Pokud nejsou přítomny jiné servery, server tuto roli převezme a bude zasílat aktualizace klientům.
 :end
 
+
 :nfs_enable_help:
 Pokud nastavíš **Ano**, aktivuje se NFS protokol.
 :end
+
 
 :nfs_tunable_fuse_remember_help:
 Pokud je aktivní NFS, toto nastavení (*fuse_remember*) může pomoci snížit nebo vyřešit chyby „NFS Stale File Handles“,  
@@ -1373,6 +1608,24 @@ Upozornění: Každý název souboru/složky uložený v paměti zabírá cca 10
 To může vést k nedostatku paměti v závislosti na velikosti stromu souborů a velikosti RAM.
 :end
 
+
+:nfs_server_max_protocol_help:
+Vyberte nejvyšší verzi NFS protokolu, kterou má váš Unraid server podporovat.
+:end
+
+
+:nfs_client_max_protocol_help:
+Vyberte maximální verzi NFS protokolu, kterou chcete použít pro připojení vzdálených sdílení.
+:end
+
+
+:nfs_threads_help:
+Nastavte počet vláken pro NFS. Pro lehké NFS zatížení postačí 8. Pro vyšší zátěž může být vhodné navýšit počet vláken.
+
+Pokud nebude vláken dostatek, může služba NFS spadnout.
+:end
+
+
 :shares_enable_disk_help:
 Pokud je nastaveno na **Ne**, nebude exportována žádná sdílená složka jednotlivých disků.
 
@@ -1383,14 +1636,17 @@ Může dojít ke ztrátě dat – tento postup není podporován.
 Pokud je nastaveno na **Auto**, budou exportovány pouze ty diskové složky, které nejsou součástí žádné uživatelské sdílené složky.
 :end
 
+
 :shares_enable_shares_help:
 Pokud je nastaveno na **Ano**, bude aktivována funkce *Uživatelské sdílené složky*.
 :end
+
 
 :shares_included_disks_help:
 Toto nastavení určuje seznam disků z pole, které mohou být použity v rámci sdílené složky.  
 Pokud žádný disk nezvolíš, budou použity **všechny** disky pole.
 :end
+
 
 :shares_excluded_disks_help:
 Určuje seznam disků, které mají být z této sdílené složky *vyloučeny*.  
@@ -1399,6 +1655,20 @@ Nech všechny disky nezaškrtnuté, pokud nechceš vyloučit žádný.
 **Poznámka:** Každá sdílená složka může mít vlastní seznam povolených a vyloučených disků,  
 který doplňuje toto globální nastavení.
 :end
+
+
+:shares_exclusive_shares_help:
+Pokud je nastaveno na *Ano*, adresáře sdílení pod /mnt/user budou symlinky na odpovídající složku na úložišti,
+za předpokladu že jsou splněny následující podmínky:
+
+* Primární úložiště je nastaveno na pool.
+* Sekundární úložiště je nastaveno na **žádné**.
+* Sdílení existuje pouze na jednom svazku.
+* Sdílení **není** exportováno přes NFS.
+
+Výhodou *exkluzivních* sdílení je, že se obchází FUSE vrstva, což může výrazně zvýšit I/O výkon.
+:end
+
 
 :shares_tunable_hard_links_help:
 Pokud nastavíš **Ano**, budou podporovány *hardlinky* (link()).
@@ -1411,12 +1681,19 @@ Poznámky:
 * Bez ohledu na nastavení bude **Mover** správně zpracovávat všechny nalezené hardlinky.
 :end
 
+
 :shares_tunable_direct_io_help:
 **Experimentální:** Pokud nastavíš **Ano**, bude souborový systém sdílených složek připojen s volbou FUSE *direct_io*.  
 To může zlepšit rychlost zápisu, ale může zpomalit čtení.
 
 Hodnota **Auto** znamená stejné jako **Ne**.
 :end
+
+
+:shares_fuse_file_descriptors_io_help:
+Nastavte počet FUSE deskriptorů souborů. Pokud dochází k vysoké aktivitě se soubory v poli, může být nutné tuto hodnotu navýšit.
+:end
+
 
 :syslog_local_server_help:
 Server bude fungovat jako systémový logovací server a může přijímat zprávy z jiných zařízení.  
@@ -1425,10 +1702,21 @@ Může naslouchat na UDP, TCP nebo obojím, a to na specifikovaném portu.
 Logy budou ukládány odděleně podle IP adresy – každé zařízení dostane svůj vlastní log soubor.
 :end
 
+
 :syslog_local_folder_help:
 Vyber složku (sdílenou složku), kam se budou ukládat log soubory.  
 Doporučuje se složka umístěná na cache disku, aby se zabránilo spouštění disků pole.
 :end
+
+
+:syslog_remote_system_identifier_help:
+Zvolte identifikátor pro vzdálený systém (používá se v názvu log souboru).
+
+* "IP adresa" použije IPv4 nebo IPv6 adresu odesílajícího systému.
+* "Hostname (z log zprávy)" použije hostname obsažený v každé syslog zprávě.
+* "Hostname (z DNS)" provede reverzní DNS záznam pro IP odesílatele a použije výsledek.
+:end
+
 
 :syslog_local_rotation_help:
 Ve výchozím nastavení je rotace logu vypnutá a vytváří se jeden soubor s neomezenou velikostí.
@@ -1436,19 +1724,23 @@ Ve výchozím nastavení je rotace logu vypnutá a vytváří se jeden soubor s 
 Aktivací rotace můžeš nastavit maximální velikost logu a počet archivovaných verzí.
 :end
 
+
 :syslog_local_file_size_help:
 Nastav maximální velikost jednoho log souboru.  
 Při jejím překročení se provede rotace.
 :end
 
+
 :syslog_local_file_number_help:
 Určuje počet starších verzí log souborů, které budou uchovány při rotaci.
 :end
+
 
 :syslog_remote_server_help:
 Zadej název nebo IP adresu vzdáleného systémového log serveru.  
 Na tento server budou odesílány kopie všech systémových log zpráv.
 :end
+
 
 :syslog_mirror_flash_help:
 Toto nastavení je ve výchozím stavu **Ne** a mělo by být používáno s opatrností,  
@@ -1458,13 +1750,24 @@ Přepni na **Ano** pouze pokud je potřeba detailní diagnostika, a není možn�
 Kopie logu se uloží do složky **logs** na USB flash disku.
 :end
 
+
+:syslog_shutdown_flash_help:
+Toto nastavení je ve výchozím stavu "ANO" a umožňuje systému zkopírovat systémový log na USB zařízení při vypnutí nebo restartu.
+
+Po restartu bude předchozí log dostupný v Nástroje > Syslog > syslog-previous;
+bude také součástí diagnostických dat jako logs/syslog-previous.txt.
+:end
+
+
 :confirm_reboot_help:
 Určuje, zda se má zobrazit potvrzení před restartováním nebo vypnutím serveru.
 :end
 
+
 :confirm_array_stop_help:
 Určuje, zda se má zobrazit potvrzení před zastavením pole.
 :end
+
 
 :display_settings_help:
 Toto nastavení ovlivňuje, jak jsou prvky zobrazeny na obrazovce.  
@@ -1473,9 +1776,42 @@ Lze použít pro úpravu vizuálních efektů dle tvých preferencí.
 Neboj se experimentovat – tato nastavení ovlivňují pouze vzhled rozhraní.
 :end
 
+
+:display_width_help:
+**Boxed** je původní nastavení, které omezuje šířku obsahu na maximálně 1920 pixelů.
+
+**Neomezeně** umožňuje obsahu využít veškerou dostupnou šířku – užitečné pro velmi široké obrazovky.
+:end
+
+
 :display_font_size_help:
 Toto nastavení se vztahuje pouze na konkrétní zařízení.
 :end
+
+
+:display_tty_size_help:
+Mění velikost písma v terminálových oknech.
+:end
+
+
+:display_page_view_help:
+Určuje způsob zobrazení některých stránek. V režimu **Záložky** se jednotlivé sekce zobrazují v samostatných panelech,
+zatímco v režimu **Bez záložek** se všechny sekce zobrazují pod sebou.
+:end
+
+
+:display_users_menu_help:
+Menu *Uživatelé* může být součástí horní lišty nebo nabídky *Nastavení*.
+Můžete jej přesunout, pokud není v horní liště dostatek místa pro zobrazení všech nabídek.
+:end
+
+
+:display_listing_height_help:
+**Automaticky** : dlouhé výpisy se zobrazí celé a uživatel musí posouvat celou stránku.
+
+**Pevně** : dlouhé výpisy se zobrazí v okně s pevnou výškou, uživatel může posouvat jen toto okno.
+:end
+
 
 :display_wwn_device_id_help:
 WWN (World Wide Name) je jedinečný identifikátor disků připojených přes SAS.
@@ -1485,20 +1821,24 @@ Pokud je nastaveno **Vypnuto**, nebude WWN připojen k identifikaci disku.
 Při volbě **Automaticky** se WWN zobrazí jako součást identifikace disku.
 :end
 
+
 :display_custom_text_color_help:
 Umožňuje přepsat výchozí barvu textu v horním panelu.  
 Lze použít k doladění kontrastu textu vůči vlastnímu pozadí.
 :end
+
 
 :display_custom_background_color_help:
 Umožňuje přepsat výchozí barvu pozadí horního panelu.  
 Lze ji použít k doladění vzhledu s ohledem na vlastní textovou barvu.
 :end
 
+
 :display_custom_banner_help:
 Obrázek bude přizpůsoben na velikost 1920×90 pixelů.  
 Maximální velikost souboru pro nahrání je 512 kB (524 288 bajtů).
 :end
+
 
 :display_temperature_unit_help:
 Nastavuje jednotky teploty používané pro prahové hodnoty disků.  
@@ -1507,14 +1847,27 @@ Při změně jednotky bude příslušně upravena i nastavená teplotní hodnota
 Ujistěte se, že všechny nové hodnoty odpovídají zvoleným jednotkám.
 :end
 
+
+:display_favorites_enabled_help:
+Povolí podporu oblíbených položek. Pokud je nastaveno na "Ne", ikona srdce pro přidání nebude zobrazena. Pokud již nějaké oblíbené existují, záložka a uložené možnosti zůstanou funkční, dokud nebudou odstraněny.
+:end
+
+
 :vms_enable_help:
 Při vypnutí správce VM se systém nejprve pokusí všechny běžící virtuální stroje korektně vypnout.  
 Po 60 sekundách bude vypnutí zbývajících strojů vynuceno.
 :end
 
+
+:vms_disable_help:
+Zabrání automatickému spuštění nebo ručnímu spuštění VMs při startu správce VM nebo přes GUI. Pokud se o to pokusíte, zobrazí se chybová hláška.
+:end
+
+
 :vms_libvirt_volume_help:
 Určuje umístění svazku libvirt.
 :end
+
 
 :vms_libvirt_vdisk_size_help:
 Při vytvoření nové libvirt image bude použita zde zadaná výchozí velikost (v GB).
@@ -1523,18 +1876,22 @@ Chcete-li změnit velikost stávajícího souboru, zadejte novou hodnotu.
 Při příštím spuštění služby libvirt bude image zvětšena (zmenšení není možné).
 :end
 
+
 :vms_libvirt_location_help:
 Zadejte umístění image souboru libvirt.  
 Soubor bude automaticky vytvořen při prvním spuštění služby libvirt.
 :end
 
+
 :vms_libvirt_storage_help:
 Zadejte sdílenou složku, která obsahuje podsložky pro všechny vaše virtuální disky (vDisks).
 :end
 
+
 :vms_libvirt_iso_storage_help:
 Zadejte sdílenou složku, která obsahuje instalační ISO obrazy operačních systémů.
 :end
+
 
 :vms_virtio_driver_help:
 Zadejte ISO obraz s ovladači VirtIO pro Windows (poskytuje Fedora Project).  
@@ -1546,15 +1903,55 @@ a přejděte na virtuální CD-ROM. Vyberte složku odpovídající vaší verzi
 i pokud máte systém založený na Intel. Vyberte všechny tři ovladače a pokračujte instalací.
 :end
 
+
+:vms_network_source_help:
+Vyberte síť, kterou chcete používat jako výchozí pro vaše virtuální stroje.
+Můžete zvolit mezi **'bridge'** vytvořenými v nastavení sítě nebo
+**'libvirt'** vytvořenou pomocí příkazu `virsh` v terminálu.
+Bridge **'virbr0'** a související virtuální síť **'default'** jsou
+vytvořeny službou libvirt.  
+Obě varianty používají NAT (překlad síťových adres) a fungují jako DHCP server pro přidělování IP adres virtuálním strojům.
+Další možnosti lze nastavit buď v síťovém nastavení pro bridge, nebo pomocí `virsh` příkazů pro libvirt sítě.
+
+**Pokud si nejste jisti, zvolte 'virbr0' – doporučené výchozí nastavení Unraid.**
+
+**DŮLEŽITÉ:** Ani Libvirt, ani Unraid automaticky nepřipojí rozhraní přiřazené k libvirt síti.
+Před použitím libvirt sítě přejděte do Nastavení -> Síťové nastavení a v případě potřeby rozhraní ručně aktivujte.
+:end
+
+
 :vms_host_shutdown_help:
 Určuje, jaká akce se má provést s běžícími VM při vypnutí serveru.  
 Při volbě **Uspat** se VM pokusí přejít do režimu spánku (pokud je podporován), jinak se provede vypnutí.
 :end
 
+
 :vms_shutdown_timeout_help:
 Určuje, jak dlouho bude server čekat na bezpečné vypnutí VM před vynucením ukončení.  
 **Doporučení:** Vypínejte VM přímo z jejich operačního systému.
 :end
+
+
+:vms_console_help:
+Slouží k nastavení možností konzole v kontextové nabídce. Web zobrazí pouze vestavěné webové klienty (VNC a SPICE),
+Remote Viewer zobrazí pouze možnost Remote Viewer. Obě možnosti zobrazí obě varianty.
+:end
+
+
+:vms_rdpopt_help:
+Přidá možnost nabídky pro spuštění RDP. Bude stažen RDP soubor. V prohlížeči je nutné nastavit otevření po stažení.
+:end
+
+
+:vms_usage_help:
+Zobrazí metriky CPU (host a guest), paměť, diskové I/O a síťové I/O.
+:end
+
+
+:vms_usage_timer_help:
+Interval v sekundách pro obnovu metrik.
+:end
+
 
 :vms_acs_override_help:
 Volba **Vynutit ACS** umožňuje izolaci PCIe zařízení pro passthrough.  
@@ -1566,6 +1963,7 @@ Po změně nastavení je nutný restart.
 Navštivte [fórum Lime Technology](https://forums.unraid.net/forum/51-vm-engine-kvm) pro více informací.
 :end
 
+
 :vms_vfio_interupts_help:
 Pokud vaše zařízení nepodporuje přemapování přerušení (interrupts), můžete povolit *nespolehlivé přerušení*.
 
@@ -1575,10 +1973,12 @@ Po změně je nutný restart.
 Podrobnosti najdete na [fóru Lime Technology](https://forums.unraid.net/forum/51-vm-engine-kvm).
 :end
 
+
 :vms_libvirt_log_help:
 Zobrazit libvirt log:  
 <a onclick="openTerminal('log','libvirt','libvirt/libvirtd.log')">Zobrazit libvirtd.log</a>
 :end
+
 
 :vms_scrub_help:
 **Scrub** spustí příkaz *btrfs scrub* pro kontrolu integrity souborového systému.
@@ -1587,24 +1987,29 @@ Pokud se objeví chyby, spusťte druhé skenování s volbou *Opravit chyby soub
 čímž se systém pokusí opravit zjištěné chyby.
 :end
 
+
 :vms_cancel_help:
 **Zrušit** přeruší právě probíhající kontrolu integrity (scrub).
 :end
 
+
 :eth_interface_description_help:
 Volitelné pole pro popis síťového rozhraní.
 :end
+
 
 :eth_mac_address_help:
 Zobrazuje fyzickou (MAC) adresu síťového rozhraní.  
 Pokud je aktivní VLAN tagging, všechna VLAN rozhraní sdílí tuto MAC adresu.
 :end
 
+
 :eth_enable_bonding_help:
 **Bonding** je funkce, která slučuje více ethernetových rozhraní do jednoho společného rozhraní s názvem **bond0**.  
 Tím lze zvýšit spolehlivost připojení (redundanci) a/nebo propustnost sítě.  
 Podporováno je několik režimů spojování (viz níže), některé však vyžadují podporu od síťového přepínače (switch).
 :end
+
 
 :eth_bonding_mode_help:
 **Režim 0 (balance-rr)**<br>
@@ -1646,23 +2051,28 @@ Příchozí provoz je řízen pomocí ARP odpovědí – každému klientovi se 
 Nesprávně zvolený režim může způsobit výpadky síťového připojení.*
 :end
 
+
 :eth_bonding_members_help:
 Vyberte, která rozhraní budou součástí *Bonded* rozhraní. Výchozí rozhraní eth0 je zahrnuto automaticky, ostatní rozhraní jsou volitelná.
 :end
+
 
 :eth_enable_bridging_help:
 Bridging je funkce, která vytvoří virtuální bridge a umožní VM a Docker kontejnerům komunikovat přímo přes fyzický ethernetový port.  
 Bonding a bridging lze kombinovat, aby VM nebo kontejnery mohly komunikovat přes *Bonded* rozhraní.
 :end
 
+
 :eth_bridging_members_help:
 Vyberte, která rozhraní budou součástí *Bridged* rozhraní. Výchozí rozhraní eth0 je zahrnuto automaticky, ostatní rozhraní jsou volitelná.
 :end
+
 
 :eth_network_protocol_help:
 Vyberte protokoly, které mají být použity. Výchozí volba je IPv4.<br>
 Pokud zvolíte IPv4 i IPv6, lze oba protokoly nakonfigurovat nezávisle.
 :end
+
 
 :eth_ipv4_address_assignment_help:
 Možné nastavení:
@@ -1672,13 +2082,16 @@ Možné nastavení:
 *Žádná* – síťové rozhraní nebude mít přidělenou IPv4 adresu (použitelné pouze pro VLANy)
 :end
 
+
 :eth_ipv4_address_help:
 Pole je neaktivní, pokud je aktivní automatické přidělení IP adresy. Jinak zde zadejte IPv4 adresu serveru.
 :end
 
+
 :eth_ipv4_default_gateway_help:
 Pole je neaktivní, pokud je aktivní automatické přidělení IP adresy. Jinak zde zadejte IPv4 adresu vašeho routeru.
 :end
+
 
 :eth_ipv4_dns_server_assignment_help:
 Při volbě *Automaticky* server použije DNS servery poskytnuté DHCP serverem.<br>
@@ -1687,19 +2100,23 @@ Při volbě *Staticky* můžete zadat vlastní seznam DNS serverů.
 Toto je užitečné v prostředí s Active Directory, kde první DNS záznam musí směřovat na IP adresu vašeho AD serveru.
 :end
 
+
 :eth_ipv4_dns_server_help:
 Zadejte primární IPv4 DNS server.
 
 Poznámka: Pokud používáte *Active Directory*, **musí** zde být uvedena IP adresa vašeho AD serveru.
 :end
 
+
 :eth_ipv4_dns_server2_help:
 Zadejte alternativní IPv4 DNS server, který se použije, pokud první není dostupný.
 :end
 
+
 :eth_ipv4_dns_server3_help:
 Zadejte další alternativní IPv4 DNS server, který se použije, pokud první dva nejsou dostupné.
 :end
+
 
 :eth_ipv6_address_assignment_help:
 Možné nastavení:
@@ -1709,40 +2126,49 @@ Možné nastavení:
 *Žádná* – síťové rozhraní nebude mít přidělenou IPv6 adresu (použitelné pouze pro VLANy)
 :end
 
+
 :eth_ipv6_address_help:
 Pole je neaktivní, pokud je aktivní automatické přidělení IP adresy. Jinak zde zadejte IPv6 adresu serveru.
 :end
 
+
 :eth_ipv6_default_gateway_help:
 Pole je neaktivní, pokud je aktivní automatické přidělení IP adresy. Jinak zde zadejte IPv6 adresu vašeho routeru.
 :end
+
 
 :eth_ipv6_privacy_extensions_help:
 Povolte nebo zakažte generování náhodných IPv6 identifikátorů podle standardu RFC4941.  
 Tato funkce odpovídá dočasné IPv6 adresaci známé z Windows.
 :end
 
+
 :eth_ipv6_dns_server_assignment_help:
 Při volbě *Automaticky* server použije DNS servery poskytnuté DHCP serverem.<br>
 Při volbě *Staticky* můžete zadat vlastní seznam DNS serverů.
 :end
 
+
 :eth_ipv6_dns_server_help:
 Zadejte primární IPv6 DNS server.
 :end
+
 
 :eth_ipv6_dns_server2_help:
 Zadejte alternativní IPv6 DNS server, který se použije, pokud první není dostupný.
 :end
 
+
 :eth_ipv6_dns_server3_help:
 Zadejte IPv6 DNS server, který se má použít, pokud nejsou dostupné servery 1 a 2.
 :end
+
 
 :eth_desired_mtu_help:
 Zadejte hodnotu MTU, která má být použita pro toto rozhraní.  
 Pokud pole zůstane prázdné, hodnota MTU se určí automaticky (výchozí je 1500 bajtů).
 :end
+
 
 :eth_enable_vlans_help:
 Ve výchozím stavu nejsou definována žádná VLAN.  
@@ -1751,9 +2177,11 @@ Povolením VLAN lze navýšit počet logických spojení přes jedno fyzické ro
 Poznámka: Funkci VLAN musí podporovat váš router a/nebo přepínač.
 :end
 
+
 :eth_vlan_number_help:
 Každému VLAN přidělte jedinečné číslo. Povolené hodnoty jsou v rozsahu 1 až 4095.
 :end
+
 
 :eth_network_rules_help:
 Zde můžete upravit pravidla pro přiřazení rozhraní, například nastavit preferované rozhraní pro správu Unraidu.  
@@ -1767,6 +2195,7 @@ Tento soubor lze otevřít v textovém editoru, ale doporučuje se provádět zm
 Pokud tento soubor smažete, konfigurace se při příštím restartu resetuje a znovu vytvoří.
 :end
 
+
 :eth_routing_table_help:
 Zadejte platnou IPv4 trasu ve formátu *nnn.nnn.nnn.nnn/xx*, např. *192.168.1.0/24*  
 nebo platnou IPv6 trasu ve formátu *nnnn:nnnn:nnnn::nnnn/xxx*, např. *fe80::3ad8:2fff:fe25:9709/64*
@@ -1776,16 +2205,33 @@ Bránu můžete vybrat ze seznamu nebo zadat ručně platnou IPv4/IPv6 adresu.
 Volitelně můžete zadat metrickou hodnotu (výchozí je 1), která určuje preferenci brány v případě více stejných tras.
 :end
 
+
+:eth_network_extra_include_help:
+Zadejte jeden nebo více názvů rozhraní nebo IP adres, které budou zahrnuty do seznamu rozhraní naslouchajících lokálním systémovým službám.
+
+Toto je užitečné zejména v případě, že jste vytvořili vlastní rozhraní (např. VPN tunel přes tailscale), která se používají pro přístup k lokálním službám systému.
+:end
+
+
+:eth_network_extra_exclude_help:
+Zadejte jeden nebo více názvů rozhraní nebo IP adres, které budou vyloučeny ze seznamu rozhraní naslouchajících lokálním systémovým službám.
+
+Lze tím např. vyloučit dedikovaná lokální rozhraní (např. point-to-point spojení) nebo dynamická rozhraní (např. WireGuard tunely).
+:end
+
+
 :apc_ups_daemon_help:
 Volba *Ano* aktivuje službu apcupsd a spustí její démon.  
 Volba *Ne* službu deaktivuje a démon se zastaví.
 :end
+
 
 :apc_ups_cable_help:
 Určuje typ kabelu, kterým je UPS připojena k serveru. Dostupné možnosti:
 
 + USB, Jednoduchý, Smart, Ether, nebo Vlastní (pro specifikaci konkrétního kabelu)
 :end
+
 
 :apc_ups_custom_cable_help:
 Zadejte konkrétní typ kabelu podle modelového čísla.  
@@ -1797,6 +2243,7 @@ Příklady platných modelů:
 + 940-1524C, 940-0024G, 940-0095A, 940-0095B  
 + 940-0095C, 940-0625A, M-04-02-2000
 :end
+
 
 :apc_ups_type_help:
 Zvolte typ UPS, který odpovídá vašemu zařízení:
@@ -1810,6 +2257,7 @@ Zvolte typ UPS, který odpovídá vašemu zařízení:
 + **ModBus** – pro nové SmartUPS modely s podporou MODBUS
 :end
 
+
 :apc_ups_device_help:
 Zadejte zařízení odpovídající způsobu připojení vaší UPS (neplatí pro typ *USB*):
 
@@ -1821,13 +2269,23 @@ Zadejte zařízení odpovídající způsobu připojení vaší UPS (neplatí pr
 + **modbus** – např. /dev/ttyS2
 :end
 
+
+:apc_ups_override_ups_capacity_help:
+Pokud vaše UPS nepodporuje reportování "Nominal Power" (`NOMPOWER`) ale uvádí zatížení v procentech (`LOADPCT`), můžete ručně zadat kapacitu UPS ve wattech (W). Plugin poté odhadne "≈" hodnotu podle aktuálního zatížení.
+
+Jde pouze o odhad — nebere v úvahu např. účinnost UPS.
+:end
+
+
 :apc_battery_level_help:
 Pokud během výpadku proudu klesne zbývající procento baterie (hlášené UPS) na nebo pod hodnotu *Kapacita baterie*, apcupsd zahájí vypnutí serveru.
 :end
 
+
 :apc_runtime_left_help:
 Pokud během výpadku proudu klesne odhadovaná zbývající doba provozu v minutách (vypočtená UPS) na nebo pod tuto hodnotu, apcupsd zahájí vypnutí serveru.
 :end
+
 
 :apc_battery_time_help:
 Pokud je při výpadku proudu server napájen z baterie UPS, apcupsd po uplynutí zde uvedeného *časového limitu* (v sekundách) zahájí vypnutí. Hodnota 0 deaktivuje vypnutí podle času.
@@ -1841,24 +2299,29 @@ Při testování může nastavení např. na 60 sekund způsobit velmi rychlé v
 Pokud máte starší nebo "hloupou" UPS, nastavte kratší časový limit, o kterém víte, že server bezpečně zvládne běžet pouze na baterii.
 :end
 
+
 :apc_note_help:
 **Poznámka:** *Kapacita baterie*, *Zbývající doba provozu* a *Čas na baterii* spolu souvisí.  
 Vypnutí serveru nastane při překročení jakékoli z těchto tří hodnot jako první.
 :end
 
+
 :apc_killups_help:
 Pokud je nastaveno na *Ano*, UPS se po vypnutí serveru rovněž vypne.
 :end
+
 
 :parity_check_scheduled_help:
 Ve výchozím stavu není nastaven žádný interval pro kontrolu parity.  
 Zde můžete nastavit požadovaný interval – denní, týdenní, měsíční, roční nebo vlastní.
 :end
 
+
 :parity_day_of_the_week_help:
 Pokud je vybrána možnost **týdně** nebo **vlastní**, zde vyberte *den v týdnu*, kdy se má kontrola spustit.  
 V ostatních intervalech se toto nastavení nepoužívá.
 :end
+
 
 :parity_week_of_the_month_help:
 Pokud je vybrána kontrola **měsíčně** nebo **ročně**, zde vyberte *den v měsíci*.  
@@ -1866,19 +2329,42 @@ Pokud je vybrán **vlastní** interval, zde vyberte *týden v měsíci*.
 V ostatních režimech není toto nastavení dostupné.
 :end
 
+
 :parity_time_of_the_day_help:
 Zvolte *čas v průběhu dne*, kdy se má kontrola parity spustit.  
 Čas lze nastavit v půlhodinových krocích.
 :end
+
 
 :parity_month_of_the_year_help:
 Pokud je vybrána kontrola **ročně** nebo **vlastní**, zde zvolte *měsíc v roce*.  
 V ostatních režimech se tato volba nepoužívá.
 :end
 
+
 :parity_write_corrections_help:
 Zvolte, zda se mají během kontroly parity automaticky opravovat zjištěné chyby parity.
 :end
+
+
+:parity_cumulative_check_help:
+Změňte toto nastavení na **Ano**, chcete-li rozdělit dlouhotrvající kontrolu parity do více časových úseků. To je užitečné, pokud má být systém k dispozici a kontrola má probíhat jen mimo špičku.
+:end
+
+
+:parity_accumulation_frequency_help:
+Určuje, jak často se jednotlivé úseky kontroly parity spouští.
+
+**Denně** znamená, že kontrola pokračuje každý následující den, dokud není dokončena.
+
+**Týdně** znamená, že kontrola pokračuje každý následující týden, dokud není dokončena.
+:end
+
+
+:parity_accumulation_duration_help:
+Určuje, jak dlouho má každý dílčí úsek trvat, v hodinách. Položka **Čas během dne** určuje, kdy má být spuštěn.
+:end
+
 
 :mover_schedule_help:
 Zvolte interval, ve kterém má být nástroj *Mover* spuštěn – buď hodinově, denně, týdně nebo měsíčně.
@@ -1886,13 +2372,16 @@ Zvolte interval, ve kterém má být nástroj *Mover* spuštěn – buď hodinov
 Interval určuje, jak často se *Mover* spustí; běží na pozadí.
 :end
 
+
 :mover_day_of_the_week_help:
 Vyberte den v týdnu, kdy má být denní interval spuštěn. Pokud není vyplněno, je deaktivováno.
 :end
 
+
 :mover_day_of_the_month_help:
 Vyberte den v měsíci, kdy má být měsíční interval spuštěn. Pokud není vyplněno, je deaktivováno.
 :end
+
 
 :mover_time_of_the_day_help:
 Pokud je zvoleno hodinové spuštění, interval je nastaven v hodinách. Začíná vždy na začátku hodiny (minuta 0).
@@ -1900,9 +2389,11 @@ Pokud je zvoleno hodinové spuštění, interval je nastaven v hodinách. Začí
 Pro jiný interval uveďte denní dobu, kdy má být *Mover* spuštěn.
 :end
 
+
 :mover_logging_help:
 Zapisuje oznámení od *Moveru* do systémového logu.
 :end
+
 
 :notifications_display_help:
 V režimu *Podrobnosti* se všechna oznámení okamžitě zobrazují na obrazovce.<br>
@@ -1912,51 +2403,68 @@ V režimu *Souhrn* se oznámení sčítají a počet nepřečtených zpráv se z
 Kliknutím na čítač zobrazíte nebo potvrdíte nepřečtená oznámení.
 :end
 
+
+:notifications_display_position_help:
+Zvolte umístění oznámení na obrazovce. Více oznámení se bude řadit nad sebe nebo pod sebe v závislosti na zvoleném umístění.
+:end
+
+
+:notifications_auto_close_help:
+Počet sekund, po kterých se notifikace automaticky zavřou v *Detailním* zobrazení.<br>
+Hodnota 0 deaktivuje automatické zavírání.
+:end
+
+
 :notifications_date_format_help:
 Zvolte požadovaný formát data, který bude použit v oznámeních. Doporučeno je YYYY-MM-DD, protože usnadňuje řazení podle data a času.
 :end
+
 
 :notifications_time_format_help:
 Zvolte požadovaný formát času, který bude použit v oznámeních. Doporučeno je 24hodinové zobrazení, protože usnadňuje řazení podle data a času.
 :end
 
-:notifications_display_position_help:
-Zvolte umístění oznámení na obrazovce. Více oznámení se bude řadit nad sebe nebo pod sebe v závislosti na zvoleném umístění.
-:end
 
 :notifications_store_flash_help:
 Oznámení se standardně ukládají do paměti RAM a po restartu nebo vypnutí se ztratí.<br>
 Lze je však ukládat i do složky `/boot/config/plugins/dynamix` na USB zařízení.
 :end
 
+
 :notifications_system_help:
 Systém oznámení je ve výchozím stavu deaktivován. Aktivujte jej zde, abyste mohli přijímat oznámení.<br>
 V následující části můžete zvolit, jaký typ oznámení a jakou formou chcete přijímat.
 :end
+
 
 :notifications_os_update_help:
 Spouští pravidelnou kontrolu dostupnosti nové verze Unraid OS a upozorní uživatele na aktualizaci.<br>
 Pomocí voleb níže nastavte, jak chcete oznámení přijímat – přes prohlížeč, e-mail nebo službu.
 :end
 
+
 :notifications_plugins_update_help:
 Spouští pravidelnou kontrolu aktualizací nainstalovaných pluginů a upozorní uživatele.<br>
 Pomocí voleb níže nastavte, jak chcete oznámení přijímat – přes prohlížeč, e-mail nebo službu.
 :end
+
 
 :notifications_docker_update_help:
 Spouští pravidelnou kontrolu aktualizací nainstalovaných Docker kontejnerů a upozorní uživatele.<br>
 Pomocí voleb níže nastavte, jak chcete oznámení přijímat – přes prohlížeč, e-mail nebo službu.
 :end
 
+
 :notifications_array_status_help:
 Spouští pravidelnou kontrolu parity (preventivní údržba) a informuje uživatele o výsledku.
 :end
+
 
 :notifications_agent_selection_help:
 Pomocí výběru výše nastavte, jak chcete oznámení přijímat – přes prohlížeč, e-mail nebo externí službu.<br>
 <b>Tip:</b> Můžete přidat i vlastní služby – umístěte je do složky `/boot/config/plugins/dynamix/notification/agents` a povolte možnost *Služby*.
 :end
+
 
 :notifications_classification_help:
 Typy oznámení:
@@ -1968,57 +2476,71 @@ Typy oznámení:
 Zvolte pro každý typ oznámení, jakým způsobem si přejete být informováni.
 :end
 
+
 :smtp_preset_service_help:
 Zvolte přednastavený profil pro automatické vyplnění základních údajů.
 :end
+
 
 :smtp_email_address_help:
 E-mailová adresa odesílatele. Tato adresa se používá pro odesílání oznámení.
 :end
 
+
 :smtp_recipients_help:
 Příjemci stavových a chybových hlášení. Zadejte jednu nebo více e-mailových adres oddělených mezerou.
 :end
+
 
 :smtp_priority_help:
 Nastaví záhlaví e-mailu jako důležité, pokud dojde k problému s Unraid.
 :end
 
+
 :smtp_subject_prefix_help:
 Zadejte předponu pro snadnou identifikaci zpráv z Unraid.
 :end
+
 
 :smtp_mail_server_help:
 Zadejte název poštovního serveru. Pomocí přednastavených šablon lze hodnoty vyplnit automaticky.
 :end
 
+
 :smtp_mail_server_port_help:
 Zadejte port poštovního serveru. Pomocí přednastavených šablon lze hodnoty vyplnit automaticky.
 :end
+
 
 :smtp_use_ssl_tls_help:
 Určuje, zda se má při komunikaci se SMTP serverem použít SSL/TLS.
 :end
 
+
 :smtp_use_starttls_help:
 Určuje, zda má být před zahájením SSL jednání použit STARTTLS – viz RFC 2487.
 :end
+
 
 :smtp_define_tls_cert_help:
 Zaškrtněte pouze v případě, že je pro komunikaci vyžadován certifikát.
 :end
 
+
 :smtp_tls_cert_location_help:
 Název souboru s RSA certifikátem, který má být použit pro TLS (je-li potřeba).
 :end
+
 
 :smtp_authentication_method_help:
 Zvolte metodu autentizace pro váš e-mailový server. Pomocí tlačítka "Test" můžete ověřit, zda je přístup funkční.
 :end
 
+
 :smtp_username_password_help:
 Zadejte uživatelské jméno a heslo pro přihlášení k vašemu e-mailovému účtu. **Poznámka:** heslo je ukládáno v konfiguračním souboru v nešifrované podobě.
 :end
+
 
 :plugin_install_help:
 Pro stažení a instalaci pluginu zadejte URL adresu `.plg` souboru a klikněte na **Instalovat**.<br>
@@ -2026,13 +2548,16 @@ Nové okno zobrazí průběh instalace. Zavřete jej až po dokončení instalac
 Lze také nahrát soubor z místního počítače.
 :end
 
+
 :plugin_error_help:
 Tyto pluginy nebyly nainstalovány kvůli chybě během instalace. Odstraňte je a poté **restartujte** server.
 :end
 
+
 :plugin_stale_help:
 Tyto pluginy nebyly nainstalovány, protože již existuje novější verze. Staré verze můžete bez obav smazat.
 :end
+
 
 :docker_client_general_help:
 Šablony jsou rychlý způsob, jak nainstalovat Docker kontejnery na váš Unraid server. Existují dva typy šablon:
@@ -2048,54 +2573,77 @@ Kliknutím na *Vytvořit* se stáhnou potřebné soubory a kontejner by měl za�
 Uživatelskou šablonu můžete smazat kliknutím na červené X napravo.
 :end
 
+
 :docker_client_name_help:
 Název kontejneru, nebo ponechte prázdné pro výchozí název.
 :end
+
 
 :docker_client_overview_help:
 Popis kontejneru. Podporuje standardní HTML formátování.
 :end
 
+
+:docker_client_additional_requirements_help:
+Jakékoli další požadavky kontejneru. Podporuje základní HTML formátování.
+:end
+
+
 :docker_client_repository_help:
 Repozitář v Docker registry ve formátu Autor/NázevAplikace. Pro konkrétní verzi lze za název přidat `:verze`.
 :end
+
 
 :docker_client_support_thread_help:
 Odkaz na diskusní vlákno podpory na fóru Lime Technology.
 :end
 
+
 :docker_client_project_page_help:
 Odkaz na stránku projektu (např. www.plex.tv).
 :end
+
+
+:docker_client_readme_help:
+Odkaz na soubor nebo stránku typu README.
+:end
+
 
 :docker_client_hub_url_help:
 Cesta k repozitáři kontejneru na Docker Hub.
 :end
 
+
 :docker_client_template_url_help:
 Tato URL se používá pro aktualizaci šablony.
 :end
+
 
 :docker_client_icon_url_help:
 Odkaz na ikonu aplikace (zobrazí se na nástěnce, pokud je v nastavení zobrazení aktivováno „Zobrazit ikony aplikací“).
 :end
 
+
 :docker_client_webui_help:
 Kliknutí na ikonu aplikace na stránce Docker kontejnerů otevře webové rozhraní zadané v tomto poli. Použijte `[IP]` pro IP adresu a `[PORT:####]` pro nastavení portu.
 :end
+
 
 :docker_extra_parameters_help:
 Zadejte další parametry, které mají být použity při spuštění kontejneru.<br>
 Možnosti příkazů naleznete zde: <a href="https://docs.docker.com/reference/run/" target="_blank">docker.com/reference/run</a>
 :end
 
+
 :docker_post_arguments_help:
 Zadejte další argumenty, které mají být přidány ZA definici kontejneru. Obsah je specifický pro daný kontejner.
 :end
 
+
 :docker_cpu_pinning_help:
 Pokud vyberete konkrétní CPU jádra, bude mít kontejner přístup pouze k nim. Nevyberete-li žádné, bude mít přístup ke všem jádrům (výchozí).
 :end
+
 
 :docker_fixed_ip_help:
 Pokud je zvolen režim „bridge“, aplikace komunikuje pouze přes porty zadané v sekci mapování portů.
@@ -2104,532 +2652,22 @@ Režim „host“ umožní přístup ke všem nepoužívaným portům hostitele.
 **DŮLEŽITÉ:** Při změně portů lze měnit pouze porty na hostiteli – porty uvnitř kontejneru jsou pevně dané.
 :end
 
-:docker_privileged_help:
-Nutné povolit pro kontejnery, které vyžadují přímý přístup k zařízení nebo funkcím hostitelského systému.
-
-Více informací: <a href="https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities" target="_blank">docker.com: Privileged containers</a>
-:end
-
-:sysdevs_iommu_groups_help:
-Zobrazí seznam dostupných IOMMU skupin v systému. Pomocí `lspci` jsou zobrazeny informace o zařízeních ve skupině.
-
-Zařízení vybraná zde budou přiřazena ovladači VFIO-PCI při startu, což umožní jejich přiřazení virtuálním strojům a zabrání systému v jejich běžném použití.
-
-**Poznámka:** Výběr jednoho zařízení platí i pro všechna ostatní zařízení ve stejné IOMMU skupině.
-
-<i class="fa fa-circle orb green-orb middle"></i> Zařízení je aktuálně přiřazeno VFIO-PCI ovladači.
-
-<i class="fa fa-retweet grey-orb middle"></i> Zařízení podporuje FLR (Function Level Reset).
-
-<input type="checkbox" value="" disabled> Pokud je pole šedé, zařízení je využíváno systémem a nelze jej předat VM.
-:end
-
-:sysdevs_thread_pairings_help:
-Zobrazí seznam spárovaných CPU vláken.
-:end
-
-:sysdevs_usb_devices_help:
-Zobrazí výstup `lsusb`. ID zařízení se používají při konfiguraci PCI passthrough.
-:end
-
-:sysdevs_scsi_devices_help:
-Zobrazí výstup `lsscsi`. ID zařízení se používají při konfiguraci PCI passthrough.
-
-Poznámka: Linux seskupuje ATA, SATA a SAS zařízení mezi SCSI zařízení.
-:end
-
-:unraidnet_wanpanel_help:
-WAN síťový port je externí TCP port, který je nastaven na vašem routeru pro přesměrování (NAT).
-Tento port přesměruje provoz z internetu na zabezpečený SSL port vašeho Unraid serveru.
-:end
-
-:unraidnet_inactivespanel_help:
-Kliknutím na „Aktivovat“ nastavíte lokální Git repozitář na USB boot zařízení a připojíte jej ke vzdálenému řízení přes unraid.net, které je přiřazeno k tomuto serveru.
-:end
-
-:unraidnet_changespanel_help:
-Stav „Není aktuální“ znamená, že došlo ke změnám v lokálních souborech oproti vzdálené verzi na unraid.net.
-
-Klikněte na „Aktualizovat“ pro odeslání změn na vzdálený server.
-
-Klikněte na „Změny“ pro zobrazení, co bylo změněno.
-:end
-
-:unraidnet_uptodatepanel_help:
-Stav „Aktuální“ znamená, že lokální konfigurace odpovídá verzi uložené na vzdáleném serveru unraid.net.
-:end
-
-:unraidnet_activepanel_help:
-Kliknutím na „Deaktivovat“ ukončíte komunikaci s unraid.net vzdáleným řízením.
-
-Kliknutím na „Znovu inicializovat“ vymažete celý historii změn jak na lokálním, tak vzdáleném serveru.
-:end
-
-; WireGuard help text
-
-:wg_local_name_help:
-Použijte toto pole pro pojmenování tohoto připojení, aby bylo snadno rozpoznatelné. Stejný název se objeví také v konfiguraci každého partnera (peer).
-:end
-
-:wg_generate_keypair_help:
-Kliknutím na **Generovat klíče** automaticky vytvoříte jedinečný pár soukromého a veřejného klíče.<br>
-Nebo vložte existující soukromý klíč vygenerovaný WireGuardem. Tento klíč **NEZVEŘEJŇUJTE** nikomu jinému!
-:end
-
-:wg_local_tunnel_network_pool_help:
-WireGuard tunely potřebují interní IP adresy. Zadejte rozsah sítí – výchozí IPv4 síť je <?=$netpool['wg0']?>/24 nebo výchozí IPv6 síť <?=$netpool6['wg0']?>/64, případně zadejte vlastní rozsah.
-
-*Tunelová síť* musí být unikátní – nesmí již existovat na serveru ani u žádného partnera.
-:end
-
-:wg_local_tunnel_network_pool_X_help:
-WireGuard tunely potřebují interní IP adresy. Zadejte rozsah sítí – výchozí IPv4 síť je <?=$netpool['wgX']?>/24 nebo výchozí IPv6 síť <?=$netpool6['wgX']?>/64, případně zadejte vlastní rozsah.
-
-*Tunelová síť* musí být unikátní – nesmí již existovat na serveru ani u žádného partnera.
-:end
-
-:wg_local_tunnel_address_help:
-Toto pole se automaticky vyplní při vytvoření tunelové sítě. Lze jej přepsat, ale obvykle to není nutné. Buďte opatrní při manuálních změnách.
-:end
-
-:wg_local_endpoint_help:
-Toto pole se automaticky vyplní veřejnou adresou serveru nebo doménou *www.&lt;hash&gt;.unraid.net*.<br>
-To umožní navázat VPN tunely od vzdálených partnerů k serveru.<br>
-Nastavte správné přesměrování portu na vašem routeru (výchozí port je <?=$netport['wg0']?>, ale lze změnit).
-
-Uživatelé s vlastní doménou mohou zadat vlastní název serveru (např. www.mujserver.mojedomena.cz).<br>
-Znovu připomínáme: zkontrolujte nastavení routeru.
-
-**Poznámka pro uživatele Cloudflare:** Proxy Cloudflare funguje pouze pro http(s), nikoliv pro VPN. Proxy musí být vypnuta.
-:end
-
-:wg_local_endpoint_X_help:
-Stejné jako výše, ale pro další instance (wg1, wg2 atd.). Nahraďte <?=$netport['wgX']?> podle příslušného rozhraní.
-:end
-
-:wg_local_server_uses_nat_help:
-Při zapnutí NAT server používá svou LAN IP při předávání provozu z tunelu do LAN. Je vhodné, pokud nechcete upravovat router, ale nefunguje s kontejnery Docker, které mají vlastní IP.
-
-Při vypnutí NAT server používá tunelovou IP adresu, což vyžaduje nastavení statické routy na routeru, která odkazuje tunelovou adresu zpět na server.
-:end
-
-:wg_local_gateway_uses_upnp_help:
-Výchozí hodnota je **Ano**, pokud místní brána podporuje UPnP a reaguje na požadavky.<br>
-V tom případě není nutné nastavovat přesměrování portů na routeru – provede se automaticky.
-:end
-
-:wg_local_tunnel_firewall_help:
-Firewall umožňuje omezit přístup přes WireGuard tunel na specifikované adresy nebo podsítě.<br>
-Výchozí pravidlo „blokovat“ zablokuje zadané adresy a ostatní povolí. Při změně na „povolit“ funguje opačně – povolí pouze uvedené a ostatní zablokuje.<br>
-Více IP adres oddělujte čárkou.
-:end
-
-:wg_mtu_size_help:
-Ponechte výchozí automatický režim pro určení velikosti MTU. Tato hodnota platí pro všechna připojení peerů.
-:end
-
-:wg_peer_configuration_help:
-Ikona <i class='fa fa-fw fa-eye'></i> slouží k náhledu konfigurace partnera. Konfiguraci lze stáhnout nebo ihned zobrazit pro rychlé nastavení partnera.<br>
-Ikona je neaktivní, pokud konfigurace neexistuje nebo nebyly změny uloženy.
-
-Ikona <i class='fa fa-fw fa-key'></i> zobrazí nebo skryje klíče – soukromý, veřejný a předsdílený. Pokud žádný klíč není nastaven, pole se zobrazí automaticky.
-:end
-
-:wg_peer_name_help:
-Použijte toto pole pro zadání názvu tohoto partnera (peer). Tento název se zobrazí i na vzdálené straně.
-:end
-
-:wg_peer_preshared_key_help:
-Pro vyšší bezpečnost lze použít předsdílený klíč. Kliknutím na **Generovat klíč** vytvoříte unikátní hodnotu.<br>
-Tento klíč musí být stejný na obou stranách – serveru i partnerovi.
-:end
-
-:wg_peer_tunnel_address_help:
-Toto pole se automaticky vyplní při vytvoření tunelové sítě. Lze je přepsat, ale obvykle to není nutné.<br>
-Každý partner musí mít **unikátní** tunelovou IP adresu.
-:end
-
-:wg_peer_endpoint_help:
-Ponecháte-li pole prázdné, server čeká pasivně na navázání tunelu (partner ho musí zahájit).<br>
-Pokud zadáte IP adresu partnera, server přejde do aktivního režimu a naváže tunel sám při detekci provozu.
-
-*Poznámka: toto pole je povinné pro spojení server–server a LAN–LAN.*
-:end
-
-:wg_peer_allowed_ips_help:
-Pole je automaticky vyplněno tunelovou adresou partnera. To umožňuje serveru dosáhnout partnera přes tunel.<br>
-Pokud má partner další sítě (např. za routerem), lze je sem přidat pro zpřístupnění přes tunel.
-:end
-
-:wg_peer_dns_server_help:
-Zadejte DNS server, který se má použít na straně partnera.
-:end
-
-:wg_persistent_keepalive_help:
-Ve výchozím nastavení zůstává WireGuard tunel neaktivní, pokud neprobíhá žádný přenos dat, což může způsobit přerušení spojení.
-Obvykle to není problém, protože tunel WireGuard se automaticky obnoví, jakmile je potřeba.<br>
-Časovač "keepalive" udržuje spojení otevřené – pro většinu případů je vhodná hodnota 20 sekund.
-
-Poznámka: Na mobilních zařízeních to zvýší spotřebu dat a rychleji vybíjí baterii.
-:end
-
-:info_share_assignment_help:
-Vybraný pool je dostupný pro uživatelské sdílení.
-:end
-
-:docker_timeout_help:
-Čas v sekundách, po který má kontejner prostor pro korektní ukončení, než bude vynuceně zastaven.
-:end
-
-:docker_vdisk_type_help:
-Zvolte, kde má být uchováván trvalý stav Dockera.
-
-Může to být obrazový soubor s určenou velikostí nebo vyhrazená složka.
-:end
-
-:docker_vdisk_directory_help:
-Musíte zadat složku pro Docker. Systém ji automaticky vytvoří při prvním spuštění Docker služby.
-
-Doporučuje se vytvořit složku ve sdílení, které je umístěné na Cache poolu (nastavení: cache=Only). Pro nejlepší výkon jsou vhodná SSD zařízení.
-:end
-
-:docker_client_additional_requirements_help:
-Jakékoli další požadavky kontejneru. Podporuje základní HTML formátování.
-:end
-
-:docker_client_readme_help:
-Odkaz na soubor nebo stránku typu README.
-:end
-
-:parity_cumulative_check_help:
-Změňte toto nastavení na **Ano**, chcete-li rozdělit dlouhotrvající kontrolu parity do více časových úseků. To je užitečné, pokud má být systém k dispozici a kontrola má probíhat jen mimo špičku.
-:end
-
-:parity_accumulation_frequency_help:
-Určuje, jak často se jednotlivé úseky kontroly parity spouští.
-
-**Denně** znamená, že kontrola pokračuje každý následující den, dokud není dokončena.
-
-**Týdně** znamená, že kontrola pokračuje každý následující týden, dokud není dokončena.
-:end
-
-:parity_accumulation_duration_help:
-Určuje, jak dlouho má každý dílčí úsek trvat, v hodinách. Položka **Čas během dne** určuje, kdy má být spuštěn.
-:end
-
-:display_tty_size_help:
-Mění velikost písma v terminálových oknech.
-:end
-
-:display_page_view_help:
-Určuje způsob zobrazení některých stránek. V režimu **Záložky** se jednotlivé sekce zobrazují v samostatných panelech,
-zatímco v režimu **Bez záložek** se všechny sekce zobrazují pod sebou.
-:end
-
-:display_users_menu_help:
-Menu *Uživatelé* může být součástí horní lišty nebo nabídky *Nastavení*.
-Můžete jej přesunout, pokud není v horní liště dostatek místa pro zobrazení všech nabídek.
-:end
-
-:display_listing_height_help:
-**Automaticky** : dlouhé výpisy se zobrazí celé a uživatel musí posouvat celou stránku.
-
-**Pevně** : dlouhé výpisy se zobrazí v okně s pevnou výškou, uživatel může posouvat jen toto okno.
-:end
-
-:unraidnet_extraorigins_help:
-Zadejte čárkou oddělený seznam URL adres, které mají povolený přístup k unraid-api (např. https://abc.myreverseproxy.com, https://xyz.rvrsprx.com,…)
-:end
-
-:myservers_remote_t2fa_help:
-Když je povolen Transparentní 2FA pro vzdálený přístup, přistupujete k serveru kliknutím na odkaz *Remote Access* na stránce <a href="https://connect.myunraid.net/" target="_blank" rel="noopener noreferrer">Go to Connect</a>.
-Systém automaticky vyžádá 2FA token ze serveru a vloží jej do přihlašovacího formuláře. Server odmítne každý pokus o přihlášení bez platného tokenu.
-Každý token je použitelný jen jednou a platí pouze 5 minut.
-:end
-
-:myservers_local_t2fa_help:
-Když je povolen Transparentní 2FA pro místní přístup, přistupujete k serveru kliknutím na odkaz *Local Access* na stránce <a href="https://connect.myunraid.net/" target="_blank" rel="noopener noreferrer">Go to Connect</a>.
-Systém automaticky vyžádá 2FA token ze serveru a vloží jej do přihlašovacího formuláře. Server odmítne každý pokus o přihlášení bez platného tokenu.
-Každý token je použitelný jen jednou a platí pouze 5 minut.
-
-Toto nastavení je poměrně přísné pro místní přístup a ve většině případů není potřeba. Vyžaduje stabilní připojení k internetu.
-Pokud potřebujete přístup k webovému rozhraní při výpadku internetu, připojte se přes SSH k serveru a spusťte `use_ssl no` – tím získáte přístup přes http://<?=['NGINX_LANIP']?><?=['NGINX_PORT'] !== '80' ? ':'.['NGINX_PORT'] : '' ?>
-:end
-
-:smb_multi_channel_help:
-Pokud je nastaveno na *Ano*, aktivuje se podpora *SMB Multi Channel* na serveru. Podle
-[microsoft](https://docs.microsoft.com/en-us/azure-stack/hci/manage/manage-smb-multichannel):
-„SMB Multichannel umožňuje souborovým serverům používat více síťových spojení současně.“
-:end
-; New entries (4) - 2023-03-17
-:docker_readmore_help:
-Některé systémy s velkým počtem Docker kontejnerů mohou zaznamenat zpomalení při použití hlavní Docker stránky.
-
-Nastavením na "Ne" může dojít ke zrychlení celkové odezvy stránek tím, že se vypne použití knihovny readmore-js.
-Místo šipek indikujících další data (např. mapování portů a svazků) se zobrazí veškerá data najednou.
-:end
-
-:docker_custom_network_type_help:
-Typ **ipvlan** je nejlepší, pokud není nutné připojení k fyzické síti.
-Přečtěte si prosím <u><a style="color:blue" href='https://docs.docker.com/network/ipvlan/' target='_blank'>tento článek</a></u> o implementaci ipvlan sítě.<br>
-
-Typ **macvlan** umožňuje přímé připojení do fyzické sítě.
-Přečtěte si prosím <u><a style="color:blue" href='https://docs.docker.com/network/macvlan/' target='_blank'>tento článek</a></u> o implementaci macvlan sítě.<br>
-
-**Poznámka:** Docker používá vlastní DHCP službu, což odpovídá nastavení **DHCP Pool**.
-Pokud používáte více serverů s Unraid, musí mít každý server jiný rozsah **DHCP Pool** pro Docker.
-:end
-
-:mgmt_local_access_urls_help:
-Lokální přístupové URL adresy uvedené výše vycházejí z aktuálního nastavení.
-Pro úpravu URL nebo přesměrování viz nápověda k položce "Použít SSL/TLS".
-:end
-
-:vms_network_source_help:
-Vyberte síť, kterou chcete používat jako výchozí pro vaše virtuální stroje.
-Můžete zvolit mezi **'bridge'** vytvořenými v nastavení sítě nebo
-**'libvirt'** vytvořenou pomocí příkazu `virsh` v terminálu.
-Bridge **'virbr0'** a související virtuální síť **'default'** jsou
-vytvořeny službou libvirt.  
-Obě varianty používají NAT (překlad síťových adres) a fungují jako DHCP server pro přidělování IP adres virtuálním strojům.
-Další možnosti lze nastavit buď v síťovém nastavení pro bridge, nebo pomocí `virsh` příkazů pro libvirt sítě.
-
-**Pokud si nejste jisti, zvolte 'virbr0' – doporučené výchozí nastavení Unraid.**
-
-**DŮLEŽITÉ:** Ani Libvirt, ani Unraid automaticky nepřipojí rozhraní přiřazené k libvirt síti.
-Před použitím libvirt sítě přejděte do Nastavení -> Síťové nastavení a v případě potřeby rozhraní ručně aktivujte.
-:end
-
-:share_edit_exclusive_access_help:
-Pokud je nastaveno na "ano", znamená to, že je sdílení namapováno přímo na pool ve stromu /mnt/user, za předpokladu že jsou splněny následující podmínky:
-
-- Primární úložiště je pool.
-- Sekundární úložiště je nastaveno na **žádné**.
-- Sdílení neexistuje na žádném jiném svazku.
-:end
-
-:share_edit_primary_storage_help:
-**Primární úložiště** je místo, kam se ukládají *nové soubory a složky*.  
-Pokud má primární úložiště méně než minimální volné místo, nové soubory
-a složky se uloží do **sekundárního úložiště**, pokud je nastaveno.
-
-**Důležité:** U sdílení s *exkluzivním přístupem* se nastavení minimálního volného místa ignoruje.
-:end
-
-:share_edit_secondary_storage_help:
-**Sekundární úložiště** slouží pro uložení nových souborů a složek, pokud není místo na primárním úložišti.
-Pokud jsou nastavena obě úložiště, soubory se přesouvají mezi nimi pomocí funkce 'mover'.
-:end
-
-:share_edit_mover_action_help:
-Definuje směr přesunu souborů mezi primárním a sekundárním úložištěm, pokud jsou obě nastavena.
-:end
-
-:vms_console_help:
-Slouží k nastavení možností konzole v kontextové nabídce. Web zobrazí pouze vestavěné webové klienty (VNC a SPICE),
-Remote Viewer zobrazí pouze možnost Remote Viewer. Obě možnosti zobrazí obě varianty.
-:end
-
-:shares_exclusive_shares_help:
-Pokud je nastaveno na *Ano*, adresáře sdílení pod /mnt/user budou symlinky na odpovídající složku na úložišti,
-za předpokladu že jsou splněny následující podmínky:
-
-* Primární úložiště je nastaveno na pool.
-* Sekundární úložiště je nastaveno na **žádné**.
-* Sdílení existuje pouze na jednom svazku.
-* Sdílení **není** exportováno přes NFS.
-
-Výhodou *exkluzivních* sdílení je, že se obchází FUSE vrstva, což může výrazně zvýšit I/O výkon.
-:end
-
-:eth_network_extra_include_help:
-Zadejte jeden nebo více názvů rozhraní nebo IP adres, které budou zahrnuty do seznamu rozhraní naslouchajících lokálním systémovým službám.
-
-Toto je užitečné zejména v případě, že jste vytvořili vlastní rozhraní (např. VPN tunel přes tailscale), která se používají pro přístup k lokálním službám systému.
-:end
-
-:eth_network_extra_exclude_help:
-Zadejte jeden nebo více názvů rozhraní nebo IP adres, které budou vyloučeny ze seznamu rozhraní naslouchajících lokálním systémovým službám.
-
-Lze tím např. vyloučit dedikovaná lokální rozhraní (např. point-to-point spojení) nebo dynamická rozhraní (např. WireGuard tunely).
-:end
-
-:sysdrivers_intro_help:
-Tato stránka zobrazuje všechny ovladače dostupné v systému. Seznam můžete filtrovat podle toho, zda je ovladač použitý, nebo ne, případně vyhledat konkrétní ovladač.
-
-Každý ovladač třetí strany nainstalovaný pluginem má vedle sebe ikonu podpory – klikněte na ni pro zobrazení podpory pluginu.
-
-Klikněte na tlačítko *Upravit* pro přidání, změnu nebo smazání libovolného konfiguračního souboru `modprobe.d` v adresáři `config/modprobe.d` na USB disku.
-:end
-
-:display_width_help:
-**Boxed** je původní nastavení, které omezuje šířku obsahu na maximálně 1920 pixelů.
-
-**Neomezeně** umožňuje obsahu využít veškerou dostupnou šířku – užitečné pro velmi široké obrazovky.
-:end
-
-:vms_disable_help:
-Zabrání automatickému spuštění nebo ručnímu spuštění VMs při startu správce VM nebo přes GUI. Pokud se o to pokusíte, zobrazí se chybová hláška.
-:end
-
-:notifications_auto_close_help:
-Počet sekund, po kterých se notifikace automaticky zavřou v *Detailním* zobrazení.<br>
-Hodnota 0 deaktivuje automatické zavírání.
-:end
-
-:console_keyboard_help:
-Zvolte výchozí rozložení klávesnice pro lokální konzoli (netýká se webového terminálu).
-:end
-
-:console_screen_help:
-**Výchozí:** Nastaví ztmavení obrazovky po 15 minutách a úsporný režim po 60 minutách.
-
-**Vypnuto:** Vypne časový limit pro ztmavení i úsporný režim.
-
-**Jiné hodnoty:** Nastaví ztmavení podle zvolené hodnoty a vypne úsporný režim.
-:end
-:console_bash_help:
-Pokud je nastaveno na "Ano", historie příkazů bash bude přetrvávat i po restartu. Nastavením na "Ne" ji deaktivujete.
-
-**UPOZORNĚNÍ:** Historie bash bude zapisována na USB zařízení pro boot, což může vést k jeho rychlejšímu opotřebení!
-
-**Poznámka:** Zapnutí nebo vypnutí této funkce vymaže celou bash historii.
-:end
-
-:ssd_default_warning_temperature_help:
-*Nastavení varovné teploty SSD* určuje výchozí hranici pro varování ohledně teploty všech SSD zařízení. Překročení této hodnoty způsobí zobrazení varování.
-
-Hodnota nula tuto funkci (včetně upozornění) vypne.
-:end
-
-:ssd_default_critical_temperature_help:
-*Kritická teplota disku* určuje výchozí kritickou hodnotu teploty všech SSD zařízení. Překročení této hodnoty způsobí zobrazení výstrahy.
-
-Hodnota nula tuto funkci (včetně upozornění) vypne.
-:end
-
-:syslog_shutdown_flash_help:
-Toto nastavení je ve výchozím stavu "ANO" a umožňuje systému zkopírovat systémový log na USB zařízení při vypnutí nebo restartu.
-
-Po restartu bude předchozí log dostupný v Nástroje > Syslog > syslog-previous;
-bude také součástí diagnostických dat jako logs/syslog-previous.txt.
-:end
-
-:WOL_enable_help:
-Pokud je nastaveno na "Ano", daemon Unraidwold bude spuštěn.
-:end
-
-:WOL_run_VM_help:
-Pokud je nastaveno na "Ano", při přijetí WOL paketů bude provedena kontrola běžících virtuálních strojů. V opačném případě budou ignorovány.
-:end
-
-:WOL_run_LXC_help:
-Pokud je nastaveno na "Ano", při přijetí WOL paketů bude provedena kontrola běžících LXC kontejnerů. Plugin LXC musí být nainstalován.
-:end
-
-:WOL_interface_help:
-Zadejte síťové rozhraní, na které se má daemon navázat. Některá rozhraní nemusí být schopna přijímat etherframe pakety. Doporučeno je použít fyzické rozhraní.
-:end
-
-:WOL_promiscuous_mode_help:
-Povolí nastavení síťové karty do promiskuitního režimu (nebude filtrovat pakety).
-:end
-
-:WOL_log_file_help:
-Výchozí logování probíhá do systémového logu. Pokud si přejete použít jiné umístění, zadejte název souboru.
-:end
-
-:WOL_intro_help:
-Tato stránka umožňuje nastavení spuštění/obnovení a vypnutí virtuálních strojů, kontejnerů (Docker a LXC) pomocí WOL (Wake-on-LAN) magických paketů.
-
-Zahrnuje také probuzení samotného serveru Unraid.
-
-Proces vyhledá odpovídající MAC adresu definovanou ve službě (VM nebo kontejner) — s výjimkou Dockeru. Docker nemá MAC adresu, dokud není spuštěn, proto musíte definovat uživatelskou MAC adresu pro možnost spuštění.
-
-Pokud je služba pozastavena, WOL paket ji obnoví.
-
-Pro každou službu lze nastavit: povolit, zakázat, nebo povolit a zároveň umožnit vypnutí.
-
-Pokud je nastaveno "povolit a vypnout", při dalším WOL paketu bude spuštěná služba vypnuta.
-:end
-
-:WOL_run_shutdown_help:
-Pokud je nastaveno na "Ano", při přijetí WOL paketu se ověří, zda je služba aktivní a jestli má nastavení "Povolit a Vypnout" — pokud ano, služba bude vypnuta.
-:end
-
-:info_zfs_scrub_help:
-**Scrub** spustí program *zfs scrub*, který přečte všechna data a metadata ze všech zařízení a ověří kontrolní součty.
-
-Kliknutím na **Aktualizovat pool** provedete upgrade ZFS poolu, čímž se aktivují nejnovější funkce ZFS.
-:end
-
-:docker_pid_limit_help:
-Nastavte limit PID pro Docker kontejner. Výchozí hodnota je 2048. Hodnota nula znamená neomezeně (nedoporučeno).
-:end
-
-:docker_storage_driver_help:
-overlay2 (výchozí): Použije jako úložiště Dockeru ovladač overlay2 bez ohledu na použitý souborový systém.
-
-native: Použije nativní úložný ovladač podle vašeho systému (XFS: overlay2 | ZFS: zfs | BTRFS: btrfs).
-
-POZOR: Změna úložného ovladače u existující instalace Dockeru není možná – je nutné smazat složku Dockeru, změnit typ úložiště a znovu nainstalovat kontejnery.
-Před změnou doporučujeme pořídit snímek obrazovky s nastaveními kontejnerů. Po změně přidávejte kontejnery pomocí tlačítka Přidat kontejner a vyberte je ze seznamu.
-:end
-
-:docker_storage_driver_active_help:
-Zobrazí aktivní úložný ovladač používaný Dockerem.
-:end
-
-:mgmt_wg_access_urls_help:
-Tyto adresy URL budou fungovat pouze při připojení přes příslušný WireGuard tunel, jak je nastaveno v ***Nastavení > VPN Manager***.
-:end
-
-:mgmt_tailscale_access_urls_help:
-Tyto adresy URL budou fungovat pouze při připojení přes odpovídající Tailscale Tailnet.
-:end
-
-:syslog_remote_system_identifier_help:
-Zvolte identifikátor pro vzdálený systém (používá se v názvu log souboru).
-
-* "IP adresa" použije IPv4 nebo IPv6 adresu odesílajícího systému.
-* "Hostname (z log zprávy)" použije hostname obsažený v každé syslog zprávě.
-* "Hostname (z DNS)" provede reverzní DNS záznam pro IP odesílatele a použije výsledek.
-:end
-
-:display_favorites_enabled_help:
-Povolí podporu oblíbených položek. Pokud je nastaveno na "Ne", ikona srdce pro přidání nebude zobrazena. Pokud již nějaké oblíbené existují, záložka a uložené možnosti zůstanou funkční, dokud nebudou odstraněny.
-:end
-
-:vms_rdpopt_help:
-Přidá možnost nabídky pro spuštění RDP. Bude stažen RDP soubor. V prohlížeči je nutné nastavit otevření po stažení.
-:end
-
-:vms_usage_help:
-Zobrazí metriky CPU (host a guest), paměť, diskové I/O a síťové I/O.
-:end
-
-:vms_usage_timer_help:
-Interval v sekundách pro obnovu metrik.
-:end
-
-:apc_ups_override_ups_capacity_help:
-Pokud vaše UPS nepodporuje reportování "Nominal Power" (`NOMPOWER`) ale uvádí zatížení v procentech (`LOADPCT`), můžete ručně zadat kapacitu UPS ve wattech (W). Plugin poté odhadne "≈" hodnotu podle aktuálního zatížení.
-
-Jde pouze o odhad — nebere v úvahu např. účinnost UPS.
-:end
 
 :docker_container_network_help:
 Umožňuje tomuto kontejneru využívat síťové nastavení jiného kontejneru. Vyberte odpovídající kontejner ze seznamu.<br/>Toto nastavení je vhodné např. pokud chcete směrovat síťový provoz přes VPN.
 :end
 
+
 :docker_tailscale_help:
 Povolte Tailscale, pokud chcete přidat tento kontejner jako zařízení do vaší Tailnet sítě.
 :end
+
 
 :docker_tailscale_hostname_help:
 Zadejte název hostitele pro tento kontejner. Nemusí odpovídat názvu kontejneru, ale musí být unikátní v Tailnet. Pro tento název bude vygenerován HTTPS certifikát, takže použijte jméno, které vám nevadí mít veřejné.
 Více informací: <a href="https://tailscale.com/kb/1153/enabling-https" target="_blank">enabling https</a>.
 :end
+
 
 :docker_tailscale_be_exitnode_help:
 Povolte, pokud má tento kontejner sloužit jako Exit Node pro ostatní zařízení v Tailnet – vhodné např. pro kontejnery s VPN.
@@ -2637,16 +2675,19 @@ Autorizujte tento uzel v <a href="https://login.tailscale.com/admin/machines" ta
 Více na: <a href="https://tailscale.com/kb/1103/exit-nodes" target="_blank">Exit Nodes</a>.
 :end
 
+
 :docker_tailscale_exitnode_ip_help:
 Volitelně můžete směrovat odchozí provoz tohoto kontejneru přes jiný Exit Node v Tailnet. Zadejte název nebo IP adresu Tailscale Exit Node.
 Více na: <a href="https://tailscale.com/kb/1103/exit-nodes" target="_blank">Exit Nodes</a>.
 :end
+
 
 :docker_tailscale_lanaccess_help:
 Pouze pokud tento kontejner používá Exit Node. Povolte přístup k místní síti (LAN).
 
 <b>UPOZORNĚNÍ:</b>&nbsp;I při zapnutí této funkce nemusí být kontejner dostupný z LAN bez nainstalovaného Tailscale.
 :end
+
 
 :docker_tailscale_userspace_networking_help:
 Při aktivaci bude kontejner fungovat v omezeném režimu – nebude mít přístup k Tailscale DNS ani navazovat spojení. Ostatní zařízení jej však budou moci oslovit.
@@ -2655,10 +2696,12 @@ Při deaktivaci bude mít kontejner plný přístup k Tailnet. Bude fungovat Tai
 Z LAN však může být přístup omezený bez Tailscale.
 :end
 
+
 :docker_tailscale_ssh_help:
 Tailscale SSH je podobné volbě "Konzole" v Docker sekci Unraid webového rozhraní, s tím rozdílem, že se připojujete pomocí SSH klienta a ověřujete se přes Tailscale.
 Více informací najdete v dokumentaci <a href="https://tailscale.com/kb/1193/tailscale-ssh" target="_blank">Tailscale SSH</a>.
 :end
+
 
 :docker_tailscale_serve_mode_help:
 Povolením funkce <b>Serve</b> dojde k automatickému reverznímu proxy primární webové služby z tohoto kontejneru a jejímu zpřístupnění v rámci vaší Tailnet sítě přes HTTPS s platným certifikátem!
@@ -2678,6 +2721,7 @@ Doporučujeme přečíst <a href="https://tailscale.com/kb/1223/funnel" target="
 Více na <a href="https://tailscale.com/kb/1153/enabling-https" target="_blank">Enabling HTTPS</a>.
 :end
 
+
 :docker_tailscale_serve_port_help:
 Zde uveďte port primární webové služby tohoto kontejneru. Upozornění: jde o port uvnitř kontejneru, nikoli o přemapovaný port na hostiteli.
 
@@ -2690,9 +2734,19 @@ Tato hodnota se předává do části '<serve_port>' v příkazu pro spuštění
 Více na <a href="https://tailscale.com/kb/1242/tailscale-serve" target="_blank">Tailscale Serve CLI</a>.
 :end
 
+
 :docker_tailscale_show_advanced_help:
 Tady číhají draci! (Zobrazí rozšířená nastavení – používejte opatrně.)
 :end
+
+
+:docker_tailscale_serve_target_help:
+Pokud není uvedeno, výchozí hodnota je http://localhost. Předává se do části `<serve_target>` příkazu pro spuštění serve nebo funnel:<br>
+`tailscale [serve|funnel] --bg --<protocol><protocol_port><path> <serve_target>:<serve_port><local_path>`<br>
+Více na <a href="https://tailscale.com/kb/1242/tailscale-serve" target="_blank">Tailscale Serve CLI</a>.<br>
+Upozornění: podporovány jsou pouze `localhost` nebo `127.0.0.1`.
+:end
+
 
 :docker_tailscale_serve_local_path_help:
 Pokud není uvedeno, výchozí hodnota je prázdný řetězec. Předává se do '<local_path>' části příkazu:
@@ -2700,11 +2754,13 @@ Pokud není uvedeno, výchozí hodnota je prázdný řetězec. Předává se do 
 Více na <a href="https://tailscale.com/kb/1242/tailscale-serve" target="_blank">Tailscale Serve CLI</a>.
 :end
 
+
 :docker_tailscale_serve_protocol_help:
 Pokud není zadáno, výchozí hodnota je "https". Předává se do části '<protocol>' příkazu:
 'tailscale [serve|funnel] --bg --'**'<protocol>'**'=<protocol_port><path> http://localhost:<serve_port><local_path>'
 Více na <a href="https://tailscale.com/kb/1242/tailscale-serve" target="_blank">Tailscale Serve CLI</a>.
 :end
+
 
 :docker_tailscale_serve_protocol_port_help:
 Pokud není zadáno, výchozí hodnota je "=443". Předává se do části '<protocol_port>' příkazu:
@@ -2712,11 +2768,13 @@ Pokud není zadáno, výchozí hodnota je "=443". Předává se do části '<pro
 Více na <a href="https://tailscale.com/kb/1242/tailscale-serve" target="_blank">Tailscale Serve CLI</a>.
 :end
 
+
 :docker_tailscale_serve_path_help:
 Pokud není zadáno, výchozí hodnota je prázdný řetězec. Předává se do části '<path>' příkazu:
 'tailscale [serve|funnel] --bg --<protocol><protocol_port>'**'<path>'** 'http://localhost:<serve_port><local_path>'
 Více na <a href="https://tailscale.com/kb/1242/tailscale-serve" target="_blank">Tailscale Serve CLI</a>.
 :end
+
 
 :docker_tailscale_serve_webui_help:
 Pokud je aktivní <b>Serve</b>, bude k dispozici HTTPS URL s platným doménovým jménem přes vaši Tailnet síť, bez nutnosti portu.
@@ -2726,59 +2784,346 @@ Pokud je aktivní <b>Funnel</b>, stejné URL bude dostupné i z internetu.
 Pokud jsou obě funkce vypnuté, bude URL vygenerováno z pole "Web UI" kontejneru, ale s použitím Tailscale IP adresy. Pokud je zde špatný port, přepněte z "Základního" do "Rozšířeného" zobrazení a zkontrolujte pole "Web UI".
 :end
 
+
 :docker_tailscale_advertise_routes_help:
 Volitelně zadejte jakékoli trasy, které mají být předány jako parametr **'--advertise-routes='** při spuštění **'tailscale up'**.
 Více informací: <a href="https://tailscale.com/kb/1019/subnets#connect-to-tailscale-as-a-subnet-router" target="_blank">Subnet routers</a>.
 :end
+
 
 :docker_tailscale_accept_routes_help:
 Pokud je aktivní, přijímá podsíťové trasy z jiných zařízení a přidá parametr **'--accept-routes'** při spuštění **'tailscale up'**.
 Více informací: <a href="https://tailscale.com/kb/1019/subnets?q=allow+routes#use-your-subnet-routes-from-other-devices" target="_blank">Použití tras z jiných zařízení</a>.
 :end
 
+
 :docker_tailscale_daemon_extra_params_help:
 Zadejte dodatečné parametry, které mají být předány při spouštění **'tailscaled'**.
 Více informací: <a href="https://tailscale.com/kb/1278/tailscaled" target="_blank">tailscaled</a>.
 :end
+
 
 :docker_tailscale_extra_param_help:
 Zadejte dodatečné parametry, které mají být předány při spuštění **'tailscale up'**.
 Více informací: <a href="https://tailscale.com/kb/1080/cli#up" target="_blank">Tailscale CLI</a>.
 :end
 
+
 :docker_tailscale_statedir_help:
 Pokud selže detekce adresáře pro uložení stavu při spuštění, můžete ručně zadat perzistentní adresář v kontejneru, např. '/container-path/.tailscale_state'
 :end
+
 
 :docker_tailscale_troubleshooting_packages_help:
 Povolte pro instalaci nástrojů 'ping', 'nslookup', 'curl' a 'speedtest-cli' do kontejneru pro diagnostiku síťových problémů. Po jejich vyřešení doporučujeme tuto funkci vypnout kvůli velikosti kontejneru.
 :end
 
+
+:docker_privileged_help:
+Nutné povolit pro kontejnery, které vyžadují přímý přístup k zařízení nebo funkcím hostitelského systému.
+
+Více informací: <a href="https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities" target="_blank">docker.com: Privileged containers</a>
+:end
+
+
+; sysdevs help - added May 18, 2020
+:sysdevs_iommu_groups_help:
+Zobrazí seznam dostupných IOMMU skupin v systému. Pomocí `lspci` jsou zobrazeny informace o zařízeních ve skupině.
+
+Zařízení vybraná zde budou přiřazena ovladači VFIO-PCI při startu, což umožní jejich přiřazení virtuálním strojům a zabrání systému v jejich běžném použití.
+
+**Poznámka:** Výběr jednoho zařízení platí i pro všechna ostatní zařízení ve stejné IOMMU skupině.
+
+<i class="fa fa-circle orb green-orb middle"></i> Zařízení je aktuálně přiřazeno VFIO-PCI ovladači.
+
+<i class="fa fa-retweet grey-orb middle"></i> Zařízení podporuje FLR (Function Level Reset).
+
+<input type="checkbox" value="" disabled> Pokud je pole šedé, zařízení je využíváno systémem a nelze jej předat VM.
+:end
+
+
+:sysdevs_thread_pairings_help:
+Zobrazí seznam spárovaných CPU vláken.
+:end
+
+
+:sysdevs_usb_devices_help:
+Zobrazí výstup `lsusb`. ID zařízení se používají při konfiguraci PCI passthrough.
+:end
+
+
+:sysdevs_scsi_devices_help:
+Zobrazí výstup `lsscsi`. ID zařízení se používají při konfiguraci PCI passthrough.
+
+Poznámka: Linux seskupuje ATA, SATA a SAS zařízení mezi SCSI zařízení.
+:end
+
+
+; unraid.net help - added March 11, 2021
+:unraidnet_wanpanel_help:
+WAN síťový port je externí TCP port, který je nastaven na vašem routeru pro přesměrování (NAT).
+Tento port přesměruje provoz z internetu na zabezpečený SSL port vašeho Unraid serveru.
+:end
+
+
+:unraidnet_inactivespanel_help:
+Kliknutím na „Aktivovat“ nastavíte lokální Git repozitář na USB boot zařízení a připojíte jej ke vzdálenému řízení přes unraid.net, které je přiřazeno k tomuto serveru.
+:end
+
+
+:unraidnet_changespanel_help:
+Stav „Není aktuální“ znamená, že došlo ke změnám v lokálních souborech oproti vzdálené verzi na unraid.net.
+
+Klikněte na „Aktualizovat“ pro odeslání změn na vzdálený server.
+
+Klikněte na „Změny“ pro zobrazení, co bylo změněno.
+:end
+
+
+:unraidnet_uptodatepanel_help:
+Stav „Aktuální“ znamená, že lokální konfigurace odpovídá verzi uložené na vzdáleném serveru unraid.net.
+:end
+
+
+:unraidnet_activepanel_help:
+Kliknutím na „Deaktivovat“ ukončíte komunikaci s unraid.net vzdáleným řízením.
+
+Kliknutím na „Znovu inicializovat“ vymažete celý historii změn jak na lokálním, tak vzdáleném serveru.
+:end
+
+
+:unraidnet_extraorigins_help:
+Zadejte čárkou oddělený seznam URL adres, které mají povolený přístup k unraid-api (např. https://abc.myreverseproxy.com, https://xyz.rvrsprx.com,…)
+:end
+
+
+:myservers_remote_t2fa_help:
+Když je povolen Transparentní 2FA pro vzdálený přístup, přistupujete k serveru kliknutím na odkaz *Remote Access* na stránce <a href="https://connect.myunraid.net/" target="_blank" rel="noopener noreferrer">Go to Connect</a>.
+Systém automaticky vyžádá 2FA token ze serveru a vloží jej do přihlašovacího formuláře. Server odmítne každý pokus o přihlášení bez platného tokenu.
+Každý token je použitelný jen jednou a platí pouze 5 minut.
+:end
+
+
+:myservers_local_t2fa_help:
+Když je povolen Transparentní 2FA pro místní přístup, přistupujete k serveru kliknutím na odkaz *Local Access* na stránce <a href="https://connect.myunraid.net/" target="_blank" rel="noopener noreferrer">Go to Connect</a>.
+Systém automaticky vyžádá 2FA token ze serveru a vloží jej do přihlašovacího formuláře. Server odmítne každý pokus o přihlášení bez platného tokenu.
+Každý token je použitelný jen jednou a platí pouze 5 minut.
+
+Toto nastavení je poměrně přísné pro místní přístup a ve většině případů není potřeba. Vyžaduje stabilní připojení k internetu.
+Pokud potřebujete přístup k webovému rozhraní při výpadku internetu, připojte se přes SSH k serveru a spusťte `use_ssl no` – tím získáte přístup přes http://<?=['NGINX_LANIP']?><?=['NGINX_PORT'] !== '80' ? ':'.['NGINX_PORT'] : '' ?>
+:end
+
+
+; WireGuard help text
+
+:wg_local_name_help:
+Použijte toto pole pro pojmenování tohoto připojení, aby bylo snadno rozpoznatelné. Stejný název se objeví také v konfiguraci každého partnera (peer).
+:end
+
+
+:wg_generate_keypair_help:
+Kliknutím na **Generovat klíče** automaticky vytvoříte jedinečný pár soukromého a veřejného klíče.<br>
+Nebo vložte existující soukromý klíč vygenerovaný WireGuardem. Tento klíč **NEZVEŘEJŇUJTE** nikomu jinému!
+:end
+
+
+:wg_local_tunnel_network_pool_help:
+WireGuard tunely potřebují interní IP adresy. Zadejte rozsah sítí – výchozí IPv4 síť je <?=$netpool['wg0']?>/24 nebo výchozí IPv6 síť <?=$netpool6['wg0']?>/64, případně zadejte vlastní rozsah.
+
+*Tunelová síť* musí být unikátní – nesmí již existovat na serveru ani u žádného partnera.
+:end
+
+
+:wg_local_tunnel_network_pool_X_help:
+WireGuard tunely potřebují interní IP adresy. Zadejte rozsah sítí – výchozí IPv4 síť je <?=$netpool['wgX']?>/24 nebo výchozí IPv6 síť <?=$netpool6['wgX']?>/64, případně zadejte vlastní rozsah.
+
+*Tunelová síť* musí být unikátní – nesmí již existovat na serveru ani u žádného partnera.
+:end
+
+
+:wg_local_tunnel_address_help:
+Toto pole se automaticky vyplní při vytvoření tunelové sítě. Lze jej přepsat, ale obvykle to není nutné. Buďte opatrní při manuálních změnách.
+:end
+
+
+:wg_local_endpoint_help:
+Toto pole se automaticky vyplní veřejnou adresou serveru nebo doménou *www.&lt;hash&gt;.unraid.net*.<br>
+To umožní navázat VPN tunely od vzdálených partnerů k serveru.<br>
+Nastavte správné přesměrování portu na vašem routeru (výchozí port je <?=$netport['wg0']?>, ale lze změnit).
+
+Uživatelé s vlastní doménou mohou zadat vlastní název serveru (např. www.mujserver.mojedomena.cz).<br>
+Znovu připomínáme: zkontrolujte nastavení routeru.
+
+**Poznámka pro uživatele Cloudflare:** Proxy Cloudflare funguje pouze pro http(s), nikoliv pro VPN. Proxy musí být vypnuta.
+:end
+
+
+:wg_local_endpoint_X_help:
+Stejné jako výše, ale pro další instance (wg1, wg2 atd.). Nahraďte <?=$netport['wgX']?> podle příslušného rozhraní.
+:end
+
+
+:wg_local_server_uses_nat_help:
+Při zapnutí NAT server používá svou LAN IP při předávání provozu z tunelu do LAN. Je vhodné, pokud nechcete upravovat router, ale nefunguje s kontejnery Docker, které mají vlastní IP.
+
+Při vypnutí NAT server používá tunelovou IP adresu, což vyžaduje nastavení statické routy na routeru, která odkazuje tunelovou adresu zpět na server.
+:end
+
+
+:wg_local_gateway_uses_upnp_help:
+Výchozí hodnota je **Ano**, pokud místní brána podporuje UPnP a reaguje na požadavky.<br>
+V tom případě není nutné nastavovat přesměrování portů na routeru – provede se automaticky.
+:end
+
+
+:wg_local_tunnel_firewall_help:
+Firewall umožňuje omezit přístup přes WireGuard tunel na specifikované adresy nebo podsítě.<br>
+Výchozí pravidlo „blokovat“ zablokuje zadané adresy a ostatní povolí. Při změně na „povolit“ funguje opačně – povolí pouze uvedené a ostatní zablokuje.<br>
+Více IP adres oddělujte čárkou.
+:end
+
+
+:wg_mtu_size_help:
+Ponechte výchozí automatický režim pro určení velikosti MTU. Tato hodnota platí pro všechna připojení peerů.
+:end
+
+
+:wg_peer_configuration_help:
+Ikona <i class='fa fa-fw fa-eye'></i> slouží k náhledu konfigurace partnera. Konfiguraci lze stáhnout nebo ihned zobrazit pro rychlé nastavení partnera.<br>
+Ikona je neaktivní, pokud konfigurace neexistuje nebo nebyly změny uloženy.
+
+Ikona <i class='fa fa-fw fa-key'></i> zobrazí nebo skryje klíče – soukromý, veřejný a předsdílený. Pokud žádný klíč není nastaven, pole se zobrazí automaticky.
+:end
+
+
+:wg_peer_name_help:
+Použijte toto pole pro zadání názvu tohoto partnera (peer). Tento název se zobrazí i na vzdálené straně.
+:end
+
+
+:wg_peer_preshared_key_help:
+Pro vyšší bezpečnost lze použít předsdílený klíč. Kliknutím na **Generovat klíč** vytvoříte unikátní hodnotu.<br>
+Tento klíč musí být stejný na obou stranách – serveru i partnerovi.
+:end
+
+
+:wg_peer_tunnel_address_help:
+Toto pole se automaticky vyplní při vytvoření tunelové sítě. Lze je přepsat, ale obvykle to není nutné.<br>
+Každý partner musí mít **unikátní** tunelovou IP adresu.
+:end
+
+
+:wg_peer_endpoint_help:
+Ponecháte-li pole prázdné, server čeká pasivně na navázání tunelu (partner ho musí zahájit).<br>
+Pokud zadáte IP adresu partnera, server přejde do aktivního režimu a naváže tunel sám při detekci provozu.
+
+*Poznámka: toto pole je povinné pro spojení server–server a LAN–LAN.*
+:end
+
+
+:wg_peer_allowed_ips_help:
+Pole je automaticky vyplněno tunelovou adresou partnera. To umožňuje serveru dosáhnout partnera přes tunel.<br>
+Pokud má partner další sítě (např. za routerem), lze je sem přidat pro zpřístupnění přes tunel.
+:end
+
+
+:wg_peer_dns_server_help:
+Zadejte DNS server, který se má použít na straně partnera.
+:end
+
+
+:wg_persistent_keepalive_help:
+Ve výchozím nastavení zůstává WireGuard tunel neaktivní, pokud neprobíhá žádný přenos dat, což může způsobit přerušení spojení.
+Obvykle to není problém, protože tunel WireGuard se automaticky obnoví, jakmile je potřeba.<br>
+Časovač "keepalive" udržuje spojení otevřené – pro většinu případů je vhodná hodnota 20 sekund.
+
+Poznámka: Na mobilních zařízeních to zvýší spotřebu dat a rychleji vybíjí baterii.
+:end
+
+
+:sysdrivers_intro_help:
+Tato stránka zobrazuje všechny ovladače dostupné v systému. Seznam můžete filtrovat podle toho, zda je ovladač použitý, nebo ne, případně vyhledat konkrétní ovladač.
+
+Každý ovladač třetí strany nainstalovaný pluginem má vedle sebe ikonu podpory – klikněte na ni pro zobrazení podpory pluginu.
+
+Klikněte na tlačítko *Upravit* pro přidání, změnu nebo smazání libovolného konfiguračního souboru `modprobe.d` v adresáři `config/modprobe.d` na USB disku.
+:end
+
+
+:console_keyboard_help:
+Zvolte výchozí rozložení klávesnice pro lokální konzoli (netýká se webového terminálu).
+:end
+
+
+:console_screen_help:
+**Výchozí:** Nastaví ztmavení obrazovky po 15 minutách a úsporný režim po 60 minutách.
+
+**Vypnuto:** Vypne časový limit pro ztmavení i úsporný režim.
+
+**Jiné hodnoty:** Nastaví ztmavení podle zvolené hodnoty a vypne úsporný režim.
+:end
+
+
+:console_bash_help:
+Pokud je nastaveno na "Ano", historie příkazů bash bude přetrvávat i po restartu. Nastavením na "Ne" ji deaktivujete.
+
+**UPOZORNĚNÍ:** Historie bash bude zapisována na USB zařízení pro boot, což může vést k jeho rychlejšímu opotřebení!
+
+**Poznámka:** Zapnutí nebo vypnutí této funkce vymaže celou bash historii.
+:end
+
+
+:WOL_intro_help:
+Tato stránka umožňuje nastavení spuštění/obnovení a vypnutí virtuálních strojů, kontejnerů (Docker a LXC) pomocí WOL (Wake-on-LAN) magických paketů.
+
+Zahrnuje také probuzení samotného serveru Unraid.
+
+Proces vyhledá odpovídající MAC adresu definovanou ve službě (VM nebo kontejner) — s výjimkou Dockeru. Docker nemá MAC adresu, dokud není spuštěn, proto musíte definovat uživatelskou MAC adresu pro možnost spuštění.
+
+Pokud je služba pozastavena, WOL paket ji obnoví.
+
+Pro každou službu lze nastavit: povolit, zakázat, nebo povolit a zároveň umožnit vypnutí.
+
+Pokud je nastaveno "povolit a vypnout", při dalším WOL paketu bude spuštěná služba vypnuta.
+:end
+
+
+:WOL_enable_help:
+Pokud je nastaveno na "Ano", daemon Unraidwold bude spuštěn.
+:end
+
+
 :WOL_run_docker_help:
 Pokud je nastaveno na "ano", po přijetí Wake-on-LAN paketů budou prováděny kontroly pro Docker kontejnery. Jinak budou kontejnery ignorovány.
 :end
 
-; New entries (4) - 2025-04-21
 
-:nfs_security_rules_help:
-Zadejte pravidlo pro každou IP adresu na samostatný řádek a ukončete jej novým řádkem.
-Nelze zadávat pravidla ve formátu IP1,IP2(...). Unraid tento formát v souboru exports nepodporuje.
-
-Výchozí pravidla pro každé NFS pravidlo jsou: async a no_subtree_check.
-
-**Poznámka:** Veřejně přístupné pravidlo je: '*(rw,sec=sys,insecure,anongid=100,anonuid=99,no_root_squash)'.
+:WOL_run_VM_help:
+Pokud je nastaveno na "Ano", při přijetí WOL paketů bude provedena kontrola běžících virtuálních strojů. V opačném případě budou ignorovány.
 :end
 
-:nfs_server_max_protocol_help:
-Vyberte nejvyšší verzi NFS protokolu, kterou má váš Unraid server podporovat.
+
+:WOL_run_LXC_help:
+Pokud je nastaveno na "Ano", při přijetí WOL paketů bude provedena kontrola běžících LXC kontejnerů. Plugin LXC musí být nainstalován.
 :end
 
-:nfs_threads_help:
-Nastavte počet vláken pro NFS. Pro lehké NFS zatížení postačí 8. Pro vyšší zátěž může být vhodné navýšit počet vláken.
 
-Pokud nebude vláken dostatek, může služba NFS spadnout.
+:WOL_run_shutdown_help:
+Pokud je nastaveno na "Ano", při přijetí WOL paketu se ověří, zda je služba aktivní a jestli má nastavení "Povolit a Vypnout" — pokud ano, služba bude vypnuta.
 :end
 
-:shares_fuse_file_descriptors_io_help:
-Nastavte počet FUSE deskriptorů souborů. Pokud dochází k vysoké aktivitě se soubory v poli, může být nutné tuto hodnotu navýšit.
+
+:WOL_interface_help:
+Zadejte síťové rozhraní, na které se má daemon navázat. Některá rozhraní nemusí být schopna přijímat etherframe pakety. Doporučeno je použít fyzické rozhraní.
 :end
+
+
+:WOL_promiscuous_mode_help:
+Povolí nastavení síťové karty do promiskuitního režimu (nebude filtrovat pakety).
+:end
+
+
+:WOL_log_file_help:
+Výchozí logování probíhá do systémového logu. Pokud si přejete použít jiné umístění, zadejte název souboru.
+:end
+

@@ -11,30 +11,37 @@ Enable for Cache and Pool Disks=Zapnout pro cache a pool disky
 ;
 ; Help
 ;
-:file_activity_loggging_plug:
+:file_activity_logging_plug:
 > Monitorování aktivity souborů:
 >
 > Otevírání, čtení, zápis a úpravy souborů jsou monitorovány a logovány na array pomocí `inotify` a zobrazují se podle disku nebo sdílené složky, UD disků a cache.
 > Pro zaznamenávání aktivity disků je potřeba File Activity nejprve spustit.
 > File Activity je určena pro krátkodobé spuštění, abyste mohli zkontrolovat aktivitu disků.
 > Server s vysokou aktivitou může rychle zaplnit prostor pro logy.
-> Složky „appdata“, „docker“, „syslogs“ a „system“ (nerozlišuje velikost písmen) jsou automaticky vyloučeny.
+> Složky „appdata", „docker", „syslogs" a „system" (nerozlišuje velikost písmen) jsou automaticky vyloučeny.
 >
 > Poznámka: Monitorování File Activity se zastaví při zastavení array a znovu se spustí po jejím opětovném spuštění, pokud je zapnuto.
 :end
+
 
 :file_activity_enable_logging_plug:
 > Nastavte na **Ano**, pokud chcete povolit monitorování File Activity při startu serveru.
 :end
 
+
 :file_activity_enable_ud_plug:
 > Nastavte na **Ano**, pokud chcete povolit monitorování File Activity pro Unassigned Devices (nepřiřazené disky), pokud je nainstalován příslušný plugin.
 :end
+
 
 :file_activity_enable_cache_plug:
 > Nastavte na **Ano**, pokud chcete povolit monitorování File Activity pro Cache a Pool disky.
 :end
 
+
 :file_activity_display_events_plug:
 > Toto je počet událostí se soubory, které se zobrazí na discích a sdílených složkách z File Activity logu pro každou sdílenou složku nebo disk.
 :end
+
+
+

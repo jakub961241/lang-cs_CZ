@@ -20,4 +20,3 @@ Stop Preclear=Zastavit Preclear
 Success=Úspěch
 There is a previous preclear session available for this drive=Pro tento disk je dostupná předchozí relace Preclear
 This will stop all running sessions, halt all processes and remove all related files=Tím se zastaví všechny relace, ukončí všechny procesy a odstraní se všechny související soubory
-

@@ -1,4 +1,4 @@
-Disabling Spectre, Meltdown and Zombieload MDS mitigations may improve your CPU speed But these are security risks for certain workloads, and disabling the mitigations is purely all at your own risk=Vypnutím zmírnění pro Spectre, Meltdown a Zombieland MDS může zlepšit výkon procesoru. Vězte ale, že toto jsou bezpečnostní hrozby a vypnutí zmírnění je čistě na vaše riziko
+Disabling Spectre, Meltdown and Zombieload MDS mitigations may improve your CPU speed But these are security risks for certain workloads, and disabling the mitigations is purely all at your own risk=Vypnutí zmírnění pro Spectre, Meltdown a Zombieload MDS může zlepšit výkon procesoru. Vězte ale, že toto jsou bezpečnostní hrozby a vypnutí zmírnění je čistě na vaše riziko
 Mitigations currently disabled=Aktuálně vypnutá zmírnění
 Mitigations currently enabled=Aktuálně zapnutá zmírnění
 Status=Stav

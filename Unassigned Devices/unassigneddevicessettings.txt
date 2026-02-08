@@ -60,21 +60,26 @@ Working=Probíhá
 > **Poznámka:** Pro připojení disků formátovaných jako HFS+ nebo exFAT a pro aktivaci destruktivního režimu musí být nainstalován plugin "Unassigned Devices Plus".
 :end
 
+
 :ud_settings_common_script_plug:
 > Pokud je aktivováno, tento skript bude spuštěn před skriptem konkrétního disku. Akce bude dostupná v proměnné **$ACTION**. Ujisti se, že všechny příkazy obsahují plnou cestu.
 :end
+
 
 :ud_settings_destructive_plug:
 > Pokud je tato možnost aktivována, budeš moci pomocí Unassigned Devices mazat a formátovat oddíly. Tuto funkci lze aktivovat pouze tehdy, pokud je nainstalován plugin "Unassigned Devices Plus".
 :end
 
+
 :ud_settings_mount_usb_devices_plug:
 > Pokud je tato možnost nastavena na **Ano**, nový USB disk bude automaticky připojen a sdílen bez uživatelského zásahu.
 :end
 
+
 :ud_settings_discard_plug:
 > SSD disky, které podporují "Discard", budou připojeny s touto možností. Pokud používáš plánované TRIMování, můžeš tuto možnost nastavit na **Ne**.
 :end
+
 
 :ud_settings_symlinks_plug:
 > Nastav na **Ano**, pokud chceš vytvořit symlinky z /mnt/remotes/ na /mnt/disks/.
@@ -82,9 +87,11 @@ Working=Probíhá
 > Pokud zpětnou kompatibilitu nepotřebuješ, ponech tuto možnost jako **Ne**.
 :end
 
+
 :ud_settings_remote_share_wait_plug:
 > Čas v sekundách, jak dlouho čekat před připojením vzdálených sdílení po startu arraye.
 :end
+
 
 :ud_settings_specify_smb_vers_plug:
 > Nastavte na **Ne** u Unassigned Devices, aby se při připojování vzdálených sdílení nejprve neuváděla verze SMB.
@@ -93,6 +100,7 @@ Working=Probíhá
 >
 > Některé vzdálené servery vyžadují, aby byla verze SMB specifikována.
 :end
+
 
 :ud_settings_debug_level_plug:
 > Nastavení úrovně ladicího protokolu (Debug Log Level) přidává další záznamy v konkrétních oblastech UD pro řešení problémů. Nastavte úroveň ladicího protokolu pro ladění určité oblasti UD.
@@ -108,11 +116,13 @@ Working=Probíhá
 > **Poznámka:** Nedržte úroveň ladicího protokolu zapnutou po delší dobu. Může to způsobit velké množství zpráv v syslogu.
 :end
 
+
 :ud_settings_specify_nfs_vers_plug:
 > Nastavte na **Auto** pro automatické připojení všech vzdálených NFS sdílení s automatickým vyjednáním verze NFS.
 >
 > Pokud nastavení **Auto** nefunguje nebo připojuje pouze NFSv3, je třeba použít nastavení **NFSv4**, protože vaše verze Unraidu automaticky nevyjednává NFSv4.
 :end
+
 
 :ud_settings_smb_security_plug:
 > Nastavte uživatelskou úroveň sdílení SMB:
@@ -129,6 +139,7 @@ Working=Probíhá
 > Pokud používáte Microsoft účet, může být lepší vytvořit v Unraidu uživatele s jednoduchým uživatelským jménem a heslem, a pak ve Windows přejít do Ovládací panely -> Správce pověření -> Povolení Windows -> Přidat pověření Windows a zadat správný název Unraid serveru a přihlašovací údaje.
 :end
 
+
 :ud_settings_case_sensitive_plug:
 > Řídí, zda jsou názvy souborů citlivé na velikost písmen.
 >
@@ -139,13 +150,16 @@ Working=Probíhá
 > Hodnota **Forced lower** je speciální: velikost písmen u všech příchozích názvů souborů od klientů, nejen nových, bude převedena na malá písmena. Jinými slovy, bez ohledu na to, jaký název s různou velikostí písmen je vytvořen na Windows straně, bude uložen a přístupný vždy v malých písmenech. To zajistí, že všechny Windows aplikace soubor správně najdou bez ohledu na velikost písmen, ale velikost písmen nebude zachována ve výpisu složek.
 :end
 
+
 :ud_time_machine_plug:
 > Nastav na **Ano**, pokud chceš povolit Time Machine podporu u SMB sdílení.
 :end
 
+
 :ud_time_machine_vol_size_plug:
 > Toto omezuje hlášenou velikost svazku, čímž zabraňuje Time Machine používat celý skutečný diskový prostor pro zálohu. Například nastavení této hodnoty na "1024" omezí hlášený diskový prostor na 1 GB.
 :end
+
 
 :ud_settings_force_user_plug:
 > Někdy nejsou oprávnění na SMB sdíleních zpracována podle očekávání. Zapnutí této funkce může pomoci s těmito oprávněními.
@@ -153,9 +167,11 @@ Working=Probíhá
 > Nevýhodou je, že se tím přepíší skupinová oprávnění Linuxu. Pokud si nejste jisti, zda je to nutné, ponechte funkci vypnutou.
 :end
 
+
 :ud_settings_nfs_security_plug:
 > Aktivuj, pokud chceš exportovat nezarovnané disky přes NFS. Přístup bude veřejný nebo řízený podle nastavených pravidel.
 :end
+
 
 :ud_settings_nfs_rules_plug:
 > Zadejte pravidlo pro každou IP adresu na samostatný řádek a pravidlo ukončete novým řádkem.
@@ -171,9 +187,11 @@ Working=Probíhá
 
 :end
 
+
 :ud_settings_disk_pass_plug:
 > Vyber disk, pro který chceš nastavit heslo. Pokud ponecháš prázdné, použije se heslo/heslová fráze pole.
 :end
+
 
 :ud_settings_change_uuid_plug:
 > Vyber disk, jehož UUID chceš změnit. Vhodné, pokud disk dříve patřil do pole a UUID koliduje. Disk musí být odpojen.
@@ -181,9 +199,11 @@ Working=Probíhá
 > **Poznámka:** Neměň UUID u disků v poolech.
 :end
 
+
 :ud_settings_zfs_upgrade_plug:
 > Vyber disk, který chceš upgradovat na novou verzi ZFS. Musí být připojený.
 :end
+
 
 :ud_remote_server_test_plug:
 > Vzdálené servery musí mít povolené SMB a/nebo NFS. Tento test zkontroluje, zda jsou porty SMB a/nebo NFS otevřené. Příkaz 'showmount -e <server>' na Unraidu musí také zobrazit dostupné NFS mounty.
@@ -218,3 +238,4 @@ Working=Probíhá
 > Zajištěním, že NFS je povoleno, správně nakonfigurováno s potřebnými oprávněními a exportované adresáře jsou povoleny pro vaši klientskou IP, by showmount měl zobrazit dostupné exporty.
 
 :end
+

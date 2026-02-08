@@ -55,6 +55,7 @@ When parity operation is running=Když probíhá paritní operace
 > Mějte na paměti, že *hlavní* menu má omezený prostor.
 :end
 
+
 :integrity_service_plug:
 > Pokud je povoleno, automaticky se vypočítá kontrolní součet a přidá se do rozšířených atributů nově vytvořeného nebo upraveného souboru.
 > Pokud dojde ke změně souboru, ale čas jeho úpravy se nezměnil, provede se automatická kontrola kontrolního součtu, aby se odhalila případná skrytá korupce souboru.
@@ -64,6 +65,7 @@ When parity operation is running=Když probíhá paritní operace
 > Pokud je automatické hashování vypnuto, je třeba provádět ruční kontrolu, aby byla data aktuální.
 :end
 
+
 :integrity_hashing_plug:
 > Vyberte preferovanou metodu hashování. SHA2 generuje kontrolní součet o délce 256 bitů, MD5 generuje kontrolní součet o délce 128 bitů, zatímco BLAKE2 generuje kontrolní součet o délce 512 bitů na soubor.
 >
@@ -72,10 +74,12 @@ When parity operation is running=Když probíhá paritní operace
 > Všechny metody vyžadují značný výpočetní výkon procesoru, slabý procesor nemusí být schopen požadovaný výkon zajistit.
 :end
 
+
 :integrity_flash_plug:
 > Pokud je povoleno, bude denně vytvářen soubor na flash zařízení, který obsahuje výsledky kontrolních součtů všech nových nebo upravených souborů daného dne.
 > Formát tohoto souboru je stejný jako standardní exportní soubor. Denní soubor se ukládá do */config/plugins/dynamix.file.integrity/saved/disks.export.&lt;datum&gt;.new.hash*
 :end
+
 
 :integrity_exluded_plug:
 > Zde vyberte složky (sdílené složky), které chcete vyloučit z automatického hashování a ověřování. Sdílená složka, která existuje na více discích, bude přeskočena na kterémkoliv disku, kde je přítomna.
@@ -85,6 +89,7 @@ When parity operation is running=Když probíhá paritní operace
 >
 > Vyberte **Apple metadata** pro vyloučení metadatových souborů vytvářených Apple netatalk (.AppleDB a .DS_Store).
 :end
+
 
 :integrity_verification_plug:
 > Pokud je povoleno, vytvoří se cron úloha, která provádí ověřování souborů na pozadí. Musíte vybrat disky, které se mají automaticky hashovat a ověřovat (viz tabulka níže).
@@ -99,33 +104,41 @@ When parity operation is running=Když probíhá paritní operace
 > Pokud je ověřovací plán vypnutý, je potřeba manuálně kontrolovat správnost souborů.
 :end
 
+
 :integrity_priority_plug:
 > Procesy na pozadí lze spustit s normální nebo sníženou prioritou.
 :end
+
 
 :integrity_parity_plug:
 > Před zahájením úlohy ověřování může úloha pokračovat jako obvykle i během probíhající parity operace, nebo se ověřování vůbec nespustí.
 > V druhém případě je nutné počkat na další plánovaný čas pro spuštění úlohy.
 :end
 
+
 :integrity_day_of_the_week_plug:
 > Pokud je zvolen týdenní plán, zvolte den v týdnu, kdy má být úloha spuštěna.
 :end
+
 
 :integrity_day_of_the_month_plug:
 > Pokud je zvolen měsíční plán, zvolte datum, kdy má být úloha spuštěna.
 :end
 
+
 :integrity_time_of_the_day_plug:
 > Zvolte hodinu a minutu, kdy má být naplánovaná úloha spuštěna. Přesnost je 5 minut.
 :end
+
 
 :integrity_notifications_plug:
 > Nastavte na ANO, pokud chcete být informováni v případě zjištěného poškození souboru.
 > V nastavení oznámení si můžete upravit způsob a úroveň těchto „alarmových“ notifikací.
 :end
 
+
 :integrity_logging_plug:
 > Záznam chyb včetně informací o poškození souborů může být zapsán do systémového protokolu nebo uložen jako soubor na flash disku.
 > Pokud protokolování vypnete, nebudou se protokoly zapisovat, ale oznámení zůstanou aktivní.
 :end
+

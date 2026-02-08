@@ -24,8 +24,9 @@ to obtain a MapQuest API key=pro získání klíče API MapQuestu
 > Zadejte adresu (ulice, město, země), která se použije pro výpočet času východu a západu slunce.
 >
 > Geocodingová služba se použije pro převod vaší adresy na geografické souřadnice.<br>
-> Musíte se zaregistrovat do jedné z dostupných složek a získat unikátní klíč k API.
+> Musíte se zaregistrovat do jedné z dostupných služeb a získat unikátní klíč k API.
 >
 > **Denní** téma se použije mezi východem a západem slunce.<br>
 > **Noční** téma se použije mezi západem a východem slunce.
 :end
+

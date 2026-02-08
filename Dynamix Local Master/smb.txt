@@ -1,5 +1,5 @@
 Current elected master=Nyní zvolený hlavní
-is current local master browser=je současný místní místní hlavní prohlížeč
+is current local master browser=je současný místní hlavní prohlížeč
 Local master=Místní hlavní
 Monitor local master election=Sledovat volby místního hlavního
 please wait, obtaining=získávám, prosím počkejte
@@ -9,15 +9,19 @@ Workgroup=Pracovní skupina
 > Zadejte název vaší lokální pracovní skupiny (Workgroup). Obvykle je to „WORKGROUP“.
 :end
 
+
 :smb_master_plug:
 > Pokud je nastaveno na 'Ano', server se plně zapojí do voleb Master Browsera a v nepřítomnosti jiných serverů obvykle převezme roli místního Master Browsera.
 :end
+
 
 :smb_master_election_plug:
 > Povolit nebo zakázat pozadní sledování voleb místního Master Browsera.
 > Výsledek sledování je zobrazen v záhlaví v pravém horním rohu.
 :end
 
+
 :smb_master_current_plug:
 > Zobrazuje v reálném čase aktuálně zvoleného místního Master Browsera.
 :end
+

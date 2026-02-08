@@ -27,7 +27,7 @@ If you are experiencing OOM errors, try adjusting the Disk Cache settings on the
 If you configure VLANs on Unraid, you should make Unraid the Master Browser=Pokud nastavíš VLAN v Unraidu, měl bys z Unraidu udělat hlavní prohlížeč
 If you dont Unraid may not detect the Master Browser for all network interfaces correctly=Pokud to neuděláš, Unraid nemusí správně detekovat hlavní prohlížeč na všech síťových rozhraních
 If you have an Intel Processor, it may appear that all CPUs are constantly running at full speed=Pokud máš procesor Intel, může se zdát, že všechny CPU běží stále na plný výkon
-If you set the 'Power Save' CPU Governor, you may see your processors stuck at 800 MHz=Pokud nastavíš správce CPU na „Úspora energie“, můžeš vidět, že CPU běží pouze na 800 MHz
+If you set the Power Save CPU Governor, you may see your processors stuck at 800 MHz=Pokud nastavíš správce CPU na „Úspora energie", můžeš vidět, že CPU běží pouze na 800 MHz
 Install the Fix Common Problems plugin and resolve any Unraid configuration problems=Nainstaluj plugin „Fix Common Problems“ a vyřeš případné problémy s konfigurací Unraid
 Intel TurboAMD Performance Boost=Intel Turbo/AMD Performance Boost
 It is recommended that you update Unraid to the latest stable version to get the latest features, bug fixes, and security updates=Doporučuje se aktualizovat Unraid na nejnovější stabilní verzi kvůli novým funkcím, opravám a bezpečnostním aktualizacím
@@ -36,7 +36,7 @@ It is recommended you use the 'Performance' Governor for best performance and po
 Make changes slowly=Prováděj změny postupně
 Make one change at a time and verify if it improves your situation=Prováděj změny jednu po druhé a ověřuj, zda zlepšují situaci
 Making changes here can briefly interrupt your network operation=Změny zde mohou krátce přerušit provoz sítě
-Many plugins are no longer compatible with older Unraid versons=Mnoho pluginů již není kompatibilních se staršími verzemi Unraid
+Many plugins are no longer compatible with older Unraid versions=Mnoho pluginů již není kompatibilních se staršími verzemi Unraid
 Max SMB Open Files=Maximální počet otevřených SMB souborů
 Max User Instances=Maximální počet instancí uživatele
 Max User Watches=Maximální počet sledovaných událostí uživatele
@@ -77,6 +77,7 @@ Use the Update Assistant that is part of the Fix Common Problems plugin=Použij 
 Version 6.11.4 and later=Verze 6.11.4 a novější
 You can check CPU frequencies on the command line with=Frekvenci CPU lze zkontrolovat v příkazové řádce pomocí
 You may actually cause more problems than you solve if there are problems with your Unraid configuration=Můžeš způsobit více problémů, než vyřešíš, pokud máš chyby v konfiguraci Unraidu
+
 ;
 ; Help
 ;
@@ -89,6 +90,7 @@ You may actually cause more problems than you solve if there are problems with y
 > + Hodnota vm.dirty_background_ratio větší než polovina vm.dirty_ratio se nedoporučuje, pokud nejsou obě hodnoty jednociferné.
 :end
 
+
 :tips_tweaks_nic_flow_control_plug:
 > Nastavte na 'Yes' pro deaktivaci NIC Flow Control. NIC Flow Control byl původně zaveden pro pomoc v sítích s zařízeními různých rychlostí. Dnes se zdá být méně nutný.
 > Pokud máte spravovaný switch, můžete Flow Control obvykle zapínat a vypínat přímo na switchi. U běžných domácích switchů tuto úroveň kontroly nemáte.
@@ -96,6 +98,7 @@ You may actually cause more problems than you solve if there are problems with y
 >
 > Přechod z jakéhokoliv nastavení na 'Default' vyžaduje restart systému.
 :end
+
 
 :tips_tweaks_nic_offload_plug:
 > Nastavte na 'Yes' pro deaktivaci NIC offloadů. Offloady byly vyvinuty pro přesun části síťového zpracování na síťovou kartu (NIC) a odlehčení hlavního CPU, zejména při zpracování velkých paketů.
@@ -105,11 +108,13 @@ You may actually cause more problems than you solve if there are problems with y
 > Přechod z jakéhokoliv nastavení na 'Default' vyžaduje restart systému.
 :end
 
+
 :tips_tweaks_rx_buffer_plug:
 > Vyberte velikost Rx ring bufferu síťové karty (NIC). Některé síťové karty mají omezení velikosti Rx ring bufferu. Výchozí hodnota 256 je doporučena.
 >
 > Změna z jakéhokoliv nastavení na 'Default' vyžaduje restart systému.
 :end
+
 
 :tips_tweaks_tx_buffer_plug:
 > Vyberte velikost Tx ring bufferu síťové karty (NIC). Některé síťové karty mají omezení velikosti Tx ring bufferu. Výchozí hodnota 256 je doporučena.
@@ -117,9 +122,11 @@ You may actually cause more problems than you solve if there are problems with y
 > Změna z jakéhokoliv nastavení na 'Default' vyžaduje restart systému.
 :end
 
+
 :tips_tweaks_nics_plug:
 > Uveďte seznam síťových karet (NIC), na které se mají výše uvedená nastavení aplikovat, oddělené čárkami. Pokud máte více síťových karet v bondingu, zahrňte je všechny. Nastavení Flow Control, TSO a NIC bufferů se použijí na tyto karty.
 :end
+
 
 :tips_tweaks_dirty_background_plug:
 > Doporučené hodnoty jsou: vm.dirty_background_ratio na 3 % a vm.dirty_ratio na 5 %.
@@ -130,18 +137,22 @@ You may actually cause more problems than you solve if there are problems with y
 > Výchozí hodnota 3 % je doporučena, pokud nemáte velké množství RAM. Pokud používáte VM pro streamování médií nebo hraní her, použijte hodnotu 1 %.
 :end
 
+
 :tips_tweaks_dirty_ratio_plug:
 > Nastavte hodnotu 'vm.dirty_ratio' jako procento z celkové velikosti RAM.
 > Příliš vysoká hodnota může způsobit, že Linux ukončí některé procesy, aby uvolnil paměť. Výchozí nastavení 5 % je doporučeno, pokud nemáte velké množství RAM.
 :end
 
+
 :tips_tweaks_writeback_plug:
 > Výchozí hodnota je 200 centisekund (2 sekundy), která řídí, jak často jádro kontroluje zašpiněná data pro jejich zápis na pozadí.
 :end
 
+
 :tips_tweaks_expire_plug:
 > Výchozí hodnota je 1000 centisekund (10 sekund), která udává, jak dlouho mohou data zůstat zašpiněná, než jsou považována za kandidáta pro zápis zpět.
 :end
+
 
 :tips_tweaks_max_watches_plug:
 > Pokud inotify nemůže začít, protože není dostatek uživatelských sledování, zvýšte max_user_watches.
@@ -149,11 +160,13 @@ You may actually cause more problems than you solve if there are problems with y
 > Výchozí hodnota je 524288.
 :end
 
+
 :tips_tweaks_max_instances_plug:
 > Toto je maximální počet instancí inotify, které může uživatel vytvořit.
 >
 > Výchozí hodnota je 128.
 :end
+
 
 :tips_tweaks_max_files_plug:
 > Tato hodnota je používána Sambou pro nastavení maximálního počtu otevřených souborů povolených v SMB sdíleních.
@@ -161,17 +174,21 @@ You may actually cause more problems than you solve if there are problems with y
 > Výchozí hodnota je 40960 a povolený rozsah je od 40960 do 65535.
 :end
 
+
 :tips_tweak_turbo_plug:
-> Nastavte na 'Yes' pro povolení Intel Turbo nebo AMD Performance Boost režimu. Nastavte na 'No' pro zakázání. Nastavte na 'Schedule' pro zapnutí/vypnutí Turbo/AMD Performance Boost režimu podle časů uvedených níže.
+> Nastav na **Ano**, pokud chceš povolit Intel Turbo nebo AMD Performance Boost.
 :end
+
 
 :tips_tweaks_turbo_state_off_plug:
 > Zadejte čas, kdy chcete vypnout Intel Turbo/AMD Performance Boost ve 24hodinovém formátu hh:mm.
 :end
 
+
 :tips_tweaks_turbo_state_on_plug:
 > Zadejte čas, kdy chcete zapnout Intel Turbo/AMD Performance Boost ve 24hodinovém formátu hh:mm.
 :end
+
 
 :tips_tweaks_cpu_governor_plug:
 > Vyberte Normal CPU Scaling Governor (správce škálování CPU frekvence), který chcete použít.
@@ -197,9 +214,6 @@ You may actually cause more problems than you solve if there are problems with y
 > + "Schedutil" – Nastaví škálování CPU podle Linux plánovače. Poznámka: Tato funkce je stále ve vývoji.
 :end
 
-:tips_tweak_turbo_plug:
-> Nastav na **Ano**, pokud chceš povolit Intel Turbo nebo AMD Performance Boost.
-:end
 
 :tips_tweaks_scheduled_plug:
 > Nastav na **Ano**, pokud chceš naplánovat přepínání mezi úsporným a výkonnostním režimem CPU podle časů zadaných níže.
@@ -210,6 +224,7 @@ You may actually cause more problems than you solve if there are problems with y
 > Zadej čas (ve formátu hh:mm), kdy se má CPU přepnout do režimu "Power Save" (u Intel Pstate) nebo "On Demand".
 :end
 
+
 :tips_tweaks_performance_plug:
 > Zadej čas (ve formátu hh:mm), kdy se má CPU přepnout do režimu "Performance".
 :end
@@ -219,13 +234,16 @@ You may actually cause more problems than you solve if there are problems with y
 > Nastav na **Ano**, pokud chceš zapnout archivaci systémových protokolů a provést diagnostiku při vypnutí. Protokoly a výstupy budou uloženy v `/boot/logs/`.
 :end
 
+
 :tips_tweaks_number_syslogs_plug:
 > Nastav počet systémových protokolů, které se mají uchovávat v archivu.
 > Zadej `0` pro uložení pouze posledního protokolu, `-1` pro uchování všech. Výchozí hodnota je `10`.
 :end
+
 
 :tips_tweaks_kill_processes_plug:
 > Zadej názvy procesů, které mají být ukončeny před zastavením arraye – oddělené čárkami. Např. `ssh`, `bash`. Tyto procesy mohou bránit odpojení disků a způsobit, že se Unraid při zastavení zasekne.
 >
 > **Poznámka:** Buď opatrný při ukončování procesů – hrozí ztráta dat!
 :end
+

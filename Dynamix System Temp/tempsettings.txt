@@ -19,11 +19,13 @@ Unload drivers=Uvolnit ovladače
 > Použijte **„načíst / odpojit ovladače“** pro ruční načtení nebo odpojení dostupných modulů ovladačů.
 :end
 
+
 :temp_processor_plug:
 > Vyberte jednu z dostupných sond jako indikátor teploty procesoru.
 > Výstup této sondy se zobrazí ve spodní části stránky.
 > Zvolte „Nepoužito“, pokud si nepřejete tuto sondu zobrazovat.
 :end
+
 
 :temp_mainboard_plug:
 > Vyberte jednu z dostupných sond jako indikátor teploty základní desky.
@@ -31,12 +33,15 @@ Unload drivers=Uvolnit ovladače
 > Zvolte „Nepoužito“, pokud si nepřejete tuto sondu zobrazovat.
 :end
 
+
 :temp_fan_plug:
 > Vyberte jednu z dostupných sond jako indikátor otáček ventilátoru pro array.
 > Výstup této sondy se zobrazí ve spodní části stránky.
 > Zvolte „Nepoužito“, pokud si nepřejete tuto sondu zobrazovat.
 :end
 
+
 :temp_rescan_plug:
 > Možnost **„Přeskenovat“** aktualizuje výběrový seznam a lze ji použít, pokud jsou k dispozici nové sondy, např. po instalaci nové sondy ventilátoru.
 :end
+

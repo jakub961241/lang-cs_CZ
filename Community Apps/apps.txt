@@ -22,7 +22,6 @@ Name Descending=Název sestupně
 Downloads=Stažení
 Date Added=Datum přidání
 Number Of Apps=Počet aplikací
-
 ; Initial disclaimer translations
 Disclaimer=Vyloučení odpovědnosti
 All applications listed here are 3rd party additions to Unraid Neither the authors of Community Applications nor Limetech make any warranty as to the suitability of any application listed here=Všechny zde uvedené aplikace jsou doplňky třetích stran pro Unraid. Autoři Community Applications ani Limetech nezaručují vhodnost žádné z uvedených aplikací.
@@ -43,7 +42,7 @@ Install Plugin Applications=Nainstalovat pluginy
 Select all on page=Vybrat vše na stránce
 Install Application=Nainstalovat aplikaci
 Install Applications=Nainstalovat aplikace
-Update Application=
+Update Application=Aktualizovat aplikaci
 Update Applications=Aktualizovat aplikace
 Are you sure you want to update %s applications=Opravdu chcete aktualizovat %s aplikací?
 Are you sure you want to install %s docker and %s plugin applications=Opravdu chcete nainstalovat %1$s Docker kontejner(ů) a %2$s plugin(ů)?
@@ -88,7 +87,6 @@ Search Apps=Hledat aplikace
 Registry=Seznam zdrojů
 Details=Podrobnosti
 Added=Přidáno
-
 ; Install Plugin title of openbox
 Install Plugin=Nainstalovat plugin
 Update Plugin=Aktualizovat plugin
@@ -128,17 +126,11 @@ Yes, install it=Ano, nainstalovat
 
 ; Multi-install popup
 Yes, install them=Ano, nainstalovat je
-
 Cookies not enabled Plugins must be separately installed from docker applications=Cookies nejsou povolené. Pluginy musí být instalovány samostatně od dockerových aplikací.
-
 Docker applications will be installed utilizing the most recently saved template with no user input on your part=Dockerové aplikace budou nainstalovány pomocí nejnověji uložené šablony bez potřeby vašeho zásahu.
-
 Updating Support Links=Aktualizuji odkazy na podporu
-
 Downloading docker icons=Stahuji ikony dockeru
-
 Finished Installing If the DONE button did not appear, then you will need to click the red X in the top right corner=Instalace dokončena. Pokud se nezobrazil tlačítko HOTOVO, klikněte na červené X vpravo nahoře.
-
 
 ; error messages
 An error occurred Could not find any %s Apps=Došlo k chybě. Nebyly nalezeny žádné %s aplikace.
@@ -171,7 +163,6 @@ Additional information may be within Tools, PHPSettings - View Log=Doplňující
 Attempt to Fix Via Reload Page=Pokuste se opravit obnovením stránky.
 External Link=Externí odkaz.
 Clicking OK will take you to a 3rd party website not associated with Limetech=Kliknutím na OK budete přesměrováni na web třetí strany, který není spojen s Limetech.
-
 
 ; CA Sections Keep the length reasonable
 Home=Domů
@@ -316,9 +307,9 @@ OtherUncategorized=Jiné:Bez kategorie
 and %s more=a %s více
 
 ; App Popup Related
-This application template has been blacklisted=Tato šablona aplikace byla zablokována
-This application template has been deprecated=Tato šablona aplikace je zastaralá
-This application has additional requirements=Tato aplikace má dodatečné požadavky
+This application template has been blacklisted=Tento šablonový soubor aplikace je na blacklistu
+This application template has been deprecated=Tento šablonový soubor aplikace je zastaralý
+This application has additional requirements=Tato aplikace má další požadavky
 Additional Requirements=Další požadavky
 Donate To Author=Darovat autorovi
 Donate To Maintainer=Darovat správci
@@ -337,7 +328,9 @@ Total Downloads=Celkem stažení
 Popularity=Oblíbenost
 Licence=Licence
 Ranked #%s=Hodnocení #%s
+; as in Trending up or down arrow
 Trending %s=Trend %s
+; as in As of some date
 As of %s=K datu %s
 Play Video=Spustit video
 Play Video %s=Spustit video %s
@@ -350,19 +343,22 @@ Install=Nainstalovat
 Uninstall=Odinstalovat
 Project=Projekt
 Read Me First=Nejprve si přečtěte
-Install second instance=Nainstalovat druhou instanci
+Install another instance=Nainstalovat další instanci
 Install Using The Templates Default Tag=Nainstalovat pomocí výchozí šablony
 Moderator Comments=Komentáře moderátora
 Note not all authors keep up to date on change logs=Upozornění: Ne všichni autoři udržují záznamy změn aktuální
 Note not all maintainers keep up to date on change logs=Upozornění: Ne všichni správci udržují záznamy změn aktuální
 Last Update=Poslední aktualizace
 Note All statistics are only gathered every 30 days=Poznámka: Všechny statistiky jsou shromažďovány každých 30 dní
+;the following if using a space you MUST use nbsp but keep it down to one word if at all possible
 Donate=Darovat
 Currently Installed Version=Aktuálně nainstalovaná verze
 Install The Update=Instalovat aktualizaci
+; as in you have the latest version already installed
 Latest Version=Nejnovější verze
 Multi Language Support=Podpora více jazyků
 Support Forum=Fórum podpory
+; as in more than 100000
 More than %s=Více než %s
 Remove from Previous Apps=Odstranit z předchozích aplikací
 Remove=Odstranit
@@ -384,45 +380,45 @@ Docker Application Installation finished=Instalace Docker aplikace dokončena
 ; Application Cards
 Actions=Akce
 Pending=Čekající
-This application is a driver plugin= Tato aplikace je ovladač (plugin)
-This is a language pack= Toto je jazykový balíček
-This application is a docker container= Tato aplikace je dockerový kontejner
-This application is a plugin= Tato aplikace je plugin
-This is a spotlight application= Toto je spotlight aplikace
-This is your favourite repository= Toto je vaše oblíbené úložiště
-This application is from your favourite repository= Tato aplikace je z vašeho oblíbeného úložiště
-This application is pinned for later viewing= Tato aplikace je připnutá pro pozdější zobrazení
-Private Application= Soukromá aplikace
-Remove Application From List= Odebrat aplikaci ze seznamu
-Check off to select multiple reinstalls= Zaškrtněte pro výběr více reinstalací
-Go to the plugin settings= Přejít do nastavení pluginu
-Click to reinstall the application using default values= Klikněte pro přeinstalaci aplikace s výchozími hodnotami
-Click to edit the application values= Klikněte pro úpravu hodnot aplikace
-Click to reinstall= Klikněte pro přeinstalaci
-Click to install= Klikněte pro instalaci
-Click to go to the WebUI= Klikněte pro přechod na WebUI
-This application template has been deprecated= Tento šablonový soubor aplikace je zastaralý
-This application template has been blacklisted= Tento šablonový soubor aplikace je na blacklistu
-Click info to see the notes regarding this application= Klikněte na info pro zobrazení poznámek k této aplikaci
-This application has additional requirements= Tato aplikace má další požadavky
-BETA= BETA
-INSTALLED= NAINSTALOVÁNO
-OFFICIAL= OFICIÁLNÍ
-UPDATED= AKTUALIZOVÁNO
-This is an official container= Toto je oficiální kontejner
-Digitally Signed= Digitálně podepsáno
-This container is digitally signed= Tento kontejner je digitálně podepsán
-Docker Hub= Docker Hub
-NOTE You must visit the dockerHub page to gather the information required to install correctly= POZNÁMKA: Musíte navštívit stránku Docker Hub, abyste získali informace potřebné pro správnou instalaci
-Show CA templates= Zobrazit CA šablony
-Deprecated= Zastaralé
-Incompatible= Nekompatibilní
-Blacklisted= Na blacklistu
-Template Exists= Šablona existuje
-Template already exists in Apps= Šablona již existuje v aplikacích
+This application is a driver plugin=Tato aplikace je ovladač (plugin)
+This is a language pack=Toto je jazykový balíček
+This application is a docker container=Tato aplikace je dockerový kontejner
+This application is a plugin=Tato aplikace je plugin
+This is a spotlight application=Toto je spotlight aplikace
+This is your favourite repository=Toto je vaše oblíbené úložiště
+This application is from your favourite repository=Tato aplikace je z vašeho oblíbeného úložiště
+This application is pinned for later viewing=Tato aplikace je připnutá pro pozdější zobrazení
+Private Application=Soukromá aplikace
+Remove Application From List=Odebrat aplikaci ze seznamu
+Check off to select multiple reinstalls=Zaškrtněte pro výběr více reinstalací
+Go to the plugin settings=Přejít do nastavení pluginu
+Click to reinstall the application using default values=Klikněte pro přeinstalaci aplikace s výchozími hodnotami
+Click to edit the application values=Klikněte pro úpravu hodnot aplikace
+Click to reinstall=Klikněte pro přeinstalaci
+Click to install=Klikněte pro instalaci
+Click to go to the WebUI=Klikněte pro přechod na WebUI
+This application template has been deprecated=Tento šablonový soubor aplikace je zastaralý
+This application template has been blacklisted=Tento šablonový soubor aplikace je na blacklistu
+Click info to see the notes regarding this application=Klikněte na info pro zobrazení poznámek k této aplikaci
+This application has additional requirements=Tato aplikace má další požadavky
+BETA=BETA
+INSTALLED=NAINSTALOVÁNO
+OFFICIAL=OFICIÁLNÍ
+UPDATED=AKTUALIZOVÁNO
+This is an official container=Toto je oficiální kontejner
+Digitally Signed=Digitálně podepsáno
+This container is digitally signed=Tento kontejner je digitálně podepsán
+Docker Hub=Docker Hub
+NOTE You must visit the dockerHub page to gather the information required to install correctly=POZNÁMKA: Musíte navštívit stránku Docker Hub, abyste získali informace potřebné pro správnou instalaci
+Show CA templates=Zobrazit CA šablony
+Deprecated=Zastaralé
+Incompatible=Nekompatibilní
+Blacklisted=Na blacklistu
+Template Exists=Šablona existuje
+Template already exists in Apps=Šablona již existuje v aplikacích
 ; eg: LinuxServer Repository
 %s Repository=%s repozitář
-; eg: Squid's Repository
+; eg: Squid’s Repository
 %s's Repository=Repozitář uživatele %s
 
 Info=Informace
@@ -459,8 +455,5 @@ Checking %s=Kontroluje se %s
 Determine configuration=Zjistit konfiguraci
 Would you like CA to attempt to determine any applicable paths, ports, and variables for the template This will entail performing a test installation of the container It will be automatically deleted after processing The container will not be started=Chceš, aby se CA pokusil automaticky zjistit odpovídající cesty, porty a proměnné pro tuto šablonu? Bude provedena testovací instalace kontejneru, která bude po zpracování automaticky odstraněna. Kontejner nebude spuštěn.
 An error occurred - Could not determine configuration=Došlo k chybě – konfiguraci se nepodařilo zjistit
-
 ; WebGui
 Click Install to download and install the Community Applications plugin=Klikni na **Instalovat**, aby se stáhl a nainstaloval plugin **Community Applications**
-
-; Note: April 29, 2023 - 114 missing translations

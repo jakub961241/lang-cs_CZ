@@ -22,14 +22,14 @@ Last week=Poslední týden
 Last 2 weeks=Poslední 2 týdny
 Last 3 weeks=Poslední 3 týdny
 Last month=Poslední měsíc
-Network graph display unit=Jednotka zobrazení grafu síťě
+Network graph display unit=Jednotka zobrazení grafu sítě
 Opening page=Otevíraná stránka
 Pair=Dva
 Placement of Stats menu=Umístění nabídky statistik
 Position of disk utilization percentage=Pozice využití disku v procentech
 Real-time=V reálném čase
 Show disk size=Zobrazit velikost disku
-Since start=Od spuštěníé
+Since start=Od spuštění
 Single=Jeden
 Storage=Úložiště
 System graphs view per row=Počet systémových grafů na řádek
@@ -44,15 +44,18 @@ Viewable system graphs=Zobrazitelné systémové grafy
 > Umístění vlevo zarovná všechna čísla, zatímco umístění vpravo umožní, aby se číslo pohybovalo podle své hodnoty.
 :end
 
+
 :stats_graphs_plug:
 > Vyberte, které systémové informace se mají zobrazit. Interně jsou vždy shromažďovány a ukládány všechny informace.
 >
 > Toto nastavení ovlivňuje pouze to, co se zobrazuje.
 :end
 
+
 :stats_scaling_plug:
 > Zvolte, zda má mít graf CPU automatické měřítko, nebo pevně nastavené na 100 %.
 :end
+
 
 :stats_view_plug:
 > Vyberte, kolik grafů se má zobrazit v jednom řádku. Šířka se automaticky přizpůsobí počtu grafů a rozlišení obrazovky.
@@ -60,17 +63,21 @@ Viewable system graphs=Zobrazitelné systémové grafy
 > Vzorkování grafů probíhá interně v minutových intervalech; toto nastavení pouze mění šířku grafu, nikoli jeho rozlišení.
 :end
 
+
 :stats_disk_size_plug:
 > Zobrazí velikost každého disku na pravé straně grafu využití disku. Velikost je vždy zobrazena v nejvyšší možné jednotce.
 :end
+
 
 :stats_ethernet_plug:
 > Pokud je přítomno více síťových rozhraní, vyberte to, které se má zobrazit. Interně jsou uchovávány statistiky všech dostupných rozhraní.
 :end
 
+
 :stats_unit_plug:
 > Vyberte, jak se mají zobrazovat rychlosti rozhraní (sítě), běžně v bitech za sekundu.
 :end
+
 
 :stats_initial_plug:
 > Systémové grafy lze zobrazit za různá časová období, zde vyberte výchozí období. Na stránce se systémovými statistikami jej lze kdykoli změnit.
@@ -78,8 +85,10 @@ Viewable system graphs=Zobrazitelné systémové grafy
 > Interně se data ukládají pomocí měsíčního rotačního mechanismu. Každý den je uložen do samostatného souboru.
 :end
 
+
 :stats_realtime_plug:
 > Zobrazení v reálném čase probíhá pomocí posuvného okna. Např. 5 minut se nejprve naplní a poté se s každým novým vzorkem posouvají.
 >
 > Toto nastavení určuje počáteční délku posuvného okna; lze jej změnit na stránce se systémovými statistikami.
 :end
+

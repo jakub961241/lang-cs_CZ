@@ -6,7 +6,7 @@ Folder caching function=Funkce ukládání adresářů do mezipaměti
 for adaptive depth=pro adaptivní hloubku
 Important - check HELP if disks spin up=Důležité – pokud se disky roztáčejí, podívejte se do NÁPOVĚDY
 Included folders=Zahrnuté složky
-Memory available to the cache_dirs script increase if it dies=Dostupná paměť pro skript cache_dirs (zvyšte, pokud padá)
+Memory available to the 'cache_dirs' script increase if it dies=Memory available to the 'cache_dirs' script (increase if it crashes)
 Logging=Protokolování
 Maximum interval between folder scans=Maximální interval mezi prohledáním složek
 Maximum level depth=Maximální úroveň hloubky
@@ -24,7 +24,6 @@ Unraid forum=Fórum Unraid
 Use Adaptive depth=Použít adaptivní hloubku
 User defined options=Uživatelsky definovaná nastavení
 
-
 :cachedirs_info_plug:
 > Informace o ukládání adresářů do mezipaměti
 >
@@ -39,10 +38,12 @@ User defined options=Uživatelsky definovaná nastavení
 > Čím méně souborů je třeba uchovávat v paměti, tím menší je pravděpodobnost, že dojde k probuzení disků.
 :end
 
+
 :cachedirs_function_plug:
 > Zvolte, zda má být ukládání adresářů do mezipaměti aktivní nebo deaktivované. Tato funkce je aktivní pouze tehdy, pokud je pole disků spuštěno.
 > Caching se automaticky zapíná nebo vypíná při přechodu pole do online/offline stavu.
 :end
+
 
 :cachedirs_pressure_plug:
 > Nastavte hodnotu `cache_pressure` (výchozí = 10). Hodnota 0 znamená, že se cache nebude znovu používat.
@@ -58,10 +59,12 @@ User defined options=Uživatelsky definovaná nastavení
 > Viz také „vfs_cache_pressure“ na [kernel.org](https://www.kernel.org/doc/Documentation/sysctl/vm.txt).
 :end
 
+
 :cachedirs_suspend_plug:
 > Pozastaví ukládání do mezipaměti během běhu Moveru, aby se předešlo konfliktům. Při použití adaptivní hloubky by měla volba NE fungovat bez problémů.
 > Při použití pevně nastavené hloubky budou disky méně zatíženy, pokud zvolíte ANO.
 :end
+
 
 :cachedirs_included_folders_plug:
 > Rozbalovací nabídka zobrazuje všechny dostupné složky, ve výchozím nastavení jsou zahrnuty všechny. Vyber seznam složek, které mají být zahrnuty.
@@ -69,11 +72,13 @@ User defined options=Uživatelsky definovaná nastavení
 > Pokud zahrnutou složku zároveň vyloučíte, bude vyloučena. Nejjednodušší je nepoužívat současně zahrnutí i vyloučení.
 :end
 
+
 :cachedirs_excluded_folders_plug:
 > Rozbalovací nabídka zobrazuje všechny dostupné složky, ve výchozím nastavení není žádná složka vyloučena. Vyber složky, které mají být vyloučeny.
 >
 > Je možné vyloučit složku, která je zároveň zahrnuta. Nejjednodušší je nepoužívat současně zahrnutí a vyloučení.
 :end
+
 
 :cachedirs_adaptive_depth_plug:
 > Pokud je aktivována adaptivní funkce, bude hloubka automaticky upravována, ale nikdy nepřekročí maximální nastavenou úroveň.
@@ -81,53 +86,65 @@ User defined options=Uživatelsky definovaná nastavení
 > Pokud je adaptivní funkce vypnuta, cache_dirs vždy skenuje až do maximální hloubky.
 :end
 
+
 :cachedirs_min_level_plug:
 > Nastavuje minimální hloubku složek pro adaptivní skenování (Uživatelské sdílení > podsložka > podsložka = dvě úrovně). Výchozí hodnota je 4.
 :end
+
 
 :cachedirs_max_level_plug:
 > Nastavuje maximální hloubku složek pro skenování (Uživatelské sdílení > podsložka > podsložka). Nastavte na "Bez omezení" (nebo 0) pro odstranění limitu.
 :end
 
+
 :cachedirs_idle_timer_plug:
 > Pokud byly disky po určitou dobu v nečinnosti, cache_dirs zahájí adaptivní skenování a budování cache.
 :end
+
 
 :cachedirs_timeout_scan_plug:
 > Timeout pro skenování je maximální doba, po kterou probíhá jedno úplné skenování všech složek v aktuální hloubce (která se může adaptivně měnit).
 > Zvyšte hodnotu, pokud cache_dirs nestihne uložit všechny vaše adresáře do mezipaměti. Tento timeout se používá i v případě, že je adaptivní režim vypnutý.
 :end
 
+
 :cachedirs_timeout_initial_plug:
 > Zvyšte tuto hodnotu, pokud chcete dát cache_dirs více času při prvním spuštění, nebo pokud může být souborový systém dočasně vytížen.
 :end
+
 
 :cachedirs_timeout_cached_plug:
 > Snižte tuto hodnotu, pokud chcete, aby cache_dirs méně zatěžoval systém, když cache již není v paměti a disky nejsou nečinné.
 > Zvyšte hodnotu, pokud chcete dát cache_dirs větší šanci znovu načíst složky do paměti.
 :end
 
+
 :cachedirs_min_interval_plug:
 > Pro pomalejší systémy lze upravit interval mezi skenováním. Výchozí hodnota je 1 sekunda, což by mělo být dostatečné pro většinu systémů.
 :end
 
+
 :cachedirs_max_interval_plug:
 > Pro pomalejší systémy lze upravit interval mezi skenováním. Výchozí hodnota je 10 sekund, což by mělo být dostatečné pro většinu systémů.
 :end
+
 
 :cachedirs_scan_disk_plug:
 > Každý disk je skenován samostatným procesem, takže disky mohou být čteny současně. Pokud se skenují i uživatelská sdílení,
 > jsou skenována v jednom procesu až po dokončení skenování jednotlivých disků, aby se předešlo přetížení.
 :end
 
+
 :cachedirs_limit_memory_plug:
 > Nastavte `ulimit` na určitou hodnotu (výchozí = 50000) pro omezení množství paměti, kterou může skript použít. Pomocí „-U 0“ se žádné omezení nenastaví a budou použity výchozí hodnoty shellu.
 :end
+
 
 :cachedirs_logging_plug:
 > Zvolte, zda má být protokolování aktivní nebo vypnuté. Protokoly jsou ukládány do `/var/log/cache_dirs.log` a `/var/log/cache_dirs_lost_cache.csv`.
 > Upozorňujeme, že protokoly cache_dirs jsou ukládány do paměti systému unRAID a není u nich nastavena automatická rotace logů.
 :end
+
 
 :cachedirs_user_defined_plug:
 > Skript cache_dirs umožňuje použít další vlastní parametry.

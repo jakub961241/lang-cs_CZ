@@ -15,3 +15,4 @@ User=Uživatel
 >
 > Pro odstranění přiřazeného jména vymažte položku uživatelského jména a klepněte na použít.
 :end
+

@@ -35,107 +35,132 @@ Other Highlight Color=Barva zvýraznění ostatních
 ; Help
 ;
 :enhanced_syslog_show_all_lines_plug:
-> Pro zobrazení všech řádek rozřířeného záznamu nastavte na 'Ano'. Nastavte na 'Ne' pro zobrazení jen zvýrazněných řádek.
+> Pro zobrazení všech řádků rozšířeného záznamu nastavte na 'Ano'. Nastavte na 'Ne' pro zobrazení jen zvýrazněných řádků.
 :end
+
 
 :enhanced_log_number_of_lines_plug:
 > Počet řádků pro zobrazení v rozšířeném Syslogu. Výchozí je 1000.
 :end
 
+
 :enhanced_log_enable_error_plug:
 > Pro zvýraznění chyb (error) v rozšířených záznamech zvolte 'Ano'.
 :end
+
 
 :enhanced_log_enable_minor_plug:
 > Pro zvýraznění malých chyb (minor issue) v rozšířených záznamech zvolte 'Ano'.
 :end
 
+
 :enhanced_log_enable_limetch_plug:
 > Pro zvýraznění Limetechu v rozšířených záznamech zvolte 'Ano'.
 :end
+
 
 :enhanced_log_enable_array_plug:
 > Pro zvýraznění pole v rozšířených záznamech zvolte 'Ano'.
 :end
 
+
 :enhanced_log_enable_system_plug:
 > Pro zvýraznění systému v rozšířených záznamech zvolte 'Ano'.
 :end
+
 
 :enhanced_log_enable_file_system_plug:
 > Pro zvýraznění souborového systému v rozšířených záznamech zvolte 'Ano'.
 :end
 
+
 :enhanced_log_enable_drive_plug:
 > Pro zvýraznění zpráv souvisejících s disky v rozšířených záznamech zvolte 'Ano'.
 :end
+
 
 :enhanced_log_enable_network_plug:
 > Pro zvýraznění zpráv souvisejících se sítí v rozšířených záznamech zvolte 'Ano'.
 :end
 
+
 :enhanced_log_enable_login_plug:
 > Pro zvýraznění přihlášení v rozšířených záznamech zvolte 'Ano'.
 :end
+
 
 :enhanced_log_enable_emhttp_plug:
 > Pro zvýraznění zpráv souvisejících s emhttp v rozšířených záznamech zvolte 'Ano'.
 :end
 
+
 :enhanced_log_enable_other_plug:
 > Pro zvýraznění ostatních v rozšířených záznamech zvolte 'Ano'.
 :end
+
 
 :enhancd_log_default_plug:
 > Zvolte 'Výchozí' pro reset nastavení a barev. Pro uložení klepněte na 'Použít'. Klepněte na 'Hotovo' až dokončíte změny.
 :end
 
+
 :enhanced_log_color_error_plug:
 > Barva použitá pro zvýraznění chyb (Error). Můžete použít jméno barvy, nebo číslo. Číslo barvy musí začínat znakem '#'.
 :end
+
 
 :enhanced_log_color_minor_plug:
 > Barva použitá pro zvýraznění malých chyb (minor issue). Můžete použít jméno barvy, nebo číslo. Číslo barvy musí začínat znakem '#'.
 :end
 
+
 :enhanced_log_color_limetech_plug:
 > Barva použitá pro zvýraznění Limetechu. Můžete použít jméno barvy, nebo číslo. Číslo barvy musí začínat znakem '#'.
 :end
+
 
 :enhanced_log_color_array_plug:
 > Barva použitá pro pole. Můžete použít jméno barvy, nebo číslo. Číslo barvy musí začínat znakem '#'.
 :end
 
+
 :enhanced_log_color_system_plug:
 > Barva použitá pro zvýraznění systému. Můžete použít jméno barvy, nebo číslo. Číslo barvy musí začínat znakem '#'.
 :end
+
 
 :enhanced_log_color_file_system_plug:
 > Barva použitá pro zvýraznění souborového systému. Můžete použít jméno barvy, nebo číslo. Číslo barvy musí začínat znakem '#'.
 :end
 
+
 :enhanced_log_color_drive_plug:
 > Barva použitá pro zvýraznění zpráv souvisejících s disky. Můžete použít jméno barvy, nebo číslo. Číslo barvy musí začínat znakem '#'.
 :end
+
 
 :enhanced_log_color_network_plug:
 > Barva použitá pro zvýraznění sítě. Můžete použít jméno barvy, nebo číslo. Číslo barvy musí začínat znakem '#'.
 :end
 
+
 :enhanced_log_color_login_plug:
 > Barva použitá pro zvýraznění přihlášení. Můžete použít jméno barvy, nebo číslo. Číslo barvy musí začínat znakem '#'.
 :end
+
 
 :enhanced_log_color_emhttp_plug:
 > Barva použitá pro zvýraznění emhttp. Můžete použít jméno barvy, nebo číslo. Číslo barvy musí začínat znakem '#'.
 :end
 
+
 :enhanced_log_color_other_plug:
 > Barva použitá pro zvýraznění ostatních. Můžete použít jméno barvy, nebo číslo. Číslo barvy musí začínat znakem '#'.
 :end
 
+
 :enhanced_log_custom_plug:
-> Enter any custom events you want highlighted in the log.  Any custom events you enter will be processed after the built in events.
+> Zadejte vlastní události, které chcete zvýraznit v záznamu. Vlastní události budou zpracovány po vestavěných událostech.
 > Události se zadávají jako "vyhledávací řetězec", "událost"
 > Velikost písmen je ve vyhledávacím řetězci ignorována a je možné použít masky.
 > Příklady:
@@ -145,10 +170,12 @@ Other Highlight Color=Barva zvýraznění ostatních
 > Události jsou: "error", "minor issues", "lime tech", "array", "system", "file system", "drive related", "network", "login", "emhttp", "other".
 :end
 
+
 :enhanced_log_custom_buttons_plug:
 > Klepněte na **Použít** pro uložení vlastních událostí. Klepněte na **Reset** pro
 > vymazání všech změn provedených před uložením vlastních událostí. Klepněte na **Hotovo** pro opuštění této stránky.
 :end
+
 
 :enhanced_log_filter_plug:
 > Můžete filtrovat systémové záznamy, abyste nebyli moc zavalení ladícími informacemi, nebo přebytečnými záznamy. Měli byste filtrovat pouze záznamy, o kterých je známo, že jsou nepotřebné, nebo přebytečné.
@@ -156,7 +183,9 @@ Other Highlight Color=Barva zvýraznění ostatních
 > Zadejte řetězce záznamů které chcete odfiltrovat. Každý záznam je na zvláštní řádce v úvozovkách na začátku i na konci.
 :end
 
+
 :enhanced_log_filter_buttons_plug:
 > Klepněte na **Použít** pro použití filtru systémových záznamů. Klepněte na **Reset** pro
 > vymazání všech změn provedených před uložením filtru systémových záznamů. Klepněte na **Hotovo** pro opuštění této stránky.
 :end
+

@@ -53,24 +53,29 @@ Update Recycle Bin Size in Background=Aktualizovat velikost koše na pozadí
 > Kliknutím na záhlaví sloupců „SMB sdílení“, „Typ sdílení“ nebo „Velikost koše“ tabulku setřídíš. Řazení velikosti koše je alfanumerické, nikoli numerické.
 :end
 
+
 :recycle_bin_enable_plug:
 > Nastav na **Ano**, pokud chceš aktivovat funkci koše pro smazané soubory při startu serveru.
 >
 > Pro skrytí složky koše nastav <a href='/Settings/SMB'>zde</a> v SMB nastavení volbu „Skrýt soubory začínající tečkou“ na „Ano“.
 :end
 
+
 :recycle_bin_hide_folder_plug:
 > Nastav na **Ne**, pokud chceš, aby se složka koše zobrazovala v uživatelských sdíleních. Zobrazení závisí také na SMB volbě „Skrýt soubory začínající tečkou“.
 :end
 
+
 :recycle_bin_background_plug:
-> Nastavte na **Yes** pro povolení aktualizace velikosti Koše na pozadí každých pět minut.  Toto může zlepšit odezvu na stránkách Nastavení Koše a Sdílení a zabránit spínání disků při přístupu ke Koši.  Velikost Koše může trvat až pět minut, než se při zapnutí této funkce obnoví.
+> Nastavte na **Ano** pro povolení aktualizace velikosti koše na pozadí každých pět minut. Toto může zlepšit odezvu na stránkách nastavení koše a sdílení a zabránit spínání disků při přístupu ke koši. Velikost koše může trvat až pět minut, než se při zapnutí této funkce obnoví.
 :end
 
+
 :recycle_bin_ud_plug:
-> Nastavte na **Yes** pro povolení funkce Koše pro smazané soubory na sdíleních disků Unassigned Devices, pokud je nainstalován plugin Unassigned Devices.  SMB/NFS mounty a ISO mounty nejsou funkcí Koše na tomto serveru podporovány.
-> Povolení Koše je potřeba provést na vzdáleném serveru, odkud vzdálené sdílení pochází, pokud je to Unraid server.
+> Nastavte na **Ano** pro povolení funkce koše pro smazané soubory na sdíleních disků Unassigned Devices, pokud je nainstalován plugin Unassigned Devices. SMB/NFS připojení a ISO připojení nejsou funkcí koše na tomto serveru podporovány.
+> Povolení koše je potřeba provést na vzdáleném serveru, odkud vzdálené sdílení pochází, pokud je to Unraid server.
 :end
+
 
 :recycle_bin_parameters_plug:
 > Další parametry pro Koš. Níže jsou některé možnosti, které můžete nastavit pro kontrolu adresářové struktury smazaných souborů.
@@ -87,18 +92,22 @@ Update Recycle Bin Size in Background=Aktualizovat velikost koše na pozadí
 > + '%m' Jméno stroje uživatele, který soubor smazal
 :end
 
+
 :recycle_bin_permissions_plug:
 > Nastavte oprávnění adresáře a podadresářů Koše. Pro správný chod Koše nastavte oprávnění na 07xx. Neměňte toto nastavení, pokud nevíte, jak s oprávněními pracovat.
 :end
+
 
 :recycle_bin_excluded_files_plug:
 > Seznam souborů, které budou vyloučeny z Koše, oddělený čárkami. Podporovány jsou zástupné znaky '*' a '?'.
 :end
 
+
 :recycle_bin_excluded_dirs_plug:
 > Seznam adresářů, které budou vyloučeny z Koše, oddělený čárkami. Pro specifikaci konkrétního adresáře ve sdílení použijte formát 'share/directory'. Můžete zadat až jeden podadresář.
 > U Unassigned Devices se používá stejný zápis ve formátu 'mountpoint/directory'. Podporovány jsou zástupné znaky '*' a '?' v názvu adresáře.
 :end
+
 
 :recycle_bin_excluded_shares_plug:
 > Seznam sdílení, která budou vyloučena z Koše, oddělený čárkami. Tento seznam může obsahovat i sdílení Unassigned Devices. Název sdílení rozlišuje velikost písmen.
@@ -110,21 +119,26 @@ Update Recycle Bin Size in Background=Aktualizovat velikost koše na pozadí
 > Poznámka: Vyloučení sdílení znamená pouze vyloučení z ukládání smazaných souborů do složky .Recycle.Bin na tomto sdílení. Soubory již existující ve složce .Recycle.Bin se stále počítají do celkové velikosti a zobrazují se na záložce 'Shares'.
 :end
 
+
 :recycle_bin_age_day_plug:
 > Jakékoliv soubory starší než nastavený počet dní budou odstraněny podle plánu nebo při kliknutí na tlačítko 'Odstranit staré soubory'.
 :end
 
+
 :recycle_bin_remove_age_files_plug:
-> Nastavte požadovaný plán pro odstraňování starých souborů. 'Hourly' znamená každou hodinu přesně na hodinu. 'Daily' znamená každý den v 3:00 ráno. 'Weekly' znamená každé nedělní 3:00 ráno.
+> Nastavte požadovaný plán pro odstraňování starých souborů. „Hodinově" znamená každou hodinu přesně na hodinu. „Denně" znamená každý den v 3:00 ráno. „Týdně" znamená každou neděli v 3:00 ráno.
 :end
+
 
 :recycle_bin_age_files_notification_plug:
 > Pokud je nastaveno na **Ano**, bude odesláno upozornění při spuštění úlohy pro odstranění starých souborů podle plánu.
 :end
 
+
 :recycle_bin_log_deleted_files_plug:
 > Pokud je nastaveno na **Ano**, budou smazané soubory zaznamenávány do logu.
 :end
+
 
 :recycle_bin_show_log_plug:
 > Protokol Koše:
@@ -132,3 +146,4 @@ Update Recycle Bin Size in Background=Aktualizovat velikost koše na pozadí
 > Smazané soubory se v protokolu zobrazí jako nepropojené soubory.
 > Klikněte na tlačítko 'Vymazat' pro vyčištění protokolu.
 :end
+
